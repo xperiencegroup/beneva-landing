@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-at-surt: "AT Surt", sans-serif;
+  --font-founders: "Founders Grotesk", sans-serif;
+  --font-woodland: "PP Woodland", serif;
+  --font-basic-sans: "Basic Sans", sans-serif;
+
+  --color-verde-confianza: #0b392d;
+  --color-beige-hogar: #fff7ec;
+  --color-celeste-bienestar: #bcdcea;
+
+  --text-button: clamp(8px, 1.406vw, 18px);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #333;
+  color: white;
+  font-family:
+    var(--font-basic-sans),
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
