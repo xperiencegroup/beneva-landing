@@ -7,10 +7,16 @@
   --font-basic-sans: "Basic Sans", sans-serif;
 
   --color-verde-confianza: #0b392d;
+  --color-verde-dinamico: #e0ffae;
+  --color-verde-gradiente: #003c2c;
   --color-beige-hogar: #fff7ec;
   --color-celeste-bienestar: #bcdcea;
+  --color-gris-profundo: #27282b;
 
   --text-button: clamp(8px, 1.406vw, 18px);
+  --text-paragraph1: clamp(13px, 2.188vw, 28px);
+  --text-display1: clamp(15px, 2.5vw, 32px);
+  --text-display-min: clamp(13px, 2.188vw, 28px);
 }
 
 * {
@@ -19,7 +25,7 @@
 }
 
 body {
-  background-color: #333;
+  background-color: var(--color-beige-hogar);
   color: white;
   font-family:
     var(--font-basic-sans),
