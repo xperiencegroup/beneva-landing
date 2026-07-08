@@ -25,6 +25,7 @@ export default function Navbar() {
           return (
             <Link
               to={ruta.slug}
+              key={ruta.slug}
               className={`group relative px-[clamp(11px,1.875vw,24px)] py-[clamp(7px,1.172vw,15px)] text-button font-at-surt transition-colors ${ruta.slug === pathname ? "bg-celeste-bienestar text-verde-confianza font-bold" : "text-beige-hogar"}`}
             >
               {ruta.title}

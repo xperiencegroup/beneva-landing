@@ -33,7 +33,10 @@ export default function HomeNosotros() {
       <div className="w-full flex flex-col justify-center items-center gap-y-[clamp(9px,1.563vw,20px)]">
         {PARAGRAPHS.map((item) => {
           return (
-            <div className="flex flex-col gap-y-[clamp(9px,1.563vw,18px)]">
+            <div
+              key={item.title}
+              className="flex flex-col gap-y-[clamp(9px,1.563vw,18px)]"
+            >
               <h2 className="text-display-min text-center font-woodland font-bold text-verde-confianza">
                 {item.title}
               </h2>

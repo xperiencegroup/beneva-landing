@@ -1,5 +1,8 @@
+import HomeCompromiso from "./components/home-compromiso";
+import HomeConstruimos from "./components/home-construimos";
 import HomeHero from "./components/home-hero";
 import HomeNosotros from "./components/home-nosotros";
+import HomePatrimonio from "./components/home-patrimonio";
 
 export default function Home() {
   return (
@@ -7,6 +10,12 @@ export default function Home() {
       <HomeHero />
 
       <HomeNosotros />
+
+      <HomeCompromiso />
+
+      <HomeConstruimos />
+
+      <HomePatrimonio />
     </div>
   );
 }

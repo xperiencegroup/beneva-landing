@@ -12,11 +12,17 @@
   --color-beige-hogar: #fff7ec;
   --color-celeste-bienestar: #bcdcea;
   --color-gris-profundo: #27282b;
+  --color-azul-integro: #004056;
+  --color-rosa-bienestar: #f8b7a5;
 
   --text-button: clamp(8px, 1.406vw, 18px);
   --text-paragraph1: clamp(13px, 2.188vw, 28px);
+  --text-paragraph2: clamp(8px, 1.406vw, 18px);
+  --text-paragraph3: clamp(11px, 1.875vw, 24px);
   --text-display1: clamp(15px, 2.5vw, 32px);
+  --text-display2: clamp(18px, 3.125vw, 40px);
   --text-display-min: clamp(13px, 2.188vw, 28px);
+  --text-min: clamp(12px, 2.031vw, 26px);
 }
 
 * {
