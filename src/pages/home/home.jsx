@@ -1,5 +1,7 @@
+import Footer from "../../layout/components/footer";
 import HomeCompromiso from "./components/home-compromiso";
 import HomeConstruimos from "./components/home-construimos";
+import HomeCta from "./components/home-cta";
 import HomeEnterarme from "./components/home-enterarme";
 import HomeHero from "./components/home-hero";
 import HomeNosotros from "./components/home-nosotros";
@@ -19,6 +21,10 @@ export default function Home() {
       <HomePatrimonio />
 
       <HomeEnterarme />
+
+      <HomeCta />
+
+      <Footer />
     </div>
   );
 }
