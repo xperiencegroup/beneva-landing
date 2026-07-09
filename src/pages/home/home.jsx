@@ -1,5 +1,6 @@
 import HomeCompromiso from "./components/home-compromiso";
 import HomeConstruimos from "./components/home-construimos";
+import HomeEnterarme from "./components/home-enterarme";
 import HomeHero from "./components/home-hero";
 import HomeNosotros from "./components/home-nosotros";
 import HomePatrimonio from "./components/home-patrimonio";
@@ -16,6 +17,8 @@ export default function Home() {
       <HomeConstruimos />
 
       <HomePatrimonio />
+
+      <HomeEnterarme />
     </div>
   );
 }
