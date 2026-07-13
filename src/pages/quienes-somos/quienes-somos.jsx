@@ -1,3 +1,18 @@
+import QuienesSomosHero from "./components/quienes-somos-hero";
+import QuienesSomosHistoria from "./components/quienes-somos-historia";
+import QuienesSomosNosMueve from "./components/quienes-somos-nos-mueve";
+import QuienesSomosValores from "./components/quienes-somos-valores";
+
 export default function QuienesSomos() {
-  return <div>quienes-somos</div>;
+  return (
+    <main className="flex flex-col">
+      <QuienesSomosHero />
+
+      <QuienesSomosHistoria />
+
+      <QuienesSomosNosMueve />
+
+      <QuienesSomosValores />
+    </main>
+  );
 }
