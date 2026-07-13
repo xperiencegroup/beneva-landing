@@ -1,4 +1,3 @@
-import Footer from "../../layout/components/footer";
 import HomeCompromiso from "./components/home-compromiso";
 import HomeConstruimos from "./components/home-construimos";
 import HomeCta from "./components/home-cta";
@@ -23,8 +22,6 @@ export default function Home() {
       <HomeEnterarme />
 
       <HomeCta />
-
-      <Footer />
     </div>
   );
 }

@@ -30,7 +30,7 @@ export default function QuienesSomosValores() {
   return (
     <div className="flex flex-col justify-center items-center p-[clamp(9px,1.563vw,20px)] py-[clamp(14px,2.344vw,30px)] gap-[clamp(9px,1.563vw,20px)]">
       <div className="flex flex-col justify-center items-center gap-[clamp(9px,1.563vw,20px)]">
-        <h3 className="text-display2 font-woodland text-verde-confianza">
+        <h3 className="text-display2 font-woodland font-bold text-verde-confianza">
           Nuestros valores
         </h3>
         <p className="text-paragraph1 text-center leading-tight text-gris-profundo">
