@@ -12,12 +12,12 @@ export default function QuienesSomosHero() {
           <img
             src={background}
             alt="Imagen de fondo"
-            className="absolute inset-0 w-full h-full"
+            className="absolute inset-0 w-full h-full object-cover"
           />
         </div>
       </div>
 
-      <h2 className="relative max-w-[732px] text-display3 font-woodland font-bold text-center leading-[110%] text-beige-hogar">
+      <h2 className="relative max-w-[732px] text-display4 font-woodland font-bold text-center leading-[110%] text-beige-hogar">
         Construyamos algo grande juntos
       </h2>
 
