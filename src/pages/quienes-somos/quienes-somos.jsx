@@ -1,3 +1,4 @@
+import QuienesSomosCta from "./components/quienes-somos-cta";
 import QuienesSomosHero from "./components/quienes-somos-hero";
 import QuienesSomosHistoria from "./components/quienes-somos-historia";
 import QuienesSomosNosMueve from "./components/quienes-somos-nos-mueve";
@@ -16,6 +17,8 @@ export default function QuienesSomos() {
       <QuienesSomosValores />
 
       <QuienesSomosProfesionales />
+
+      <QuienesSomosCta />
     </main>
   );
 }

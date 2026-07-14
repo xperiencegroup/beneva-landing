@@ -11,7 +11,7 @@ export default function Navbar() {
   const { pathname } = useLocation();
 
   return (
-    <div className="fixed z-10 flex h-fit w-full bg-verde-confianza px-[clamp(11px,1.875vw,24px)] py-[clamp(7px,1.172vw,15px)]">
+    <div className="fixed z-50 flex h-fit w-full bg-verde-confianza px-[clamp(11px,1.875vw,24px)] py-[clamp(7px,1.172vw,15px)]">
       {/* Logo */}
       <div className="flex-1 flex justify-start items-center">
         <Link to={"/"}>
