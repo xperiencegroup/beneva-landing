@@ -4,7 +4,7 @@ import QuienesSomos from "./pages/quienes-somos/quienes-somos";
 import DesarrollemosJuntos from "./pages/desarrollemos-juntos/desarrollemos-juntos";
 import Contacto from "./pages/contacto/contacto";
 import Proyectos from "./pages/proyectos/proyectos";
-import Layout from "./layout/Layout";
+import Layout from "./layout/layout";
 
 export default function Router() {
   return (
