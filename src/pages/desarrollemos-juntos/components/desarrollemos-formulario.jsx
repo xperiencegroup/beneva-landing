@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import SendIcon from "../../../assets/icons/commons/sendIcon";
 
 export default function DesarrollemosFormulario() {
   const { handleSubmit, register, reset } = useForm({
@@ -229,9 +230,10 @@ export default function DesarrollemosFormulario() {
           {/* Input */}
           <button
             type="submit"
-            className="flex-1 h-[48px] font-at-surt bg-verde-dinamico text-verde-confianza hover:cursor-pointer"
+            className="flex-1 flex justify-center items-center h-[48px] gap-[clamp(7px,1.172vw,15px)] font-at-surt bg-verde-dinamico text-verde-confianza hover:cursor-pointer"
           >
             Enviar Solicitud
+            <SendIcon className="w-[clamp(11px,1.797vw,23px)] text-verde-confianza" />
           </button>
         </div>
       </form>
