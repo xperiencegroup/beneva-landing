@@ -5,10 +5,12 @@ import DesarrollemosJuntos from "./pages/desarrollemos-juntos/desarrollemos-junt
 import Contacto from "./pages/contacto/contacto";
 import Proyectos from "./pages/proyectos/proyectos";
 import Layout from "./layout/layout";
+import { ScrollToTop } from "./components/scroll-to-top";
 
 export default function Router() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
