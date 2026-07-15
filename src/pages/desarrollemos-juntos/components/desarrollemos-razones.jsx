@@ -1,0 +1,58 @@
+export default function DesarrollemosRazones() {
+  const steps = [
+    {
+      number: "01",
+      title: "Experiencia real",
+      text: "Casi 20 años entre construcción y negocios. Sabemos lo que cuesta levantar un desarrollo y cómo hacerlo bien.",
+    },
+    {
+      number: "02",
+      title: "Proceso probado",
+      text: "Desde la conceptualización hasta la entrega, manejamos cada etapa con rigor y transparencia.",
+    },
+    {
+      number: "03",
+      title: "Calidad que genera plusvalía",
+      text: "Desarrollamos con los más altos estándares porque un proyecto bien hecho genera valor para todos: socios, compradores y la ciudad.",
+    },
+    {
+      number: "04",
+      title: "Visión de largo plazo",
+      text: "Pensamos en comunidades autosustentables que crecen bien  proyectos que siguen generando valor mucho después de la entrega.",
+    },
+  ];
+
+  return (
+    <div className="flex flex-col justify-center items-center w-full bg-beige-hogar p-[clamp(20px,4.688vw,60px)] gap-[clamp(9px,1.563vw,20px)]">
+      {/* Heading */}
+      <div className="flex flex-col items-center text-center gap-[clamp(8px,1.172vw,15px)] mb-[clamp(32px,4.688vw,60px)]">
+        <h2 className="text-display2 font-woodland text-verde-confianza font-semibold">
+          Por qué desarrollar con Beneva
+        </h2>
+        <p className="text-paragraph1 leading-tight text-gris-profundo">
+          No solo construimos casas desarrollamos proyectos integrales con
+          visión de largo plazo. Estas son las razones por las que nuestros
+          socios eligen trabajar con nosotros.
+        </p>
+      </div>
+
+      {/* Cards grid */}
+      <div className="grid grid-cols-2 w-full max-w-[1160px] gap-[clamp(9px,1.563vw,20px)]">
+        {steps.map((step) => (
+          <div
+            key={step.number}
+            className="flex flex-col items-center justify-center text-center w-full bg-rosa-bienestar rounded-t-[120px] p-[clamp(24px,3.125vw,40px)] gap-[clamp(9px,1.563vw,20px)]"
+          >
+            <h3 className="flex flex-col text-display-min font-woodland text-gris-profundo font-bold leading-none">
+              <span>{step.title}</span>
+            </h3>
+
+            <p className="max-w-[390px] text-paragraph2 leading-tight tracking-wide text-gris-profundo">
+              {step.text}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
