@@ -21,23 +21,23 @@ const PARAGRAPHS = [
 
 export default function HomeNosotros() {
   return (
-    <div className="relative w-full h-lvh flex flex-col justify-center items-center gap-y-[clamp(14px,2.344vw,30px)]">
+    <div className="relative w-full flex flex-col justify-center items-center py-[30px] px-[40px] gap-[20px] md:gap-y-[clamp(14px,2.344vw,30px)]">
       {/* Logo */}
-      <LogoMain className="w-[clamp(26px,4.375vw,56px)] text-verde-confianza" />
+      <LogoMain className="w-[56px] text-verde-confianza" />
 
       {/* Texts */}
-      <p className="text-display1 font-woodland font-light text-verde-confianza">
+      <p className="text-[32px] md:text-display1 font-woodland font-light text-verde-confianza">
         Nosotros
       </p>
 
-      <div className="w-full flex flex-col justify-center items-center gap-y-[clamp(9px,1.563vw,20px)]">
+      <div className="w-full flex flex-col justify-center items-center gap-[20px] md:gap-y-[clamp(9px,1.563vw,20px)]">
         {PARAGRAPHS.map((item) => {
           return (
             <div
               key={item.title}
-              className="flex flex-col gap-y-[clamp(9px,1.563vw,18px)]"
+              className="flex flex-col justify-center items-center gap-y-[clamp(9px,1.563vw,18px)]"
             >
-              <h2 className="text-display-min text-center font-woodland font-bold text-verde-confianza">
+              <h2 className="text-[20px] md:text-display-min text-center font-woodland font-bold leading-none text-verde-confianza">
                 {item.title}
               </h2>
               <h2 className="w-[86vw] text-paragraph1 text-center font-sans font-light text-verde-confianza leading-[109%]">
@@ -54,7 +54,7 @@ export default function HomeNosotros() {
       </button>
 
       {/* Whatsapp Button */}
-      <button className="flex justify-center items-center size-[clamp(26px,4.375vw,56px)] p-[clamp(8px,1vw,14px)] absolute top-20 right-10 bg-celeste-bienestar hover:cursor-pointer">
+      <button className="hidden md:flex justify-center items-center size-[clamp(26px,4.375vw,56px)] p-[clamp(8px,1vw,14px)] absolute top-20 right-10 bg-celeste-bienestar hover:cursor-pointer">
         <WhatsappIcon className="text-verde-confianza" />
       </button>
     </div>

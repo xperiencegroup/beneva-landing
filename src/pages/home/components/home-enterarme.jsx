@@ -6,12 +6,12 @@ export default function HomeEnterarme() {
   const onSubmit = (values) => console.log(values);
 
   return (
-    <div className="flex flex-col px-[clamp(28px,4.688vw,60px)] py-[clamp(16px,2.656vw,34px)] gap-[clamp(9px,1.563vw,20px)] bg-verde-confianza">
+    <div className="flex flex-col px-[40px] py-[30px] md:px-[clamp(28px,4.688vw,60px)] md:py-[clamp(16px,2.656vw,34px)] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)] bg-verde-confianza">
       <div className="flex flex-col gap-[clamp(9px,1.563vw,20px)]">
-        <h3 className="text-display2 font-woodland text-verde-dinamico text-center">
+        <h3 className="text-[24px] md:text-display2 font-woodland text-verde-dinamico text-center">
           Más proyectos en camino
         </h3>
-        <p className="text-paragraph2 text-center leading-tight">
+        <p className="text-[18px] md:text-paragraph2 text-center leading-tight">
           Estamos trabajando en nuevos desarrollos para distintas zonas de la
           zona metropolitana. <br /> Si quieres ser de los primeros en
           enterarte, déjanos tus datos.
@@ -21,11 +21,14 @@ export default function HomeEnterarme() {
       {/* Form */}
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col gap-[clamp(9px,1.563vw,20px)]"
+        className="flex flex-col gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]"
       >
         {/* Nombre completo */}
         <div className="flex flex-col gap-[clamp(4px,0.781vw,10px)]">
-          <label htmlFor="nombre" className="text-paragraph2 text-beige-hogar">
+          <label
+            htmlFor="nombre"
+            className="text-[16px] md:text-paragraph2 text-beige-hogar"
+          >
             Nombre completo <span className="text-beige-hogar">*</span>
           </label>
           <input
@@ -34,7 +37,7 @@ export default function HomeEnterarme() {
             type="text"
             required
             placeholder="Tu nombre completo"
-            className="w-full bg-beige-hogar text-gris-profundo placeholder:text-gris-profundo/70 px-[clamp(14px,2.344vw,30px)] py-[clamp(10px,1.406vw,16px)] text-paragraph2 outline-none"
+            className="w-full max-md:h-[40px] bg-beige-hogar text-gris-profundo max-md:text-[12px] max-md:placeholder:text-[12px] placeholder:leading-none placeholder:text-gris-profundo/70 px-[clamp(14px,2.344vw,30px)] py-[clamp(10px,1.406vw,16px)] text-paragraph2 outline-none"
           />
         </div>
 

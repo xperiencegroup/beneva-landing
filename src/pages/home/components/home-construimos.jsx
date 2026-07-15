@@ -23,10 +23,10 @@ export default function HomeConstruimos() {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center w-full bg-beige-hogar p-[clamp(20px,4.688vw,60px)] gap-[clamp(9px,1.563vw,20px)]">
+    <div className="flex flex-col justify-center items-center w-full bg-beige-hogar px-[40px] py-[30px] md:p-[clamp(20px,4.688vw,60px)] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]">
       {/* Heading */}
-      <div className="flex flex-col items-center text-center gap-[clamp(8px,1.172vw,15px)] mb-[clamp(32px,4.688vw,60px)]">
-        <h2 className="text-display2 font-woodland text-verde-confianza font-semibold">
+      <div className="flex flex-col items-center text-center gap-[20px] md:gap-[clamp(8px,1.172vw,15px)] mb-[clamp(32px,4.688vw,60px)]">
+        <h2 className="text-[24px] md:text-display2 font-woodland text-verde-confianza font-semibold leading-none">
           Así construimos cada proyecto
         </h2>
         <p className="text-paragraph1 leading-tight text-gris-profundo">
@@ -36,18 +36,18 @@ export default function HomeConstruimos() {
       </div>
 
       {/* Cards grid */}
-      <div className="grid grid-cols-2 gap-[clamp(18px,3.125vw,40px)]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-[clamp(18px,3.125vw,40px)]">
         {steps.map((step) => (
           <div
             key={step.number}
-            className="flex flex-col items-center justify-center text-center w-full max-w-[clamp(245px,41.641vw,533px)] h-[clamp(164px,27.813vw,356px)] bg-rosa-bienestar rounded-t-[180px] p-[clamp(24px,3.125vw,40px)] gap-[clamp(9px,1.563vw,20px)]"
+            className="flex flex-col items-center justify-center text-center w-full w-[295px] max-md:h-[317px] md:max-w-[clamp(245px,41.641vw,533px)] h-[clamp(164px,27.813vw,356px)] bg-rosa-bienestar rounded-t-[180px] px-[34px] py-[40px] md:p-[clamp(24px,3.125vw,40px)] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]"
           >
-            <h3 className="flex flex-col text-display-min font-woodland text-gris-profundo font-bold leading-none">
+            <h3 className="flex flex-col text-[20px] md:text-display-min font-woodland text-gris-profundo font-bold leading-none">
               <span>{step.number}</span>
               <span>{step.title}</span>
             </h3>
 
-            <p className="text-paragraph3 leading-tight text-gris-profundo">
+            <p className="text-[16px] md:text-paragraph3 leading-tight text-gris-profundo leading-none">
               {step.text}
             </p>
           </div>

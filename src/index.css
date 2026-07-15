@@ -17,7 +17,7 @@
   --color-rosa-bienestar: #f8b7a5;
 
   --text-button: clamp(8px, 1.406vw, 18px);
-  --text-paragraph1: clamp(13px, 2.188vw, 28px);
+  --text-paragraph1: clamp(18px, 2.188vw, 28px);
   --text-paragraph2: clamp(8px, 1.406vw, 18px);
   --text-paragraph3: clamp(6px, 1.094vw, 14px);
   --text-paragraph4: clamp(11px, 1.875vw, 24px);

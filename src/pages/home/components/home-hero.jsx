@@ -1,25 +1,34 @@
 import BenevaSloganCustom from "../../../assets/images/icons/main/beneva-slogan-custom";
+import heroBackground from "../../../assets/images/sections/home/hero-bg.jpg";
 
 export default function HomeHero() {
   return (
-    <div className="relative w-full min-h-lvh bg-zinc-800 rounded-bl-[200px]">
+    <div className="relative w-full min-h-lvh rounded-bl-[200px] overflow-hidden">
       {/* Image */}
-      <div className="absolute inset-0 w-full h-full bg-beige-hogar rounded-bl-[200px]" />
+      <div className="absolute -z-10 inset-0 w-full h-full">
+        <div className="relative w-full h-full">
+          <img
+            src={heroBackground}
+            alt="Imagen de fondo"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+      </div>
 
       {/* Overlay */}
       <div className="absolute inset-0 w-full h-full bg-linear-to-b from-verde-gradiente/0 from-20% via-verde-gradiente/80 via-70% to-verde-gradiente rounded-bl-[200px]" />
 
       {/* Content */}
-      <div className="absolute inset-0 w-full h-full flex flex-col justify-end items-center gap-[clamp(46px,7.813vw,100px)] pb-[clamp(64px,10.938vw,140px)]">
+      <div className="absolute inset-0 w-full h-full flex flex-col justify-end items-center gap-[clamp(46px,7.813vw,100px)] pb-[25vh] md:pb-[clamp(64px,10.938vw,140px)]">
         {/* Logo */}
-        <BenevaSloganCustom className="w-[clamp(242px,41.016vw,525px)] text-verde-dinamico" />
+        <BenevaSloganCustom className="w-[80vw] md:w-[clamp(242px,41.016vw,525px)] text-verde-dinamico" />
 
         {/* Text */}
-        <div className="flex flex-col items-center">
-          <h1 className="text-[clamp(33px,5.625vw,72px)] font-woodland font-semibold text-beige-hogar">
+        <div className="flex flex-col items-center gap-[clamp(9px,1.563vw,20px)]">
+          <h1 className="text-center text-[clamp(33px,5.625vw,72px)] font-woodland font-semibold leading-none text-beige-hogar">
             Tu hogar merece lo mejor de ti
           </h1>
-          <p className="max-w-[52vw] text-paragraph1 text-center font-sans font-light leading-[120%]">
+          <p className="max-w-[80vw] md:max-w-[52vw] text-[18px] md:text-paragraph1 text-center font-sans font-light leading-[120%]">
             En Beneva pensamos cada espacio desde adentro hacia afuera porque el
             hogar es donde tu familia echa raíces y construye su historia.
           </p>
