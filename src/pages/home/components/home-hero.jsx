@@ -19,7 +19,7 @@ export default function HomeHero() {
       <div className="absolute inset-0 w-full h-full bg-linear-to-b from-verde-gradiente/0 from-20% via-verde-gradiente/80 via-70% to-verde-gradiente rounded-bl-[200px]" />
 
       {/* Content */}
-      <div className="absolute inset-0 w-full h-full flex flex-col justify-end items-center gap-[clamp(46px,7.813vw,100px)] pb-[25vh] md:pb-[clamp(64px,10.938vw,140px)]">
+      <div className="absolute inset-0 w-full h-full flex flex-col justify-end items-center gap-[clamp(46px,7.813vw,100px)] max-md:px-[20px] pb-[25vh] md:pb-[clamp(64px,10.938vw,140px)]">
         {/* Logo */}
         <BenevaSloganCustom className="w-[80vw] md:w-[clamp(242px,41.016vw,525px)] text-verde-dinamico" />
 

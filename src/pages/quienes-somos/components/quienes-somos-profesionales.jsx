@@ -45,24 +45,24 @@ const ITEMS = [
 
 export default function QuienesSomosProfesionales() {
   return (
-    <div className="flex flex-col py-[clamp(28px,4.688vw,60px)] px-[clamp(18px,3.125vw,40px)] gap-[clamp(9px,1.563vw,20px)]">
-      <div className="flex flex-col justify-center items-center gap-[clamp(9px,1.563vw,20px)] ">
-        <h3 className="text-display2 font-woodland font-bold text-verde-confianza">
+    <div className="flex flex-col justify-center items-center px-[24px] py-[30px] md:py-[clamp(28px,4.688vw,60px)] md:px-[clamp(18px,3.125vw,40px)] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]">
+      <div className="flex flex-col justify-center items-center gap-[20px] max-md:max-w-[295px] md:gap-[clamp(9px,1.563vw,20px)] ">
+        <h3 className="text-[24px] md:text-display2 text-center font-woodland leading-none font-bold text-verde-confianza">
           En una sola palabra somos: Profesionales
         </h3>
         <p className="text-paragraph1 text-center leading-tight text-gris-profundo">
-          Lo que somos hacia adentro se refleja en lo que construimos hacia
-          afuera.
+          Para nosotros ser profesional no es un título es una forma de actuar
+          todos los días
         </p>
       </div>
 
       {/* Items */}
-      <div className="self-center flex flex-wrap w-full max-w-[1280px] lg:justify-center gap-[clamp(9px,1.484vw,19px)]">
+      <div className="self-center flex flex-wrap w-full max-w-[1280px] justify-center gap-[clamp(9px,1.484vw,19px)]">
         {ITEMS.map((item, index) => {
           return (
             <div
               key={index}
-              className="flex flex-col w-full max-w-[40%] lg:w-[23%] h-[279px] lg:h-[279px] justify-center items-center gap-[clamp(7px,1.172vw,15px)] p-[clamp(9px,1.563vw,20px)] rounded-t-[130px] bg-azul-integro"
+              className="flex flex-col w-[48%] md:w-full md:max-w-[40%] lg:w-[23%] h-[192px] md:h-[279px] lg:h-[279px] justify-center items-center gap-[15px] md:gap-[clamp(7px,1.172vw,15px)] p-[20px] md:p-[clamp(9px,1.563vw,20px)] rounded-t-[130px] bg-azul-integro"
             >
               <div className="relative size-[45px]">
                 <img
@@ -71,7 +71,7 @@ export default function QuienesSomosProfesionales() {
                   className="absolute w-full h-full object-contain"
                 />
               </div>
-              <p className="max-w-[216px] text-[20px] lg:text-[26px] font-woodland font-bold leading-[115%] text-center text-beige-hogar whitespace-break-spaces">
+              <p className="max-w-[216px] text-[15px] md:text-[20px] lg:text-[26px] font-woodland font-bold leading-[115%] text-center text-beige-hogar whitespace-break-spaces">
                 {item.description}
               </p>
             </div>

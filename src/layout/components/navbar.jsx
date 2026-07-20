@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router";
 import benevaLogo from "../../assets/images/icons/main/beneva-white.svg";
 import menuIcon from "../../assets/icons/navbar/menuIcon.svg";
+import closeIcon from "../../assets/icons/commons/closeIcon.svg";
 
 const RUTAS = [
   { slug: "/quienes-somos", title: "Quiénes somos" },
@@ -56,10 +57,48 @@ export default function Navbar() {
           onClick={() => {
             setIsMenuOpen(!isMenuOpen);
           }}
-          className="flex size-[42px] justify-center items-center bg-beige-hogar"
+          className={`flex size-[42px] justify-center items-center transition-all ${isMenuOpen ? "bg-celeste-bienestar" : "bg-beige-hogar"}`}
         >
-          <img src={menuIcon} alt="Ícono de menu" className="w-[22px]" />
+          <img
+            src={isMenuOpen ? closeIcon : menuIcon}
+            alt="Ícono de menu"
+            className="w-[22px]"
+          />
         </button>
+      </div>
+
+      <div
+        inert={!isMenuOpen}
+        className={`absolute -z-10 top-[82px] left-0 w-full h-fit bg-verde-confianza flex flex-col justify-start items-center p-[20px] pt-[30px] gap-[24px] transition-opacity ${isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+      >
+        <Link
+          to={"quienes-somos"}
+          onClick={() => setIsMenuOpen(false)}
+          className="w-full text-[18px] leading-tight text-center px-[24px] py-[15px] hover:cursor-pointer"
+        >
+          Quiénes Somos
+        </Link>
+        <Link
+          to={"proyectos"}
+          onClick={() => setIsMenuOpen(false)}
+          className="w-full text-[18px] leading-tight text-center px-[24px] py-[15px] hover:cursor-pointer"
+        >
+          Proyectos
+        </Link>
+        <Link
+          to={"desarrollemos-juntos"}
+          onClick={() => setIsMenuOpen(false)}
+          className="w-full text-[18px] leading-tight text-center px-[24px] py-[15px] hover:cursor-pointer"
+        >
+          Desarrollemos Juntos
+        </Link>
+        <Link
+          to={"contactanos"}
+          onClick={() => setIsMenuOpen(false)}
+          className="w-full text-[18px] leading-tight text-center px-[24px] py-[15px] text-verde-confianza bg-beige-hogar hover:cursor-pointer"
+        >
+          Contáctanos
+        </Link>
       </div>
     </div>
   );

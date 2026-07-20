@@ -37,7 +37,7 @@ export default function HomeEnterarme() {
             type="text"
             required
             placeholder="Tu nombre completo"
-            className="w-full max-md:h-[40px] bg-beige-hogar text-gris-profundo max-md:text-[12px] max-md:placeholder:text-[12px] placeholder:leading-none placeholder:text-gris-profundo/70 px-[clamp(14px,2.344vw,30px)] py-[clamp(10px,1.406vw,16px)] text-paragraph2 outline-none"
+            className="w-full max-md:h-[40px] bg-beige-hogar text-gris-profundo max-md:text-[12px] max-md:placeholder:text-[12px] placeholder:text-gris-profundo/70 px-[clamp(14px,2.344vw,30px)] py-[clamp(10px,1.406vw,16px)] text-paragraph2 outline-none"
           />
         </div>
 
@@ -46,7 +46,7 @@ export default function HomeEnterarme() {
           <div className="flex flex-col gap-[clamp(4px,0.781vw,10px)]">
             <label
               htmlFor="correo"
-              className="text-paragraph2 text-beige-hogar"
+              className="text-[16px] md:text-paragraph2 text-beige-hogar"
             >
               Correo electrónico <span className="text-beige-hogar">*</span>
             </label>
@@ -56,14 +56,14 @@ export default function HomeEnterarme() {
               type="email"
               required
               placeholder="tu@email.com"
-              className="w-full bg-beige-hogar text-gris-profundo placeholder:text-gris-profundo/70 px-[clamp(14px,2.344vw,30px)] py-[clamp(10px,1.406vw,16px)] text-paragraph2 outline-none"
+              className="w-full max-md:h-[40px] bg-beige-hogar text-gris-profundo max-md:text-[12px] max-md:placeholder:text-[12px] placeholder:text-gris-profundo/70 px-[clamp(14px,2.344vw,30px)] py-[clamp(10px,1.406vw,16px)] text-paragraph2 outline-none"
             />
           </div>
 
           <div className="flex flex-col gap-[clamp(4px,0.781vw,10px)]">
             <label
               htmlFor="telefono"
-              className="text-paragraph2 text-beige-hogar"
+              className="text-[16px] md:text-paragraph2 text-beige-hogar"
             >
               Teléfono <span className="text-beige-hogar">*</span>
             </label>
@@ -73,14 +73,17 @@ export default function HomeEnterarme() {
               type="tel"
               required
               placeholder="81 1234 5678"
-              className="w-full bg-beige-hogar text-gris-profundo placeholder:text-gris-profundo/70 px-[clamp(14px,2.344vw,30px)] py-[clamp(10px,1.406vw,16px)] text-paragraph2 outline-none"
+              className="w-full max-md:h-[40px] bg-beige-hogar text-gris-profundo max-md:text-[12px] max-md:placeholder:text-[12px] placeholder:text-gris-profundo/70 px-[clamp(14px,2.344vw,30px)] py-[clamp(10px,1.406vw,16px)] text-paragraph2 outline-none"
             />
           </div>
         </div>
 
         {/* Mensaje */}
         <div className="flex flex-col gap-[clamp(4px,0.781vw,10px)]">
-          <label htmlFor="mensaje" className="text-paragraph2 text-beige-hogar">
+          <label
+            htmlFor="mensaje"
+            className="text-[16px] md:text-paragraph2 text-beige-hogar"
+          >
             Mensaje
           </label>
           <textarea
@@ -88,17 +91,17 @@ export default function HomeEnterarme() {
             id="mensaje"
             rows={5}
             placeholder="Cuéntanos más sobre lo que estás buscando..."
-            className="w-full resize-none bg-beige-hogar text-gris-profundo placeholder:text-gris-profundo/70 p-[clamp(9px,1.563vw,20px)] text-paragraph2 outline-none"
+            className="w-full bg-beige-hogar text-gris-profundo max-md:text-[12px] max-md:placeholder:text-[12px] placeholder:text-gris-profundo/70 px-[clamp(14px,2.344vw,30px)] py-[clamp(10px,1.406vw,16px)] text-paragraph2 outline-none"
           />
         </div>
 
         {/* Submit */}
         <button
           type="submit"
-          className="w-full flex items-center justify-center gap-[clamp(6px,0.938vw,12px)] bg-[#B7D9E8] text-verde-confianza font-semibold px-[clamp(14px,2.344vw,30px)] py-[clamp(10px,1.406vw,16px)] text-button transition-opacity hover:opacity-90"
+          className="w-full flex items-center justify-center gap-[15px] md:gap-[clamp(6px,0.938vw,12px)] bg-[#B7D9E8] text-verde-confianza font-semibold px-[clamp(14px,2.344vw,30px)] py-[clamp(10px,1.406vw,16px)] text-[14px] md:text-button transition-opacity hover:opacity-90"
         >
           Quiero enterarme primero
-          <SendIcon className="w-[clamp(11px,1.797vw,23px)] text-verde-confianza" />
+          <SendIcon className="w-[20px] md:w-[clamp(11px,1.797vw,23px)] text-verde-confianza" />
         </button>
       </form>
     </div>
