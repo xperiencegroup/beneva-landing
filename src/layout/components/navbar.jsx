@@ -69,7 +69,7 @@ export default function Navbar() {
 
       <div
         inert={!isMenuOpen}
-        className={`absolute -z-10 top-[82px] left-0 w-full h-fit bg-verde-confianza flex flex-col justify-start items-center p-[20px] pt-[30px] gap-[24px] transition-opacity ${isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        className={`absolute -z-10 top-[82px] left-0 w-full h-fit bg-verde-confianza md:hidden landscape:hidden flex flex-col justify-start items-center p-[20px] pt-[30px] gap-[24px] transition-opacity ${isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
       >
         <Link
           to={"quienes-somos"}
