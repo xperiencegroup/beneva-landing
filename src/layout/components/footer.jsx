@@ -13,36 +13,43 @@ export default function Footer() {
         <div className="flex max-md:flex-col gap-[20px] md:gap-[clamp(9px,1.563vw,20px)] max-md:w-full">
           <Link
             to={"quienes-somos"}
-            className="px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] text-[16px] max-md:text-center md:text-button text-beige-hogar hover:cursor-pointer"
+            className="relative group px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] text-[16px] max-md:text-center md:text-button text-beige-hogar hover:cursor-pointer active:text-verde-confianza active:font-bold active:bg-celeste-bienestar transition-all"
           >
             Quiénes Somos
+            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-celeste-bienestar opacity-0 group-hover:opacity-100 group-active:opacity-0 transition-opacity ease-in" />
           </Link>
           <Link
             to={"proyectos"}
-            className="px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] text-[16px] max-md:text-center md:text-button text-beige-hogar hover:cursor-pointer"
+            className="relative group px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] text-[16px] max-md:text-center md:text-button text-beige-hogar hover:cursor-pointer active:text-verde-confianza active:font-bold active:bg-celeste-bienestar transition-all"
           >
             Proyectos
+            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-celeste-bienestar opacity-0 group-hover:opacity-100 group-active:opacity-0 transition-opacity ease-in" />
           </Link>
           <Link
             to={"desarrollemos-juntos"}
-            className="px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] text-[16px] max-md:text-center md:text-button text-beige-hogar hover:cursor-pointer"
+            className="relative group px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] text-[16px] max-md:text-center md:text-button text-beige-hogar hover:cursor-pointer active:text-verde-confianza active:font-bold active:bg-celeste-bienestar transition-all"
           >
             Desarrollemos Juntos
+            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-celeste-bienestar opacity-0 group-hover:opacity-100 group-active:opacity-0 transition-opacity ease-in" />
           </Link>
           <Link
             to={"contactanos"}
-            className="px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] text-[16px] max-md:text-center md:text-button text-beige-hogar hover:cursor-pointer"
+            className="relative group px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] text-[16px] max-md:text-center md:text-button text-beige-hogar hover:cursor-pointer active:text-verde-confianza active:font-bold active:bg-celeste-bienestar transition-all"
           >
             Contacto
+            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-celeste-bienestar opacity-0 group-hover:opacity-100 group-active:opacity-0 transition-opacity ease-in" />
           </Link>
         </div>
 
-        <p className="flex justify-center items-center gap-[clamp(7px,1.172vw,15px)] text-[15px] md:text-min font-woodland font-bold tracking-wider text-beige-hogar">
+        <a
+          href="mailto:contacto@beneva.mx"
+          className="flex justify-center items-center gap-[clamp(7px,1.172vw,15px)] text-[15px] md:text-min font-woodland font-bold tracking-wider text-beige-hogar px-2 rounded hover:bg-black/10"
+        >
           <span>
             <img src={mailIcon} alt="Icóno de correo" />
           </span>
           contacto@beneva.mx
-        </p>
+        </a>
 
         <img
           src={developedByXperience}
