@@ -41,13 +41,13 @@ export default function DesarrollemosRazones() {
         {steps.map((step) => (
           <div
             key={step.number}
-            className="flex flex-col items-center justify-center text-center w-full max-md:max-w-[330px] bg-rosa-bienestar rounded-t-[100px] md:rounded-t-[120px] p-[clamp(24px,3.125vw,40px)] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]"
+            className="flex flex-col items-center justify-center text-center w-full h-[230px] md:h-[280px] lg:h-[233px] max-lg:max-w-[330px] bg-rosa-bienestar rounded-t-[100px] md:rounded-t-[120px] p-[clamp(24px,3.125vw,40px)] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]"
           >
             <h3 className="max-md:max-w-[250px] flex flex-col text-[20px] md:text-display-min font-woodland text-gris-profundo font-bold leading-none">
               <span>{step.title}</span>
             </h3>
 
-            <p className="max-w-[390px] text-[18px] md:text-paragraph2 leading-tight tracking-wide text-gris-profundo">
+            <p className="text-[18px] lg:text-[23px] leading-tight tracking-wide text-gris-profundo">
               {step.text}
             </p>
           </div>

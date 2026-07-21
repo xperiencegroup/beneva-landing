@@ -54,10 +54,10 @@ export default function HomePatrimonio() {
                 </h3>
                 <Link
                   to={"/proyectos"}
-                  className="relative group text-[14px] md:text-button px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] bg-celeste-bienestar hover:bg-transparent text-verde-confianza hover:text-celeste-bienestar hover:cursor-pointer"
+                  className="relative group text-[14px] md:text-button px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] bg-celeste-bienestar hover:bg-transparent text-verde-confianza hover:text-celeste-bienestar active:text-beige-hogar active:font-bold active:bg-transparent hover:cursor-pointer"
                 >
                   Ver proyecto
-                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-celeste-bienestar opacity-0 group-hover:opacity-100 transition-opacity ease-in" />
+                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-celeste-bienestar opacity-0 group-hover:opacity-100 group-active:opacity-0 transition-opacity ease-in" />
                 </Link>
               </div>
             </div>

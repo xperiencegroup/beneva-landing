@@ -4,7 +4,7 @@ import misionImage from "../../../assets/images/sections/proyectos/mision-main-i
 export default function ProyectosMision() {
   return (
     <>
-      <div className="flex flex-col h-fit md:h-[373px] justify-center items-center max-md:px-[40px] max-md:py-[30px] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]">
+      <div className="flex flex-col h-fit md:h-[373px] justify-center items-center px-[40px] py-[30px] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]">
         <img
           src={logoMision}
           alt="Logo Misión de los Ángeles"
@@ -21,8 +21,9 @@ export default function ProyectosMision() {
           tu familia merece está aquí.
         </p>
 
-        <button className="text-[18px] md:text-button px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] text-verde-confianza bg-celeste-bienestar hover:cursor-pointer">
+        <button className="relative group text-[18px] md:text-button px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] text-verde-confianza bg-celeste-bienestar hover:bg-transparent hover:cursor-pointer active:text-beige-hogar active:font-bold active:bg-verde-confianza transition-all">
           Ver sitio del proyecto
+          <div className="absolute bottom-0 left-0 w-full h-0.5 bg-celeste-bienestar opacity-0 group-hover:opacity-100 active:opacity-0 group-active:opacity-0 transition-opacity ease-in" />
         </button>
       </div>
 
