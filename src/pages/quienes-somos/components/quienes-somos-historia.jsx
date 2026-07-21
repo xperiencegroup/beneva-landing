@@ -1,6 +1,6 @@
 export default function QuienesSomosHistoria() {
   return (
-    <div className="flex flex-col w-full h-fit justify-center items-center px-[48px] py-[30px] md:p-[clamp(28px,4.688vw,60px)] gap-[20px] md:gap-[clamp(14px,2.344vw,30px)]">
+    <div className="flex flex-col self-center w-full max-w-[1280px] h-fit justify-center items-center px-[48px] py-[30px] md:p-[clamp(28px,4.688vw,60px)] gap-[20px] md:gap-[clamp(14px,2.344vw,30px)]">
       <h3 className="text-[24px] md:text-display2 font-woodland font-bold text-center text-verde-confianza">
         Nuestra historia
       </h3>

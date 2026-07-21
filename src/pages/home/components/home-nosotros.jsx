@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import WhatsappIcon from "../../../assets/icons/social/whatsapp-icon";
 import LogoMain from "../../../assets/images/icons/main/logo-main";
 
@@ -49,12 +50,16 @@ export default function HomeNosotros() {
       </div>
 
       {/* Button */}
-      <button className="px-[clamp(20px,3.438vw,44px)] py-[clamp(7px,1.172vw,15px)] text-gris-profundo bg-celeste-bienestar">
+      <Link
+        to={"/quienes-somos"}
+        className="relative group text-[14px] md:text-button px-[24px] py-[15px] md:px-[clamp(20px,3.438vw,44px)] md:py-[clamp(7px,1.172vw,15px)] transition-all text-gris-profundo bg-celeste-bienestar hover:bg-transparent hover:font-bold hover:cursor-pointer"
+      >
         Conócenos
-      </button>
+        <div className="absolute bottom-0 left-0 w-full h-[3px] bg-celeste-bienestar opacity-0 group-hover:opacity-100 transition-opacity ease-in" />
+      </Link>
 
       {/* Whatsapp Button */}
-      <button className="hidden md:flex justify-center items-center size-[clamp(26px,4.375vw,56px)] p-[clamp(8px,1vw,14px)] absolute top-20 right-10 bg-celeste-bienestar hover:cursor-pointer">
+      <button className="hidden md:flex justify-center items-center size-[clamp(26px,4.375vw,56px)] p-[clamp(8px,1vw,14px)] absolute top-10 right-10 bg-celeste-bienestar hover:cursor-pointer">
         <WhatsappIcon className="text-verde-confianza" />
       </button>
     </div>

@@ -21,7 +21,7 @@ const NUESTRA_EMPRESA = [
 
 export default function QuienesSomosNosMueve() {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full h-fit lg:h-[880px]">
       {/* Background image */}
       <div className="absolute -z-10 inset-0 w-full h-full overflow-hidden">
         <img
@@ -34,15 +34,15 @@ export default function QuienesSomosNosMueve() {
       {/* Content */}
       <div className="relative flex flex-col lg:flex-row w-full h-full items-center gap-[clamp(8px,2.344vw,30px)]">
         {/* Text  */}
-        <div className="flex w-[66%] max-md:w-full min-w-0 h-full justify-center items-center max-md:px-[40px] max-md:py-[30px] md:pr-2">
-          <div className="flex flex-col w-full max-w-[780px] justify-center items-center gap-[20px] md:gap-[clamp(6px,1.563vw,20px)] text-center">
+        <div className="flex w-[66%] w-full min-w-0 h-full justify-center items-center max-md:px-[40px] max-md:py-[30px] px-[30px] py-5">
+          <div className="flex flex-col w-full lg:max-w-[780px] justify-center items-center gap-[20px] md:gap-[clamp(6px,1.563vw,20px)] text-center">
             <h3 className="text-[20px] md:text-display-min font-woodland text-verde-confianza font-bold">
               Lo que nos mueve
             </h3>
             <p className="text-paragraph1 text-center leading-[110%] lg:leading-none text-gris-profundo max-w-[295px] md:max-w-[500px] lg:max-w-[760px]">
-              El nombre lo dice todo: <br /> Beneva significa buen vivir. Y esa
-              idea es la brújula que guía cada decisión que tomamos desde cómo
-              diseñamos un espacio hasta cómo tratamos a cada cliente.
+              El nombre lo dice todo: Beneva significa buen vivir. Y esa idea es
+              la brújula que guía cada decisión que tomamos desde cómo diseñamos
+              un espacio hasta cómo tratamos a cada cliente.
             </p>
 
             {NUESTRA_EMPRESA.map((item) => {
@@ -61,7 +61,7 @@ export default function QuienesSomosNosMueve() {
         </div>
 
         {/* Image */}
-        <div className="w-full lg:w-[34%] h-[545px] md:h-[100vh] relative rounded-tl-[100px] md:rounded-tl-[40px] sm:rounded-tl-[60px] lg:rounded-tl-[100px] overflow-hidden shrink-0">
+        <div className="w-full lg:w-[34%] h-[545px] lg:h-full relative rounded-tl-[100px] md:rounded-tl-[40px] sm:rounded-tl-[60px] lg:rounded-tl-[100px] overflow-hidden shrink-0">
           <img
             src={mainImage}
             alt="Imagen principal"

@@ -20,7 +20,7 @@ export default function HomeCta() {
           <img
             src={centerDecoration}
             alt="Ícono izquierdo"
-            className="absolute left-1/2 -translate-x-1/2 bottom-0 -top-5 h-[270px] max-[1100px]:hidden"
+            className="absolute left-1/2 -translate-x-1/2 bottom-0 -top-5 h-[245px] max-[1100px]:hidden"
           />
           {/* right side */}
           <img

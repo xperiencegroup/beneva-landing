@@ -27,9 +27,9 @@ export default function HomeCompromiso() {
       </div>
 
       {/* Content */}
-      <div className="relative flex flex-col lg:flex-row w-full h-full items-center gap-[clamp(8px,2.344vw,30px)]">
+      <div className="relative flex flex-col md:flex-row w-full h-full items-center gap-[clamp(8px,2.344vw,30px)]">
         {/* Image */}
-        <div className="w-full lg:w-[34%] h-[92vh] relative rounded-tr-[100px] overflow-hidden shrink-0">
+        <div className="w-full md:w-[34%] h-[92vh] relative rounded-tr-[100px] overflow-hidden shrink-0">
           <img
             src={mainImage}
             alt="Imagen principal"

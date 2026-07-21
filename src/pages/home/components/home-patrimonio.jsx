@@ -1,6 +1,7 @@
 import bgImage from "../../../assets/images/backgrounds/compromiso-bg.jpg";
 import patrimonioImage from "../../../assets/images/sections/home/patrimonio.png";
 import logoMision from "../../../assets/images/icons/main/logo-mision-angeles.svg";
+import { Link } from "react-router";
 
 export default function HomePatrimonio() {
   return (
@@ -51,10 +52,13 @@ export default function HomePatrimonio() {
                 <h3 className="text-[24px] text-center md:text-display2 font-woodland leading-none text-verde-dinamico">
                   Misión de los <br /> Ángeles
                 </h3>
-                <button className="relative group text-[14px] md:text-button px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] bg-celeste-bienestar hover:bg-transparent text-verde-confianza hover:text-celeste-bienestar hover:cursor-pointer">
+                <Link
+                  to={"/proyectos"}
+                  className="relative group text-[14px] md:text-button px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] bg-celeste-bienestar hover:bg-transparent text-verde-confianza hover:text-celeste-bienestar hover:cursor-pointer"
+                >
                   Ver proyecto
                   <div className="absolute bottom-0 left-0 w-full h-0.5 bg-celeste-bienestar opacity-0 group-hover:opacity-100 transition-opacity ease-in" />
-                </button>
+                </Link>
               </div>
             </div>
           </div>

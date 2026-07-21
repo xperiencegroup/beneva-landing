@@ -62,7 +62,7 @@ export default function QuienesSomosProfesionales() {
           return (
             <div
               key={index}
-              className="flex flex-col w-[48%] md:w-full md:max-w-[40%] lg:w-[23%] h-[192px] md:h-[279px] lg:h-[279px] justify-center items-center gap-[15px] md:gap-[clamp(7px,1.172vw,15px)] p-[20px] md:p-[clamp(9px,1.563vw,20px)] rounded-t-[130px] bg-azul-integro"
+              className="flex flex-col w-[180px] md:w-full md:max-w-[310px] lg:w-[23%] h-[192px] md:h-[279px] lg:h-[279px] justify-center items-center gap-[15px] md:gap-[clamp(7px,1.172vw,15px)] p-[20px] md:p-[clamp(9px,1.563vw,20px)] rounded-t-[130px] bg-azul-integro"
             >
               <div className="relative size-[45px]">
                 <img

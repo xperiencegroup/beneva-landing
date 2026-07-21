@@ -39,34 +39,35 @@ export default function QuienesSomosValores() {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-between w-full max-w-[1178px] mx-auto gap-y-[20px] md:gap-y-[clamp(9px,1.563vw,20px)]">
+      <div className="flex flex-wrap justify-center lg:justify-between w-full max-w-[1178px] mx-auto gap-[20px] md:gap-y-[clamp(9px,1.563vw,20px)]">
         {VALORES.map((valor, index) => {
           let widthClasses;
 
           if (index < 3) {
             // primeros 3: 1 col mobile, pares en tablet, tríada en desktop
-            widthClasses = "w-full md:w-[47%] lg:w-[31%]";
+            widthClasses = "w-full max-w-[340px] md:w-[47%] lg:w-[31%]";
           } else if (index === 3) {
             // 4to: 1 col mobile, pareja en tablet, pareja en desktop
-            widthClasses = "w-full md:w-[47%] lg:w-[47%]";
+            widthClasses = "w-full max-w-[340px] md:w-[47%] lg:w-[47%]";
           } else {
             // último: 1 col mobile, ancho completo en tablet, pareja en desktop
-            widthClasses = "w-full md:w-full lg:w-[47%]";
+            widthClasses =
+              "w-full max-w-[340px] md:max-w-[680px] md:w-full lg:w-[47%]";
           }
 
           return (
             <div
               key={index}
-              className={`flex flex-col h-[200px] md:h-[clamp(131px,22.266vw,285px)] justify-center md:justify-start p-[15px] md:px-[clamp(18px,3.125vw,40px)] rounded-t-[100px] lg:rounded-t-[150px] gap-[15px] md:gap-[clamp(9px,1.563vw,14px)] text-center bg-rosa-bienestar ${widthClasses} ${
+              className={`flex flex-col lg:max-w-none lg:h-[300px] lg:h-[clamp(131px,22.266vw,285px)] justify-center md:justify-start p-[40px] lg:px-[clamp(18px,3.125vw,40px)] rounded-t-[100px] md:rounded-t-[150px] gap-[15px] md:gap-[clamp(9px,1.563vw,14px)] text-center bg-rosa-bienestar ${widthClasses} ${
                 index < 3
-                  ? "py-[clamp(18px,3.125vw,34px)]"
-                  : "py-[clamp(18px,3.125vw,40px)]"
+                  ? "lg:py-[clamp(18px,3.125vw,34px)]"
+                  : "lg:py-[clamp(18px,3.125vw,40px)]"
               }`}
             >
-              <h4 className="self-center max-w-[200px] text-[20px] md:text-display-min font-woodland leading-[110%] font-bold tracking-wide text-verde-confianza">
+              <h4 className="self-center max-w-[250px] lg:max-w-[300px] text-[20px] md:text-[24px] lg:text-[26px] xl:text-[28px] font-woodland leading-[110%] font-bold tracking-wide text-verde-confianza">
                 {valor.title}
               </h4>
-              <p className="text-[16px] md:text-paragraph4 leading-[135%] md:leading-[110%] text-gris-profundo">
+              <p className="text-[16px] md:text-[19px] lg:text-[19px] xl:text-[24px] leading-[135%] lg:leading-[110%] text-gris-profundo">
                 {valor.description}
               </p>
             </div>

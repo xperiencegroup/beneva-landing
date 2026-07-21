@@ -1,17 +1,30 @@
 import { useForm } from "react-hook-form";
 import SendIcon from "../../../assets/icons/commons/sendIcon";
+import rightDecoration from "../../../assets/images/icons/decorations/icono-quienes-somos.png";
 
 export default function HomeEnterarme() {
   const { handleSubmit, register } = useForm();
   const onSubmit = (values) => console.log(values);
 
   return (
-    <div className="flex flex-col px-[40px] py-[30px] md:px-[clamp(28px,4.688vw,60px)] md:py-[clamp(16px,2.656vw,34px)] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)] bg-verde-confianza">
-      <div className="flex flex-col gap-[clamp(9px,1.563vw,20px)]">
+    <div className="relative flex flex-col px-[40px] py-[30px] md:px-[60px] md:py-[70px] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)] bg-verde-confianza">
+      {/* Decoration */}
+      <div className="absolute z-0 w-[clamp(184px,31.25vw,400px)] h-[clamp(115px,19.531vw,250px)] top-0 right-0">
+        <div className="relative w-full h-full">
+          <img
+            src={rightDecoration}
+            alt="Imagen decorativa"
+            className="absolute inset-0 w-full h-full object-fill"
+          />
+        </div>
+      </div>
+
+      {/* Texts */}
+      <div className="relative z-10 flex flex-col gap-[clamp(9px,1.563vw,20px)]">
         <h3 className="text-[24px] md:text-display2 font-woodland text-verde-dinamico text-center">
           Más proyectos en camino
         </h3>
-        <p className="text-[18px] md:text-paragraph2 text-center leading-tight">
+        <p className="text-[18px] md:text-paragraph1 text-center leading-tight">
           Estamos trabajando en nuevos desarrollos para distintas zonas de la
           zona metropolitana. <br /> Si quieres ser de los primeros en
           enterarte, déjanos tus datos.
@@ -21,7 +34,7 @@ export default function HomeEnterarme() {
       {/* Form */}
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]"
+        className="relative z-10 flex flex-col self-center w-full max-w-[1280px] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]"
       >
         {/* Nombre completo */}
         <div className="flex flex-col gap-[clamp(4px,0.781vw,10px)]">
