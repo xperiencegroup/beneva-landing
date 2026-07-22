@@ -23,7 +23,7 @@ export default function DesarrollemosCta() {
         <h3 className="text-display4 text-center font-woodland font-bold leading-[110%] text-beige-hogar">
           ¿Listo para encontrar tu hogar ideal?
         </h3>
-        <p className="max-md:max-w-[260px] text-[24px] md:text-display2 leading-[110%] text-center font-woodland font-bold text-beige-hogar">
+        <p className="max-md:max-w-[260px] text-[24px] md:text-display1 leading-[110%] text-center font-woodland font-bold text-beige-hogar">
           Platica con nosotros cuéntanos qué estás buscando y con gusto te
           acompañamos en cada paso del camino.
         </p>

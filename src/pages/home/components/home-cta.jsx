@@ -46,11 +46,11 @@ export default function HomeCta() {
         </div>
       </div>
 
-      <div className="relative flex flex-col max-w-[287px] md:max-w-[840px] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]">
+      <div className="relative flex flex-col max-w-[260px] md:max-w-[840px] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]">
         <h3 className="text-[30px] md:text-display3 text-center font-woodland font-semibold leading-[110%] text-beige-hogar">
           ¿Listo para encontrar <br className="md:hidden" /> tu hogar ideal?
         </h3>
-        <p className="text-[24px] md:text-display2 font-woodland font-semibold leading-none text-center text-beige-hogar">
+        <p className="text-[24px] md:text-display1 font-woodland font-semibold leading-none text-center text-beige-hogar">
           Platica con nosotros cuéntanos qué estás buscando y con gusto te
           acompañamos en cada paso del camino.
         </p>

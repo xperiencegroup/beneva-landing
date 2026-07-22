@@ -36,8 +36,9 @@ export default function QuienesSomosCta() {
         <h3 className="text-[24px] md:text-display2 text-center font-woodland font-semibold leading-[110%] text-beige-hogar">
           Ya sabes quiénes somos. <br /> ¿Empezamos?
         </h3>
-        <p className="text-paragraph1 leading-none text-center text-beige-hogar">
-          Estamos listos para acompañarte en el camino hacia tu hogar ideal.
+        <p className="text-paragraph1 leading-tight text-center text-beige-hogar">
+          Estamos listos para acompañarte <br /> en el camino hacia tu hogar
+          ideal.
         </p>
       </div>
 
