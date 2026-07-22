@@ -6,7 +6,7 @@ export default function QuienesSomosHero() {
       {/* Overlay gradiente */}
       <div className="absolute z-0 inset-0 w-full h-full bg-linear-to-b from-gris-gradiente/0 from-21% md:via-gris-gradiente/70 via-gris-gradiente/90 via-80% to-gris-gradiente" />
 
-      {/* Image */}
+      {/* Video */}
       <div className="absolute -z-10 inset-0 w-full h-full">
         <div className="relative w-full h-full">
           <img
