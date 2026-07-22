@@ -1,4 +1,4 @@
-import background from "../../../assets/images/sections/contacto/hero-bg.jpg";
+import video from "/videos/hero/contacto/banner.mov";
 
 export default function ContactoHero() {
   return (
@@ -6,12 +6,15 @@ export default function ContactoHero() {
       {/* Overlay gradiente */}
       <div className="absolute z-5 inset-0 w-full h-full bg-linear-to-b from-beige-hogar/0 from-21% md:via-beige-hogar/70 via-beige-hogar/90 via-80% to-beige-hogar" />
 
-      {/* Image */}
+      {/* Video */}
       <div className="absolute -z-0 inset-0 w-full h-full">
         <div className="relative w-full h-full">
-          <img
-            src={background}
-            alt="Imagen de fondo"
+          <video
+            src={video}
+            autoPlay
+            loop
+            muted
+            alt="Video de fondo"
             className="absolute inset-0 w-full h-full object-cover object-top"
           />
         </div>

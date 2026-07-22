@@ -1,4 +1,4 @@
-import background from "../../../assets/images/sections/proyectos/hero-bg.jpg";
+import video from "/videos/hero/proyectos/banner.mov";
 
 export default function ProyectosHero() {
   return (
@@ -9,9 +9,12 @@ export default function ProyectosHero() {
       {/* Image */}
       <div className="absolute -z-10 inset-0 w-full h-full">
         <div className="relative w-full h-full">
-          <img
-            src={background}
-            alt="Imagen de fondo"
+          <video
+            src={video}
+            autoPlay
+            loop
+            muted
+            alt="Video de fondo"
             className="absolute inset-0 w-full h-full object-cover"
           />
         </div>
