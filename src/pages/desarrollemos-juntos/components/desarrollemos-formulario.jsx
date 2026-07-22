@@ -9,13 +9,13 @@ export default function DesarrollemosFormulario() {
     },
   });
   const [tae, setTae] = useState(14);
-  const [monto, setMonto] = useState(2000000);
+  const [amount, setAmount] = useState(2000000);
   const handleReset = () => {
     return reset();
   };
 
   const onSubmit = (data) => {
-    console.log(data);
+    console.log({ ...data, tae, amount });
   };
 
   return (
@@ -105,8 +105,8 @@ export default function DesarrollemosFormulario() {
             min={0}
             max={10000000}
             step={50000}
-            value={monto}
-            onChange={(e) => setMonto(Number(e.target.value))}
+            value={amount}
+            onChange={(e) => setAmount(Number(e.target.value))}
             className="w-full h-2 rounded cursor-pointer bg-verde-confianza accent-verde-confianza"
           />
           <div className="flex flex-col md:flex-row justify-between w-full max-md:gap-[24px]">
@@ -114,7 +114,7 @@ export default function DesarrollemosFormulario() {
               Monto en pesos mexicanos (MXN)
             </p>
             <p className="text-[16px] md:text-paragraph4 text-gris-profundo">
-              ${monto.toLocaleString("es-MX")}
+              ${amount.toLocaleString("es-MX")}
             </p>
           </div>
         </div>
@@ -139,7 +139,7 @@ export default function DesarrollemosFormulario() {
             Tipo de desarrollo de interés
           </label>
           <input
-            {...register("time")}
+            {...register("interest")}
             type="text"
             className="w-full h-[60px] px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza"
           />
