@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import SendIcon from "../../../assets/icons/commons/sendIcon";
+import { useState } from "react";
 
 export default function DesarrollemosFormulario() {
   const { handleSubmit, register, reset } = useForm({
@@ -7,6 +8,8 @@ export default function DesarrollemosFormulario() {
       riskProfile: "conservador",
     },
   });
+  const [tae, setTae] = useState(14);
+  const [monto, setMonto] = useState(2000000);
   const handleReset = () => {
     return reset();
   };
@@ -97,13 +100,21 @@ export default function DesarrollemosFormulario() {
           <p className="text-[14px] md:text-button font-at-surt font-bold text-gris-profundo">
             Capital disponible para invertir
           </p>
-          <div className="w-full h-2 bg-verde-confianza rounded" />
+          <input
+            type="range"
+            min={0}
+            max={10000000}
+            step={50000}
+            value={monto}
+            onChange={(e) => setMonto(Number(e.target.value))}
+            className="w-full h-2 rounded cursor-pointer bg-verde-confianza accent-verde-confianza"
+          />
           <div className="flex flex-col md:flex-row justify-between w-full max-md:gap-[24px]">
             <p className="text-[16px] md:text-paragraph4 text-gris-profundo">
               Monto en pesos mexicanos (MXN)
             </p>
             <p className="text-[16px] md:text-paragraph4 text-gris-profundo">
-              $2,000,000
+              ${monto.toLocaleString("es-MX")}
             </p>
           </div>
         </div>
@@ -183,9 +194,17 @@ export default function DesarrollemosFormulario() {
           <p className="text-[14px] md:text-button font-at-surt font-bold text-gris-profundo">
             Rendimiento anual esperado (TAE)
           </p>
-          <div className="w-full h-2 bg-verde-confianza rounded" />
+          <input
+            type="range"
+            min={0}
+            max={30}
+            step={1}
+            value={tae}
+            onChange={(e) => setTae(Number(e.target.value))}
+            className="w-full h-2 rounded cursor-pointer bg-verde-confianza accent-verde-confianza"
+          />
           <p className="text-[14px] md:text-button font-at-surt font-bold text-center text-gris-profundo">
-            14%
+            {tae}%
           </p>
         </div>
 
