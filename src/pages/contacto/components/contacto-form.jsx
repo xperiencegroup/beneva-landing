@@ -1,8 +1,9 @@
 import { useForm } from "react-hook-form";
 import SendIcon from "../../../assets/icons/commons/sendIcon";
+import { useState } from "react";
 
 export default function ContactoForm() {
-  const { handleSubmit, register } = useForm({
+  const { handleSubmit, register, reset } = useForm({
     defaultValues: {
       name: "",
       email: "",
@@ -11,9 +12,38 @@ export default function ContactoForm() {
       message: "",
     },
   });
+  const [isLoading, setIsLoading] = useState(false);
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    setIsLoading(true);
+    try {
+      const response = await fetch(
+        "https://beneva-backend.vercel.app/api/form",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            source: "Beneva Landing",
+            page: "Contacto",
+            data: {
+              ...data,
+            },
+          }),
+        },
+      );
+
+      if (!response.ok) {
+        throw new Error("Error en la respuesta del servidor");
+      }
+
+      reset();
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -118,9 +148,10 @@ export default function ContactoForm() {
         {/* Botón enviar */}
         <button
           type="submit"
-          className="w-full h-[48px] flex items-center justify-center gap-[19px] md:gap-[clamp(7px,1.172vw,15px)] text-[14px] md:text-button bg-celeste-bienestar text-verde-confianza font-at-surt hover:cursor-pointer"
+          disabled={isLoading}
+          className="w-full h-[48px] flex items-center justify-center gap-[19px] md:gap-[clamp(7px,1.172vw,15px)] text-[14px] md:text-button bg-celeste-bienestar text-verde-confianza font-at-surt hover:cursor-pointer disabled:opacity-80 disabled:cursor-not-allowed"
         >
-          Enviar mensaje
+          {isLoading ? "Enviando" : "Enviar mensaje"}
           <SendIcon className="w-[23px] text-verde-confianza" />
         </button>
       </form>

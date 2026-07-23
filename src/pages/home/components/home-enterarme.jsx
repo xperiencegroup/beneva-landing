@@ -1,10 +1,44 @@
 import { useForm } from "react-hook-form";
+import { useState } from "react";
 import SendIcon from "../../../assets/icons/commons/sendIcon";
 import rightDecoration from "../../../assets/images/icons/decorations/icono-quienes-somos.png";
 
 export default function HomeEnterarme() {
-  const { handleSubmit, register } = useForm();
-  const onSubmit = (values) => console.log(values);
+  const { handleSubmit, register, reset } = useForm();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const onSubmit = async (values) => {
+    setIsLoading(true);
+    try {
+      const response = await fetch(
+        "https://beneva-backend.vercel.app/api/form",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            source: "Beneva Landing",
+            page: "Inicio",
+            data: {
+              ...values,
+            },
+          }),
+        },
+      );
+
+      if (!response.ok) {
+        throw new Error("Error en la respuesta del servidor");
+      }
+
+      setIsLoading(false);
+      reset();
+    } catch (error) {
+      console.log("Error: ", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div className="relative flex flex-col px-[40px] py-[30px] md:px-[60px] md:py-[70px] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)] bg-verde-confianza">
@@ -111,9 +145,10 @@ export default function HomeEnterarme() {
         {/* Submit */}
         <button
           type="submit"
-          className="w-full flex items-center justify-center gap-[15px] md:gap-[clamp(6px,0.938vw,12px)] bg-[#B7D9E8] text-verde-confianza font-semibold px-[clamp(14px,2.344vw,30px)] py-[clamp(10px,1.406vw,16px)] text-[14px] md:text-button transition-opacity hover:opacity-90"
+          disabled={isLoading}
+          className="w-full flex items-center justify-center gap-[15px] md:gap-[clamp(6px,0.938vw,12px)] bg-[#B7D9E8] text-verde-confianza font-semibold px-[clamp(14px,2.344vw,30px)] py-[clamp(10px,1.406vw,16px)] text-[14px] md:text-button transition-opacity hover:opacity-90 hover:cursor-pointer disabled:opacity-80 disabled:cursor-not-allowed"
         >
-          Quiero enterarme primero
+          {isLoading ? "Enviando..." : "Quiero enterarme primero"}
           <SendIcon className="w-[20px] md:w-[clamp(11px,1.797vw,23px)] text-verde-confianza" />
         </button>
       </form>

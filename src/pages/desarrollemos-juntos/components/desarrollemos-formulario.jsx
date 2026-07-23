@@ -2,20 +2,56 @@ import { useForm } from "react-hook-form";
 import SendIcon from "../../../assets/icons/commons/sendIcon";
 import { useState } from "react";
 
+const DEFAULT_TAE = 14;
+const DEFAULT_AMOUNT = 2000000;
+
 export default function DesarrollemosFormulario() {
   const { handleSubmit, register, reset } = useForm({
     defaultValues: {
-      riskProfile: "conservador",
+      riskProfile: "Conservador",
     },
   });
-  const [tae, setTae] = useState(14);
-  const [amount, setAmount] = useState(2000000);
+  const [tae, setTae] = useState(DEFAULT_TAE);
+  const [amount, setAmount] = useState(DEFAULT_AMOUNT);
+  const [isLoading, setIsLoading] = useState(false);
   const handleReset = () => {
-    return reset();
+    reset();
+    setTae(DEFAULT_TAE);
+    setAmount(DEFAULT_AMOUNT);
   };
 
-  const onSubmit = (data) => {
-    console.log({ ...data, tae, amount });
+  const onSubmit = async (data) => {
+    setIsLoading(true);
+    try {
+      const response = await fetch(
+        "https://beneva-backend.vercel.app/api/form",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            source: "Beneva Landing",
+            page: "Desarrollemos Juntos",
+            data: {
+              ...data,
+              tae,
+              amount,
+            },
+          }),
+        },
+      );
+
+      if (!response.ok) {
+        throw new Error("Error en la respuesta del servidor");
+      }
+
+      reset();
+      setTae(DEFAULT_TAE);
+      setAmount(DEFAULT_AMOUNT);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -153,12 +189,12 @@ export default function DesarrollemosFormulario() {
 
           {[
             {
-              value: "conservador",
+              value: "Conservador",
               title: "Conservador",
               desc: "Prefiero retornos estables con bajo riesgo, aunque sean menores.",
             },
             {
-              value: "moderado",
+              value: "Moderado",
               title: "Moderado",
               desc: "Acepto algo de volatilidad a cambio de mejores rendimientos.",
             },
@@ -251,9 +287,10 @@ export default function DesarrollemosFormulario() {
           {/* Input */}
           <button
             type="submit"
-            className="md:flex-1 flex justify-center items-center h-[48px] gap-[clamp(7px,1.172vw,15px)] font-at-surt bg-verde-dinamico text-verde-confianza hover:cursor-pointer"
+            disabled={isLoading}
+            className="md:flex-1 flex justify-center items-center h-[48px] gap-[clamp(7px,1.172vw,15px)] font-at-surt bg-verde-dinamico text-verde-confianza hover:cursor-pointer disabled:opacity-80 disabled:cursor-not-allowed"
           >
-            Enviar Solicitud
+            {isLoading ? "Enviando " : "Enviar Solicitud"}
             <SendIcon className="w-[clamp(11px,1.797vw,23px)] text-verde-confianza" />
           </button>
         </div>
