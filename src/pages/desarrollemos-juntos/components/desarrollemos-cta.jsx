@@ -3,12 +3,12 @@ import { Link } from "react-router";
 
 export default function DesarrollemosCta() {
   return (
-    <div className="relative flex flex-col h-[755px] items-center justify-center px-[44px] py-[34px] md:px-[clamp(28px,4.688vw,60px)] md:py-[clamp(16px,2.656vw,34px)] gap-[20px] md:gap-[clamp(14px,2.344vw,30px)] bg-verde-confianza/20">
+    <div className="relative flex flex-col h-[755px] items-center justify-center md:justify-end px-[44px] py-[34px] md:p-[60px] gap-[20px] md:gap-[30px] bg-verde-confianza/20">
       {/* Overlay */}
       <div className="absolute inset-0 w-full h-full bg-linear-to-b from-verde-gradiente/0 from-0% via-verde-gradiente/80 via-36% to-verde-gradiente" />
 
       {/* Image */}
-      <div className="absolute -z-10 w-full h-full overflow-hidden">
+      <div className="absolute -z-10 w-full h-full top-0 overflow-hidden">
         <div className="relative w-full h-full">
           <img
             src={backgroundImage}
@@ -19,17 +19,17 @@ export default function DesarrollemosCta() {
         </div>
       </div>
 
-      <div className="relative flex flex-col items-center max-w-[860px] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]">
-        <h3 className="text-display4 text-center font-woodland font-bold leading-[110%] text-beige-hogar">
+      <div className="relative flex flex-col items-center max-w-[860px] gap-[20px]">
+        <h3 className="max-md:max-w-[260px] text-[24px] md:text-display2  text-center font-woodland font-bold leading-[110%] text-beige-hogar">
           ¿Listo para encontrar tu hogar ideal?
         </h3>
-        <p className="max-md:max-w-[260px] text-[24px] md:text-display1 leading-[110%] text-center font-woodland font-bold text-beige-hogar">
+        <p className="max-md:max-w-[260px] text-paragraph1 leading-[110%] text-center font-woodland font-bold text-beige-hogar">
           Platica con nosotros cuéntanos qué estás buscando y con gusto te
           acompañamos en cada paso del camino.
         </p>
       </div>
 
-      <div className="relative flex flex-col md:flex-row gap-[40px] md:gap-[clamp(26px,4.375vw,56px)]">
+      <div className="relative flex flex-col md:flex-row gap-[40px] md:gap-[56px]">
         <Link
           to={"/contactanos"}
           className="relative group text-[18px] md:text-button px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] bg-beige-hogar text-center text-verde-confianza hover:text-beige-hogar hover:bg-transparent hover:cursor-pointer active:text-verde-confianza active:font-bold active:bg-celeste-bienestar transition-all"

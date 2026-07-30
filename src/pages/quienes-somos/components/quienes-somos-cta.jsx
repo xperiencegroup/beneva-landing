@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 export default function QuienesSomosCta() {
   return (
-    <div className="relative flex flex-col h-[442px] md:h-[588px] items-center justify-center px-[44px] py-[34px] md:px-[clamp(28px,4.688vw,60px)] md:py-[clamp(16px,2.656vw,34px)] gap-[30px] md:gap-[clamp(14px,2.344vw,30px)] bg-verde-confianza/20">
+    <div className="relative flex flex-col h-[442px] md:h-[588px] items-center justify-center md:justify-end px-[44px] py-[34px] md:p-[60px] gap-[30px] md:gap-[30px] bg-verde-confianza/20">
       {/* Decoración */}
       <div className="absolute z-10 top-1 right-0 w-full h-[380px] overflow-hidden pointer-events-none">
         <div className="relative w-full h-full">
@@ -21,7 +21,7 @@ export default function QuienesSomosCta() {
       <div className="absolute inset-0 w-full h-full bg-linear-to-b from-verde-gradiente/0 from-0% via-verde-gradiente/80 via-36% to-verde-gradiente" />
 
       {/* Image */}
-      <div className="absolute -z-10 w-full h-full overflow-hidden">
+      <div className="absolute -z-10 w-full h-full top-0 overflow-hidden">
         <div className="relative w-full h-full">
           <img
             src={backgroundImage}
