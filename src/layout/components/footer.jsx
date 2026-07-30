@@ -1,14 +1,14 @@
 import { Link } from "react-router";
-import BenevaSloganCustom from "../../assets/images/icons/main/beneva-slogan-custom";
 import mailIcon from "../../assets/icons/commons/mailIcon.svg";
 import developedByXperience from "../../assets/images/icons/xperience/xperience.png";
+import LogoMain from "../../assets/images/icons/main/logo-main";
 
 export default function Footer() {
   return (
     <div className="flex flex-col w-full md:h-[467px] bg-verde-confianza">
-      <div className="flex flex-col justify-center items-center h-full max-md:px-[30px] py-[30px] gap-[20px] md:gap-[clamp(14px,2.344vw,30px)]">
+      <div className="flex flex-col justify-center items-center h-full max-md:px-[30px] py-[30px] gap-[20px]">
         {/* Logo */}
-        <BenevaSloganCustom className="w-[173px] md:w-[clamp(127px,21.484vw,275px)] text-beige-hogar" />
+        <LogoMain className="w-[56px] text-beige-hogar" />
 
         <div className="flex max-md:flex-col gap-[20px] md:gap-[clamp(9px,1.563vw,20px)] max-md:w-full">
           <Link
