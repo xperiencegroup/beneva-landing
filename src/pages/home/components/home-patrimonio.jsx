@@ -1,5 +1,5 @@
 import bgImage from "../../../assets/images/backgrounds/compromiso-bg.jpg";
-import patrimonioImage from "../../../assets/images/sections/home/patrimonio.png";
+import patrimonioImage from "../../../assets/images/sections/home/patrimonio.jpg";
 import logoMision from "../../../assets/images/icons/main/logo-mision-angeles.svg";
 import { Link } from "react-router";
 
@@ -11,19 +11,17 @@ export default function HomePatrimonio() {
         <img
           src={bgImage}
           alt="Imagen de fondo"
-          className="absolute inset-0 w-full h-full object-cover scale-150"
+          className="absolute inset-0 w-full h-full object-cover scale"
         />
       </div>
 
       {/* Content */}
-      <div className="relative flex w-full h-full justify-center items-center gap-[20px] md:gap-[clamp(8px,2.344vw,30px)]">
-        <div className="flex flex-col min-w-0 h-full justify-center items-center max-md:gap-[20px]">
+      <div className="relative flex w-full h-full justify-center items-center">
+        <div className="flex flex-col min-w-0 h-full justify-center items-center gap-[20px]">
           {/* Text */}
-          <div className="flex flex-col w-full max-w-[1160px] justify-center items-center gap-[20px] md:gap-[clamp(6px,1.563vw,20px)] text-center">
+          <div className="flex flex-col w-full max-w-[1160px] justify-center items-center gap-[20px] text-center">
             <h3 className="text-[24px] md:text-display2 font-woodland text-verde-confianza font-bold leading-none md:leading-tight">
-              Más que propiedades,
-              <br />
-              construimos patrimonio
+              Más que propiedades, construimos patrimonio
             </h3>
             <p className="text-paragraph1 text-center leading-[110%] lg:leading-none text-gris-profundo">
               Cada desarrollo Beneva es una apuesta por la calidad de vida
@@ -38,7 +36,7 @@ export default function HomePatrimonio() {
               <img
                 src={patrimonioImage}
                 alt="Render de viviendas"
-                className="absolute inset-0 w-full h-full max-lg:object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
 

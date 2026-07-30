@@ -25,6 +25,7 @@
   --text-display2: clamp(18px, 3.125vw, 40px);
   --text-display3: clamp(33px, 5.625vw, 72px);
   --text-display4: clamp(30px, 5.078vw, 65px);
+  --text-display5: clamp(20px, 2.344vw, 30px);
   --text-display-min: clamp(13px, 2.188vw, 28px);
   --text-min: clamp(12px, 2.031vw, 26px);
 }

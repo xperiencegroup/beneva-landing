@@ -1,6 +1,4 @@
 import { Link } from "react-router";
-import WhatsappIcon from "../../../assets/icons/social/whatsapp-icon";
-import LogoMain from "../../../assets/images/icons/main/logo-main";
 
 const PARAGRAPHS = [
   {
@@ -22,16 +20,13 @@ const PARAGRAPHS = [
 
 export default function HomeNosotros() {
   return (
-    <div className="relative w-full flex flex-col justify-center items-center py-[30px] px-[40px] gap-[20px] md:gap-y-[clamp(14px,2.344vw,30px)]">
-      {/* Logo */}
-      <LogoMain className="w-[56px] text-verde-confianza" />
-
+    <div className="relative w-full flex flex-col justify-center items-center max-md:py-[30px] p-[40px] md:p-[60px] gap-[20px] md:gap-[30px]">
       {/* Texts */}
-      <p className="text-[32px] md:text-display1 font-woodland font-light text-verde-confianza">
+      <p className="text-[32px] md:text-display1 font-woodland font-bold text-verde-confianza">
         Nosotros
       </p>
 
-      <div className="w-full flex flex-col justify-center items-center gap-[20px] md:gap-y-[clamp(9px,1.563vw,20px)]">
+      <div className="w-full flex flex-col justify-center items-center gap-[30px] md:gap-[30px]">
         {PARAGRAPHS.map((item) => {
           return (
             <div
@@ -57,11 +52,6 @@ export default function HomeNosotros() {
         Conócenos
         <div className="absolute bottom-0 left-0 w-full h-[3px] bg-celeste-bienestar opacity-0 group-hover:opacity-100 transition-opacity ease-in" />
       </Link>
-
-      {/* Whatsapp Button */}
-      <button className="hidden md:flex justify-center items-center size-[clamp(26px,4.375vw,56px)] p-[clamp(8px,1vw,14px)] absolute top-10 right-10 bg-celeste-bienestar hover:cursor-pointer">
-        <WhatsappIcon className="text-verde-confianza" />
-      </button>
     </div>
   );
 }
