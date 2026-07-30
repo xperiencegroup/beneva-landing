@@ -1,5 +1,5 @@
 import logoMision from "../../../assets/images/icons/main/logo-mision-angeles-verde.svg";
-import misionImage from "../../../assets/images/sections/proyectos/mision-main-image.jpg";
+import misionImage from "../../../assets/images/sections/proyectos/mision-main-image.png";
 
 export default function ProyectosMision() {
   return (

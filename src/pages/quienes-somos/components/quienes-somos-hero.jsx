@@ -1,4 +1,4 @@
-import background from "../../../assets/images/sections/quienes-somos/hero-bg.jpg";
+import video from "/videos/hero/quienes-somos/banner.mp4";
 
 export default function QuienesSomosHero() {
   return (
@@ -9,9 +9,12 @@ export default function QuienesSomosHero() {
       {/* Video */}
       <div className="absolute -z-10 inset-0 w-full h-full">
         <div className="relative w-full h-full">
-          <img
-            src={background}
-            alt="Imagen de fondo"
+          <video
+            src={video}
+            autoPlay
+            loop
+            muted
+            alt="Video de fondo"
             className="absolute inset-0 w-full h-full object-cover"
           />
         </div>
@@ -21,7 +24,7 @@ export default function QuienesSomosHero() {
         Construyamos algo grande juntos
       </h2>
 
-      <p className="relative max-w-[1088px] text-[18px] md:text-paragraph4  leading-tight text-center text-beige-hogar">
+      <p className="relative max-w-[1088px] text-[18px] md:text-paragraph4 leading-tight text-center text-beige-hogar">
         Creamos espacios pensados para vivir mejor, con calidad, detalle y una
         visión profundamente humana.
       </p>
