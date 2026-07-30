@@ -2,18 +2,15 @@ import sobrepensarIcon from "../../../assets/icons/values/sobrepensar.png";
 import respetoIcon from "../../../assets/icons/values/respeto.png";
 import colaborarIcon from "../../../assets/icons/values/colaborar.png";
 import entenderIcon from "../../../assets/icons/values/entender.png";
-import proactivosIcon from "../../../assets/icons/values/proactivos.png";
-import aprendizajeIcon from "../../../assets/icons/values/aprendizaje.png";
 import calidadIcon from "../../../assets/icons/values/calidad.png";
-import responsabilidadIcon from "../../../assets/icons/values/responsabilidad.png";
 
 const ITEMS = [
   {
-    description: "Sobrepasar\nexpectativas\nsiempre.",
+    description: "Sobrepasar\nexpectativas.",
     icon: sobrepensarIcon,
   },
   {
-    description: "Actuar siempre con respeto.",
+    description: "Actuar con respeto.",
     icon: respetoIcon,
   },
   {
@@ -25,21 +22,8 @@ const ITEMS = [
     icon: entenderIcon,
   },
   {
-    description: "Ser proactivos ante cada situación.",
-    icon: proactivosIcon,
-  },
-  {
-    description: "Aprender constantemente de lo que hacemos.",
-    icon: aprendizajeIcon,
-  },
-  {
-    description: "Entregar siempre trabajos de calidad.",
+    description: "Entregar trabajos de calidad.",
     icon: calidadIcon,
-  },
-  {
-    description:
-      "Tomar responsabilidad de nuestras acciones y las de nuestro equipo.",
-    icon: responsabilidadIcon,
   },
 ];
 
@@ -57,21 +41,21 @@ export default function QuienesSomosProfesionales() {
       </div>
 
       {/* Items */}
-      <div className="self-center flex flex-wrap w-full max-w-[1280px] justify-center gap-[clamp(9px,1.484vw,19px)]">
+      <div className="self-center flex flex-wrap w-full max-w-[1280px] justify-center gap-[10px]">
         {ITEMS.map((item, index) => {
           return (
             <div
               key={index}
-              className="flex flex-col w-[180px] md:w-full md:max-w-[310px] lg:w-[23%] h-[192px] md:h-[279px] lg:h-[279px] justify-center items-center gap-[15px] md:gap-[clamp(7px,1.172vw,15px)] p-[20px] md:p-[clamp(9px,1.563vw,20px)] rounded-t-[130px] bg-azul-integro"
+              className="flex flex-col w-[180px] md:w-full md:max-w-[230px] h-[192px] md:h-[279px] justify-center items-center gap-[15px] md:gap-[clamp(7px,1.172vw,15px)] p-[20px] md:p-[clamp(9px,1.563vw,20px)] rounded-t-[130px] bg-azul-integro"
             >
-              <div className="relative size-[45px]">
+              <div className="relative lg:flex-5 flex justify-center items-center h-[55px] lg:h-full w-full">
                 <img
                   src={item.icon}
                   alt={item.description}
-                  className="absolute w-full h-full object-contain"
+                  className="absolute w-full object-contain h-[55px]"
                 />
               </div>
-              <p className="max-w-[216px] text-[15px] md:text-[20px] lg:text-[26px] font-woodland font-bold leading-[115%] text-center text-beige-hogar whitespace-break-spaces">
+              <p className="lg:flex-6 max-w-[216px] text-[15px] md:text-[20px] lg:text-[25px] font-basic-sans leading-[115%] text-center text-beige-hogar whitespace-break-spaces">
                 {item.description}
               </p>
             </div>

@@ -1,5 +1,5 @@
 import bgImage from "../../../assets/images/backgrounds/compromiso-bg.jpg";
-import mainImage from "../../../assets/images/sections/quienes-somos/nos-mueve.jpg";
+import mainImage from "../../../assets/images/sections/quienes-somos/nos-mueve.png";
 
 const NUESTRA_EMPRESA = [
   {
@@ -45,9 +45,12 @@ export default function QuienesSomosNosMueve() {
               un espacio hasta cómo tratamos a cada cliente.
             </p>
 
-            {NUESTRA_EMPRESA.map((item) => {
+            {NUESTRA_EMPRESA.map((item, index) => {
               return (
-                <div className="flex flex-col w-full items-center px-[40px] py-[20px] md:px-[clamp(21px,3.594vw,46px)] md:py-[clamp(9px,1.563vw,20px)] rounded-tl-[30px] md:rounded-tl-[20px] sm:rounded-tl-[30px] gap-[15px] md:gap-[clamp(6px,0.938vw,12px)] bg-azul-integro">
+                <div
+                  key={index}
+                  className="flex flex-col w-full items-center px-[40px] py-[20px] md:px-[clamp(21px,3.594vw,46px)] md:py-[clamp(9px,1.563vw,20px)] rounded-tl-[30px] md:rounded-tl-[20px] sm:rounded-tl-[30px] gap-[15px] md:gap-[clamp(6px,0.938vw,12px)] bg-azul-integro"
+                >
                   <h4 className="text-[17px] md:text-min font-woodland font-bold text-rosa-bienestar">
                     {item.titulo}
                   </h4>
