@@ -1,9 +1,5 @@
 import { useForm } from "react-hook-form";
-import SendIcon from "../../../assets/icons/commons/sendIcon";
 import { useState } from "react";
-
-const DEFAULT_TAE = 14;
-const DEFAULT_AMOUNT = 2000000;
 
 export default function DesarrollemosFormulario() {
   const { handleSubmit, register, reset } = useForm({
@@ -11,13 +7,9 @@ export default function DesarrollemosFormulario() {
       riskProfile: "Conservador",
     },
   });
-  const [tae, setTae] = useState(DEFAULT_TAE);
-  const [amount, setAmount] = useState(DEFAULT_AMOUNT);
   const [isLoading, setIsLoading] = useState(false);
   const handleReset = () => {
     reset();
-    setTae(DEFAULT_TAE);
-    setAmount(DEFAULT_AMOUNT);
   };
 
   const onSubmit = async (data) => {
@@ -33,8 +25,6 @@ export default function DesarrollemosFormulario() {
             page: "Desarrollemos Juntos",
             data: {
               ...data,
-              tae,
-              amount,
             },
           }),
         },
@@ -45,8 +35,6 @@ export default function DesarrollemosFormulario() {
       }
 
       reset();
-      setTae(DEFAULT_TAE);
-      setAmount(DEFAULT_AMOUNT);
     } catch (error) {
       console.error(error);
     } finally {
@@ -84,7 +72,7 @@ export default function DesarrollemosFormulario() {
               {...register("name")}
               type="text"
               placeholder="Ej: Juan Pérez"
-              className="w-full h-[60px] md:h-full px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-verde-dinamico"
+              className="w-full h-[60px] md:h-full px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-beige-hogar"
             />
           </div>
 
@@ -97,7 +85,7 @@ export default function DesarrollemosFormulario() {
               {...register("city")}
               type="text"
               placeholder="Puebla"
-              className="w-full h-[60px] md:h-full px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-verde-dinamico"
+              className="w-full h-[60px] md:h-full px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-beige-hogar"
             />
           </div>
         </div>
@@ -113,7 +101,7 @@ export default function DesarrollemosFormulario() {
               {...register("email")}
               type="text"
               placeholder="ejemplo.email@gmail.com"
-              className="w-full h-[60px] md:h-full px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-verde-dinamico"
+              className="w-full h-[60px] md:h-full px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-beige-hogar"
             />
           </div>
 
@@ -126,45 +114,7 @@ export default function DesarrollemosFormulario() {
               {...register("phone")}
               type="text"
               placeholder="(555) 876-0084"
-              className="w-full h-[60px] md:h-full px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-verde-dinamico"
-            />
-          </div>
-        </div>
-
-        {/* Capital disponible para invertir */}
-        <div className="flex flex-col w-full gap-[19px] md:gap-[clamp(9px,1.484vw,19px)]">
-          <p className="text-[14px] md:text-button font-at-surt font-bold text-gris-profundo">
-            Capital disponible para invertir
-          </p>
-          <input
-            type="range"
-            min={0}
-            max={10000000}
-            step={50000}
-            value={amount}
-            onChange={(e) => setAmount(Number(e.target.value))}
-            className="w-full h-2 rounded cursor-pointer bg-verde-confianza accent-verde-confianza"
-          />
-          <div className="flex flex-col md:flex-row justify-between w-full max-md:gap-[24px]">
-            <p className="text-[16px] md:text-paragraph4 text-gris-profundo">
-              Monto en pesos mexicanos (MXN)
-            </p>
-            <p className="text-[16px] md:text-paragraph4 text-gris-profundo">
-              ${amount.toLocaleString("es-MX")}
-            </p>
-          </div>
-        </div>
-
-        {/* Horizonte de tiempo */}
-        <div className="flex flex-col w-full">
-          <div className="flex-1 flex flex-col h-[84px] gap-[clamp(4px,0.625vw,8px)]">
-            <label className="text-[14px] md:text-button font-at-surt font-bold text-gris-profundo">
-              Horizonte de tiempo
-            </label>
-            <input
-              {...register("time")}
-              type="text"
-              className="w-full h-[60px] px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza"
+              className="w-full h-[60px] md:h-full px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-beige-hogar"
             />
           </div>
         </div>
@@ -177,71 +127,9 @@ export default function DesarrollemosFormulario() {
           <input
             {...register("interest")}
             type="text"
-            className="w-full h-[60px] px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza"
+            placeholder="Horizontal o Vertical"
+            className="w-full h-[60px] px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-beige-hogar"
           />
-        </div>
-
-        {/* Perfil de riesgo */}
-        <div className="flex-1 flex flex-col gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]">
-          <label className="text-[14px] md:text-button font-at-surt font-bold text-gris-profundo">
-            Perfil de riesgo
-          </label>
-
-          {[
-            {
-              value: "Conservador",
-              title: "Conservador",
-              desc: "Prefiero retornos estables con bajo riesgo, aunque sean menores.",
-            },
-            {
-              value: "Moderado",
-              title: "Moderado",
-              desc: "Acepto algo de volatilidad a cambio de mejores rendimientos.",
-            },
-          ].map((option) => (
-            <label
-              key={option.value}
-              className="flex items-center justify-start gap-3 cursor-pointer group"
-            >
-              <input
-                type="radio"
-                value={option.value}
-                {...register("riskProfile")}
-                className="peer sr-only"
-              />
-
-              {/* Círculo custom */}
-              <span className="self-start shrink-0 size-[13px] rounded-full outline-2 outline-verde-confianza outline-offset-0 border-verde-confianza bg-verde-dinamico peer-checked:bg-verde-confianza" />
-
-              <span className="flex flex-col">
-                <span className="text-[14px] md:text-button font-at-surt font-bold leading-none text-gris-profundo">
-                  {option.title}
-                </span>
-                <span className="text-[14px] md:text-paragraph3 text-gris-profundo">
-                  {option.desc}
-                </span>
-              </span>
-            </label>
-          ))}
-        </div>
-
-        {/* Rendimiento anual esperado (TAE) */}
-        <div className="flex flex-col w-full gap-[19px] md:gap-[clamp(9px,1.484vw,19px)]">
-          <p className="text-[14px] md:text-button font-at-surt font-bold text-gris-profundo">
-            Rendimiento anual esperado (TAE)
-          </p>
-          <input
-            type="range"
-            min={0}
-            max={30}
-            step={1}
-            value={tae}
-            onChange={(e) => setTae(Number(e.target.value))}
-            className="w-full h-2 rounded cursor-pointer bg-verde-confianza accent-verde-confianza"
-          />
-          <p className="text-[14px] md:text-button font-at-surt font-bold text-center text-gris-profundo">
-            {tae}%
-          </p>
         </div>
 
         {/* Experiencia previa en inversiones */}
@@ -253,7 +141,8 @@ export default function DesarrollemosFormulario() {
             <input
               {...register("experience")}
               type="text"
-              className="w-full h-[60px] px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza"
+              placeholder="Ya he invertido"
+              className="w-full h-[60px] px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-beige-hogar"
             />
           </div>
         </div>
@@ -268,7 +157,7 @@ export default function DesarrollemosFormulario() {
               {...register("comments")}
               type="text"
               placeholder="Compartános sobre sus objetivos"
-              className="w-full h-[150px] py-[12px] md:py-[clamp(6px,0.938vw,12px)] px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-verde-dinamico"
+              className="w-full h-[150px] py-[12px] md:py-[clamp(6px,0.938vw,12px)] px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-beige-hogar"
             />
           </div>
         </div>
@@ -279,7 +168,7 @@ export default function DesarrollemosFormulario() {
           <button
             type="button"
             onClick={handleReset}
-            className="md:flex-1 h-[48px] font-at-surt bg-rosa-bienestar text-verde-confianza hover:cursor-pointer"
+            className="md:flex-1 h-[48px] font-at-surt bg-celeste-bienestar text-verde-confianza hover:cursor-pointer"
           >
             Limpiar
           </button>
@@ -288,10 +177,9 @@ export default function DesarrollemosFormulario() {
           <button
             type="submit"
             disabled={isLoading}
-            className="md:flex-1 flex justify-center items-center h-[48px] gap-[clamp(7px,1.172vw,15px)] font-at-surt bg-verde-dinamico text-verde-confianza hover:cursor-pointer disabled:opacity-80 disabled:cursor-not-allowed"
+            className="md:flex-1 flex justify-center items-center h-[48px] gap-[clamp(7px,1.172vw,15px)] font-at-surt bg-celeste-bienestar text-verde-confianza hover:cursor-pointer disabled:opacity-80 disabled:cursor-not-allowed"
           >
             {isLoading ? "Enviando " : "Enviar Solicitud"}
-            <SendIcon className="w-[clamp(11px,1.797vw,23px)] text-verde-confianza" />
           </button>
         </div>
       </form>
