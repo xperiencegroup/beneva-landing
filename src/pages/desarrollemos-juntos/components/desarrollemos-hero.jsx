@@ -20,11 +20,11 @@ export default function DesarrollemosHero() {
         </div>
       </div>
 
-      <h2 className="relative max-w-[260px] md:max-w-[1180px] text-display6 font-woodland font-bold text-center leading-[110%] text-beige-hogar">
+      <h2 className="animate-hero-1 relative max-w-[260px] md:max-w-[1180px] text-display6 font-woodland font-bold text-center leading-[110%] text-beige-hogar">
         Invirtamos y desarrollemos juntos
       </h2>
 
-      <p className="relative max-w-[1088px] text-[18px] md:text-paragraph4 leading-tight text-center text-beige-hogar">
+      <p className="animate-hero-2 relative max-w-[1088px] text-[18px] md:text-paragraph4 leading-tight text-center text-beige-hogar">
         En Beneva sumamos experiencia, visión y capacidad de ejecución para
         crear proyectos sólidos, rentables y con valor a largo plazo.
       </p>

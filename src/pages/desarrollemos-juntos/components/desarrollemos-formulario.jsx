@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { useInView } from "../../../hooks/useInView";
 
 export default function DesarrollemosFormulario() {
   const { handleSubmit, register, reset } = useForm({
@@ -8,6 +9,8 @@ export default function DesarrollemosFormulario() {
     },
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [ref, isVisible] = useInView();
+
   const handleReset = () => {
     reset();
   };
@@ -44,13 +47,18 @@ export default function DesarrollemosFormulario() {
 
   return (
     <div className="flex flex-col justify-center items-center px-[40px] py-[60px] md:p-[clamp(28px,4.688vw,60px)] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]">
-      <h3 className="text-[24px] md:text-display2 text-center font-woodland text-verde-confianza font-semibold leading-none">
-        ¿Tienes un proyecto en mente? Platiquemos
-      </h3>
-      <p className="text-paragraph1 leading-tight text-center text-verde-confianza">
-        Cuéntanos en qué estás pensando ya sea un terreno, una idea o una
-        inversión. <br /> Nosotros nos ponemos en contacto contigo.
-      </p>
+      <div
+        ref={ref}
+        className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col items-center gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]`}
+      >
+        <h3 className="text-[24px] md:text-display2 text-center font-woodland text-verde-confianza font-semibold leading-none">
+          ¿Tienes un proyecto en mente? Platiquemos
+        </h3>
+        <p className="text-paragraph1 leading-tight text-center text-verde-confianza">
+          Cuéntanos en qué estás pensando ya sea un terreno, una idea o una
+          inversión. <br /> Nosotros nos ponemos en contacto contigo.
+        </p>
+      </div>
 
       {/* Formulario */}
       <p className="text-paragraph1 font-basic-sans text-gris-profundo">
