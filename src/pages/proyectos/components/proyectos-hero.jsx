@@ -20,11 +20,11 @@ export default function ProyectosHero() {
         </div>
       </div>
 
-      <h2 className="relative max-w-[1180px] text-display6 font-woodland font-bold text-center leading-[110%] text-beige-hogar">
+      <h2 className="animate-hero-1 relative max-w-[1180px] text-display6 font-woodland font-bold text-center leading-[110%] text-beige-hogar">
         Lo que hemos construido habla por nosotros
       </h2>
 
-      <p className="relative max-w-[1160px] text-[18px] md:text-paragraph4 leading-tight text-center text-beige-hogar">
+      <p className="animate-hero-2 relative max-w-[1160px] text-[18px] md:text-paragraph4 leading-tight text-center text-beige-hogar">
         Cada proyecto Beneva lleva consigo años de experiencia, atención al
         detalle y una visión clara: construir espacios donde las familias de
         Nuevo León quieran vivir de verdad.

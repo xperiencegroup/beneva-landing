@@ -1,10 +1,17 @@
 import logoMision from "../../../assets/images/icons/main/logo-mision-angeles-verde.svg";
 import misionImage from "../../../assets/images/sections/proyectos/mision-main-image.png";
+import { useInView } from "../../../hooks/useInView";
 
 export default function ProyectosMision() {
+  const [textRef, textVisible] = useInView({ threshold: 0.25 });
+  const [imageRef, imageVisible] = useInView({ threshold: 0.25 });
+
   return (
     <>
-      <div className="flex flex-col h-fit md:h-[373px] justify-center items-center px-[40px] py-[30px] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]">
+      <div
+        ref={textRef}
+        className={`reveal ${textVisible ? "is-visible" : ""} flex flex-col h-fit md:h-[373px] justify-center items-center px-[40px] py-[30px] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]`}
+      >
         <img
           src={logoMision}
           alt="Logo Misión de los Ángeles"
@@ -27,7 +34,10 @@ export default function ProyectosMision() {
         </button>
       </div>
 
-      <div className="relative w-full h-[545px] rounded-tr-[100px] md:rounded-tr-[200px] overflow-hidden">
+      <div
+        ref={imageRef}
+        className={`reveal-fade ${imageVisible ? "is-visible" : ""} relative w-full h-[545px] rounded-tr-[100px] md:rounded-tr-[200px] overflow-hidden`}
+      >
         <img
           src={misionImage}
           alt="Acesso Misión de los Ángeles"
