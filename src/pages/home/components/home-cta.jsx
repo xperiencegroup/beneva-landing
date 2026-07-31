@@ -1,7 +1,10 @@
 import backgroundImage from "../../../assets/images/sections/home/cta-fondo.jpg";
 import { Link } from "react-router";
+import { useInView } from "../../../hooks/useInView";
 
 export default function HomeCta() {
+  const [ref, isVisible] = useInView();
+
   return (
     <div className="relative flex flex-col h-[755px] items-center justify-center md:justify-end py-[40px] px-[34px] md:p-[60px] gap-[20px] bg-verde-confianza/20">
       {/* Overlay */}
@@ -19,7 +22,10 @@ export default function HomeCta() {
         </div>
       </div>
 
-      <div className="relative flex flex-col max-w-[260px] md:max-w-[840px] gap-[20px]">
+      <div
+        ref={ref}
+        className={`reveal-scale ${isVisible ? "is-visible" : ""} relative flex flex-col max-w-[260px] md:max-w-[840px] gap-[20px]`}
+      >
         <h3 className="text-[26px] lg:text-[42px] text-center font-woodland font-semibold leading-[110%] text-beige-hogar">
           ¿Listo para encontrar <br className="md:hidden" /> tu hogar ideal?
         </h3>
@@ -29,7 +35,10 @@ export default function HomeCta() {
         </p>
       </div>
 
-      <div className="relative flex flex-col md:flex-row max-md:w-full max-md:max-w-[271px] gap-[40px] md:gap-[56px]">
+      <div
+        style={{ transitionDelay: isVisible ? "0.15s" : "0s" }}
+        className={`reveal-scale ${isVisible ? "is-visible" : ""} relative flex flex-col md:flex-row max-md:w-full max-md:max-w-[271px] gap-[40px] md:gap-[56px]`}
+      >
         <Link
           to={"/contactanos"}
           className="relative group text-[18px] md:text-button px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] bg-beige-hogar text-center text-verde-confianza hover:text-beige-hogar hover:bg-transparent hover:cursor-pointer active:text-verde-confianza active:font-bold active:bg-celeste-bienestar transition-all"

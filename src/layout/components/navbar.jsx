@@ -15,7 +15,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="fixed z-50 flex h-fit w-full bg-verde-confianza p-[20px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)]">
+    <div className="navbar-enter fixed z-50 flex h-fit w-full bg-verde-confianza p-[20px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)]">
       {/* Logo Beneva*/}
       <div className="flex-1 flex justify-start items-center">
         <Link to={"/"}>

@@ -2,10 +2,12 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import SendIcon from "../../../assets/icons/commons/sendIcon";
 import rightDecoration from "../../../assets/images/icons/decorations/icono-quienes-somos.png";
+import { useInView } from "../../../hooks/useInView";
 
 export default function HomeEnterarme() {
   const { handleSubmit, register, reset } = useForm();
   const [isLoading, setIsLoading] = useState(false);
+  const [ref, isVisible] = useInView();
 
   const onSubmit = async (values) => {
     setIsLoading(true);
@@ -54,7 +56,10 @@ export default function HomeEnterarme() {
       </div>
 
       {/* Texts */}
-      <div className="relative z-10 flex flex-col gap-[clamp(9px,1.563vw,20px)]">
+      <div
+        ref={ref}
+        className={`reveal ${isVisible ? "is-visible" : ""} relative z-10 flex flex-col gap-[clamp(9px,1.563vw,20px)]`}
+      >
         <h3 className="text-[24px] md:text-display2 font-woodland text-verde-dinamico text-center">
           Más proyectos en camino
         </h3>

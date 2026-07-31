@@ -2,8 +2,11 @@ import bgImage from "../../../assets/images/backgrounds/compromiso-bg.jpg";
 import patrimonioImage from "../../../assets/images/sections/home/patrimonio.jpg";
 import logoMision from "../../../assets/images/icons/main/logo-mision-angeles.svg";
 import { Link } from "react-router";
+import { useInView } from "../../../hooks/useInView";
 
 export default function HomePatrimonio() {
+  const [ref, isVisible] = useInView({ threshold: 0.3 });
+
   return (
     <div className="relative w-full px-[40px] py-[30px] gap-[20px] md:p-[clamp(28px,4.688vw,60px)]">
       {/* Background image */}
@@ -16,7 +19,10 @@ export default function HomePatrimonio() {
       </div>
 
       {/* Content */}
-      <div className="relative flex w-full h-full justify-center items-center">
+      <div
+        ref={ref}
+        className={`reveal ${isVisible ? "is-visible" : ""} relative flex w-full h-full justify-center items-center`}
+      >
         <div className="flex flex-col min-w-0 h-full justify-center items-center gap-[20px]">
           {/* Text */}
           <div className="flex flex-col w-full max-w-[1160px] justify-center items-center gap-[20px] text-center">
