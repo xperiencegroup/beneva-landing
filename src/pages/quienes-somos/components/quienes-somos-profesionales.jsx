@@ -3,6 +3,7 @@ import respetoIcon from "../../../assets/icons/values/respeto.png";
 import colaborarIcon from "../../../assets/icons/values/colaborar.png";
 import entenderIcon from "../../../assets/icons/values/entender.png";
 import calidadIcon from "../../../assets/icons/values/calidad.png";
+import { useInView } from "../../../hooks/useInView";
 
 const ITEMS = [
   {
@@ -28,9 +29,16 @@ const ITEMS = [
 ];
 
 export default function QuienesSomosProfesionales() {
+  const [ref, isVisible] = useInView();
+
   return (
-    <div className="flex flex-col justify-center items-center px-[24px] py-[30px] md:py-[clamp(28px,4.688vw,60px)] md:px-[clamp(18px,3.125vw,40px)] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]">
-      <div className="flex flex-col justify-center items-center gap-[20px] max-md:max-w-[295px] md:gap-[clamp(9px,1.563vw,20px)] ">
+    <div
+      ref={ref}
+      className="flex flex-col justify-center items-center px-[24px] py-[30px] md:py-[clamp(28px,4.688vw,60px)] md:px-[clamp(18px,3.125vw,40px)] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]"
+    >
+      <div
+        className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col justify-center items-center gap-[20px] max-md:max-w-[295px] md:gap-[clamp(9px,1.563vw,20px)]`}
+      >
         <h3 className="text-[24px] md:text-display2 text-center font-woodland leading-none font-bold text-verde-confianza">
           En una sola palabra somos: Profesionales
         </h3>
@@ -41,12 +49,15 @@ export default function QuienesSomosProfesionales() {
       </div>
 
       {/* Items */}
-      <div className="self-center flex flex-wrap w-full max-w-[1280px] justify-center gap-[10px]">
+      <div className="self-center flex flex-wrap w-full max-w-[1280px] justify-center gap-[8px]">
         {ITEMS.map((item, index) => {
           return (
             <div
               key={index}
-              className="flex flex-col w-[180px] md:w-full md:max-w-[230px] h-[192px] md:h-[279px] justify-center items-center gap-[15px] md:gap-[clamp(7px,1.172vw,15px)] p-[20px] md:p-[clamp(9px,1.563vw,20px)] rounded-t-[130px] bg-azul-integro"
+              style={{
+                transitionDelay: isVisible ? `${index * 0.07 + 0.15}s` : "0s",
+              }}
+              className={`reveal-scale ${isVisible ? "is-visible" : ""} flex flex-col w-[180px] md:w-full md:max-w-[230px] h-[192px] md:h-[279px] justify-center items-center gap-[15px] md:gap-[clamp(7px,1.172vw,15px)] p-[20px] md:p-[clamp(9px,1.563vw,20px)] rounded-t-[130px] bg-azul-integro`}
             >
               <div className="relative lg:flex-5 flex justify-center items-center h-[55px] lg:h-full w-full">
                 <img

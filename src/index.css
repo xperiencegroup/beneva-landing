@@ -80,7 +80,7 @@ body {
   animation-delay: 0.5s;
 }
 
-/* Home Hero */
+/* Hero */
 .animate-hero-1 {
   animation: slideUpFadeIn 0.6s cubic-bezier(0, 0, 0, 1) both;
   animation-delay: 0.1s;
@@ -94,7 +94,7 @@ body {
   animation-delay: 0.4s;
 }
 
-/* Home Nosotros */
+/* Revel components */
 .reveal {
   opacity: 0;
   transform: translateY(16px);
@@ -102,13 +102,11 @@ body {
     opacity 0.5s ease-out,
     transform 0.5s ease-out;
 }
-
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Home Compromiso */
 .reveal-left {
   opacity: 0;
   transform: translateX(-40px);
@@ -116,13 +114,23 @@ body {
     opacity 0.6s cubic-bezier(0, 0, 0, 1),
     transform 0.6s cubic-bezier(0, 0, 0, 1);
 }
-
 .reveal-left.is-visible {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* Home Construimos */
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition:
+    opacity 0.6s cubic-bezier(0, 0, 0, 1),
+    transform 0.6s cubic-bezier(0, 0, 0, 1);
+}
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .reveal-scale {
   opacity: 0;
   transform: scale(0.94) translateY(12px);
@@ -130,8 +138,15 @@ body {
     opacity 0.5s cubic-bezier(0, 0, 0, 1),
     transform 0.5s cubic-bezier(0, 0, 0, 1);
 }
-
 .reveal-scale.is-visible {
   opacity: 1;
   transform: scale(1) translateY(0);
+}
+
+.reveal-fade {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0, 0, 0, 1);
+}
+.reveal-fade.is-visible {
+  opacity: 1;
 }

@@ -1,9 +1,16 @@
 import image from "../../../assets/images/sections/quienes-somos/nuestra-historia.png";
+import { useInView } from "../../../hooks/useInView";
 
 export default function QuienesSomosHistoria() {
+  const [textRef, textVisible] = useInView({ threshold: 0.25 });
+  const [imageRef, imageVisible] = useInView({ threshold: 0.25 });
+
   return (
     <div className="flex flex-col self-center w-full max-w-[1280px] h-lvh max-h-[900px]">
-      <div className="flex flex-col justify-center items-center px-[48px] py-[30px] md:p-[clamp(28px,4.688vw,60px)] gap-[20px] md:gap-[30px]">
+      <div
+        ref={textRef}
+        className={`reveal ${textVisible ? "is-visible" : ""} flex flex-col justify-center items-center px-[48px] py-[30px] md:p-[clamp(28px,4.688vw,60px)] gap-[20px] md:gap-[30px]`}
+      >
         <h3 className="text-[24px] md:text-display2 font-woodland font-bold text-center text-verde-confianza">
           Nuestra historia
         </h3>
@@ -22,7 +29,10 @@ export default function QuienesSomosHistoria() {
       </div>
 
       {/* Imagen */}
-      <div className="relative flex grow w-full rounded-tl-[100px] overflow-hidden">
+      <div
+        ref={imageRef}
+        className={`reveal-fade ${imageVisible ? "is-visible" : ""} relative flex grow w-full rounded-tl-[100px] overflow-hidden`}
+      >
         <img
           src={image}
           alt="Imagen del Parque de Beneva Serafines"

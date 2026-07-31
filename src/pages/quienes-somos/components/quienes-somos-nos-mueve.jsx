@@ -1,5 +1,6 @@
 import bgImage from "../../../assets/images/backgrounds/compromiso-bg.jpg";
 import mainImage from "../../../assets/images/sections/quienes-somos/nos-mueve.png";
+import { useInView } from "../../../hooks/useInView";
 
 const NUESTRA_EMPRESA = [
   {
@@ -20,8 +21,10 @@ const NUESTRA_EMPRESA = [
 ];
 
 export default function QuienesSomosNosMueve() {
+  const [ref, isVisible] = useInView({ threshold: 0.25 });
+
   return (
-    <div className="relative w-full h-fit lg:h-[880px]">
+    <div className="relative w-full h-fit lg:h-[880px] overflow-hidden">
       {/* Background image */}
       <div className="absolute -z-10 inset-0 w-full h-full overflow-hidden">
         <img
@@ -32,24 +35,36 @@ export default function QuienesSomosNosMueve() {
       </div>
 
       {/* Content */}
-      <div className="relative flex flex-col lg:flex-row w-full h-full items-center gap-[clamp(8px,2.344vw,30px)]">
+      <div
+        ref={ref}
+        className="relative flex flex-col lg:flex-row w-full h-full items-center gap-[clamp(8px,2.344vw,30px)]"
+      >
         {/* Text  */}
         <div className="flex w-[66%] w-full min-w-0 h-full justify-center items-center max-md:px-[40px] max-md:py-[30px] px-[30px] py-5">
           <div className="flex flex-col w-full lg:max-w-[780px] justify-center items-center gap-[20px] md:gap-[clamp(6px,1.563vw,20px)] text-center">
-            <h3 className="text-[20px] md:text-display-min font-woodland text-verde-confianza font-bold">
-              Lo que nos mueve
-            </h3>
-            <p className="text-paragraph1 text-center leading-[110%] lg:leading-none text-gris-profundo max-w-[295px] md:max-w-[500px] lg:max-w-[760px]">
-              El nombre lo dice todo: Beneva significa buen vivir. Y esa idea es
-              la brújula que guía cada decisión que tomamos desde cómo diseñamos
-              un espacio hasta cómo tratamos a cada cliente.
-            </p>
+            <div
+              className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col items-center gap-[20px] md:gap-[clamp(6px,1.563vw,20px)]`}
+            >
+              <h3 className="text-[20px] md:text-display-min font-woodland text-verde-confianza font-bold">
+                Lo que nos mueve
+              </h3>
+              <p className="text-paragraph1 text-center leading-[110%] lg:leading-none text-gris-profundo max-w-[295px] md:max-w-[500px] lg:max-w-[760px]">
+                El nombre lo dice todo: Beneva significa buen vivir. Y esa idea
+                es la brújula que guía cada decisión que tomamos desde cómo
+                diseñamos un espacio hasta cómo tratamos a cada cliente.
+              </p>
+            </div>
 
             {NUESTRA_EMPRESA.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className="flex flex-col w-full items-center px-[40px] py-[20px] md:px-[clamp(21px,3.594vw,46px)] md:py-[clamp(9px,1.563vw,20px)] rounded-tl-[30px] md:rounded-tl-[20px] sm:rounded-tl-[30px] gap-[15px] md:gap-[clamp(6px,0.938vw,12px)] bg-azul-integro"
+                  style={{
+                    transitionDelay: isVisible
+                      ? `${index * 0.1 + 0.15}s`
+                      : "0s",
+                  }}
+                  className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col w-full items-center px-[40px] py-[20px] md:px-[clamp(21px,3.594vw,46px)] md:py-[clamp(9px,1.563vw,20px)] rounded-tl-[30px] md:rounded-tl-[20px] sm:rounded-tl-[30px] gap-[15px] md:gap-[clamp(6px,0.938vw,12px)] bg-azul-integro`}
                 >
                   <h4 className="text-[17px] md:text-min font-woodland font-bold text-rosa-bienestar">
                     {item.titulo}
@@ -64,7 +79,9 @@ export default function QuienesSomosNosMueve() {
         </div>
 
         {/* Image */}
-        <div className="w-full lg:w-[34%] h-[545px] lg:h-full relative rounded-tl-[100px] md:rounded-tl-[40px] sm:rounded-tl-[60px] lg:rounded-tl-[100px] overflow-hidden shrink-0">
+        <div
+          className={`reveal-right ${isVisible ? "is-visible" : ""} w-full lg:w-[34%] h-[545px] lg:h-full relative rounded-tl-[100px] md:rounded-tl-[40px] sm:rounded-tl-[60px] lg:rounded-tl-[100px] overflow-hidden shrink-0`}
+        >
           <img
             src={mainImage}
             alt="Imagen principal"

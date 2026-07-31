@@ -1,8 +1,11 @@
 import backgroundImage from "../../../assets/images/sections/quienes-somos/cta-background.jpg";
 import rightDecoration from "../../../assets/images/icons/decorations/icono-quienes-somos.png";
 import { Link } from "react-router";
+import { useInView } from "../../../hooks/useInView";
 
 export default function QuienesSomosCta() {
+  const [ref, isVisible] = useInView();
+
   return (
     <div className="relative flex flex-col h-[442px] md:h-[588px] items-center justify-center md:justify-end px-[44px] py-[34px] md:p-[60px] gap-[30px] md:gap-[30px] bg-verde-confianza/20">
       {/* Decoración */}
@@ -32,7 +35,10 @@ export default function QuienesSomosCta() {
         </div>
       </div>
 
-      <div className="relative flex flex-col max-w-[860px] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]">
+      <div
+        ref={ref}
+        className={`reveal-scale ${isVisible ? "is-visible" : ""} relative flex flex-col max-w-[860px] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]`}
+      >
         <h3 className="text-[24px] md:text-display2 text-center font-woodland font-semibold leading-[110%] text-beige-hogar">
           Ya sabes quiénes somos. <br /> ¿Empezamos?
         </h3>
@@ -42,7 +48,10 @@ export default function QuienesSomosCta() {
         </p>
       </div>
 
-      <div className="relative flex portrait:flex-col gap-[40px] md:gap-[clamp(26px,4.375vw,56px)]">
+      <div
+        style={{ transitionDelay: isVisible ? "0.15s" : "0s" }}
+        className={`reveal-scale ${isVisible ? "is-visible" : ""} relative flex portrait:flex-col gap-[40px] md:gap-[clamp(26px,4.375vw,56px)]`}
+      >
         <Link
           to={"/contactanos"}
           className="relative group text-[18px] md:text-button px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] bg-beige-hogar text-center text-verde-confianza hover:text-beige-hogar hover:bg-transparent hover:cursor-pointer active:text-verde-confianza active:font-bold active:bg-celeste-bienestar transition-all"
