@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import SendIcon from "../../../assets/icons/commons/sendIcon";
 import { useState } from "react";
+import { useInView } from "../../../hooks/useInView";
 
 export default function ContactoForm() {
   const { handleSubmit, register, reset } = useForm({
@@ -13,6 +14,7 @@ export default function ContactoForm() {
     },
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [ref, isVisible] = useInView();
 
   const onSubmit = async (data) => {
     setIsLoading(true);
@@ -48,13 +50,18 @@ export default function ContactoForm() {
 
   return (
     <div className="flex flex-col justify-center items-center p-[clamp(28px,4.688vw,60px)] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)] bg-verde-noche">
-      <h2 className="text-[24px] md:text-display2 font-woodland font-bold text-beige-hogar">
-        Envíanos un mensaje
-      </h2>
-      <p className="max-w-[550px] text-paragraph1 text-center leading-[115%] text-beige-hogar">
-        Cuéntanos qué estás buscando y un asesor se pondrá en contacto contigo
-        pronto.
-      </p>
+      <div
+        ref={ref}
+        className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col items-center gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]`}
+      >
+        <h2 className="text-[24px] md:text-display2 font-woodland font-bold text-beige-hogar">
+          Envíanos un mensaje
+        </h2>
+        <p className="max-w-[550px] text-paragraph1 text-center leading-[115%] text-beige-hogar">
+          Cuéntanos qué estás buscando y un asesor se pondrá en contacto contigo
+          pronto.
+        </p>
+      </div>
 
       {/* Formulario */}
       <form

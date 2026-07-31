@@ -20,11 +20,11 @@ export default function ContactoHero() {
         </div>
       </div>
 
-      <h2 className="relative z-10 max-w-[1180px] text-[26px] lg:text-[42px]  font-woodland font-bold text-center leading-[110%] text-verde-confianza">
+      <h2 className="animate-hero-1 relative z-10 max-w-[1180px] text-[26px] lg:text-[42px]  font-woodland font-bold text-center leading-[110%] text-verde-confianza">
         Contacto
       </h2>
 
-      <p className="relative z-10 max-w-[1160px] text-[18px] md:text-paragraph4 text-center font-woodland font-bold leading-none text-verde-confianza">
+      <p className="animate-hero-2 relative z-10 max-w-[1160px] text-[18px] md:text-paragraph4 text-center font-woodland font-bold leading-none text-verde-confianza">
         Estamos aquí para ayudarte
       </p>
     </div>
