@@ -40,7 +40,7 @@ export default function HomeNosotros() {
             <div
               key={item.title}
               style={{
-                transitionDelay: isVisible ? `${index * 0.4 + 0.1}s` : "0s",
+                transitionDelay: isVisible ? `${index * 0.2 + 0.1}s` : "0s",
               }}
               className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col justify-center items-center gap-y-[clamp(9px,1.563vw,18px)]`}
             >
@@ -58,7 +58,7 @@ export default function HomeNosotros() {
       {/* Button */}
       <Link
         to={"/quienes-somos"}
-        style={{ transitionDelay: isVisible ? "1.5s" : "0s" }}
+        style={{ transitionDelay: isVisible ? ".8s" : "0s" }}
         className={`reveal ${isVisible ? "is-visible" : ""} relative group text-[14px] md:text-button px-[24px] py-[15px] md:px-[clamp(20px,3.438vw,44px)] md:py-[clamp(7px,1.172vw,15px)] transition-all text-gris-profundo bg-celeste-bienestar hover:bg-transparent hover:font-bold hover:cursor-pointer`}
       >
         Conócenos
