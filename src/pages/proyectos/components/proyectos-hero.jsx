@@ -20,7 +20,7 @@ export default function ProyectosHero() {
         </div>
       </div>
 
-      <h2 className="animate-hero-1 relative max-w-[1180px] text-display6 font-woodland font-bold text-center leading-[110%] text-beige-hogar">
+      <h2 className="animate-hero-1 relative max-w-[1180px] text-[40px] font-woodland font-bold text-center leading-[110%] text-beige-hogar">
         Lo que hemos construido habla por nosotros
       </h2>
 
