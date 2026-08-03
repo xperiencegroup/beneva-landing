@@ -18,11 +18,11 @@ export default function ProyectosMision() {
           className="w-[122px] md:w-[clamp(71px,12.031vw,154px)]"
         />
 
-        <h2 className="text-[24px] md:text-display2 font-woodland font-bold text-verde-confianza">
+        <h2 className="title font-woodland font-bold text-verde-confianza">
           Misión de los Ángeles
         </h2>
 
-        <p className="max-w-[1160px] text-paragraph1 text-center leading-[110%] text-gris-profundo">
+        <p className="max-w-[1160px] paragraph text-center leading-[110%] text-gris-profundo">
           Dos prototipos de vivienda, más de 5,500 m² de amenidades y vigilancia
           24/7 en una de las zonas de mayor crecimiento de Apodaca. El hogar que
           tu familia merece está aquí.

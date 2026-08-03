@@ -39,12 +39,11 @@ export default function QuienesSomosCta() {
         ref={ref}
         className={`reveal-scale ${isVisible ? "is-visible" : ""} relative flex flex-col max-w-[860px] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]`}
       >
-        <h3 className="text-[24px] md:text-display2 text-center font-woodland font-semibold leading-[110%] text-beige-hogar">
+        <h3 className="title text-center font-woodland font-semibold leading-[110%] text-beige-hogar">
           Ya sabes quiénes somos. <br /> ¿Empezamos?
         </h3>
-        <p className="text-paragraph1 leading-tight text-center text-beige-hogar">
-          Estamos listos para acompañarte <br /> en el camino hacia tu hogar
-          ideal.
+        <p className="paragraph leading-tight text-center text-beige-hogar">
+          Estamos listos para acompañarte en el camino hacia tu hogar ideal.
         </p>
       </div>
 

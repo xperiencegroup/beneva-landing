@@ -1,8 +1,8 @@
-import sobrepensarIcon from "../../../assets/icons/values/sobrepensar.png";
-import respetoIcon from "../../../assets/icons/values/respeto.png";
-import colaborarIcon from "../../../assets/icons/values/colaborar.png";
-import entenderIcon from "../../../assets/icons/values/entender.png";
-import calidadIcon from "../../../assets/icons/values/calidad.png";
+import sobrepensarIcon from "../../../assets/icons/values/icon-sobrepensar.svg";
+import respetoIcon from "../../../assets/icons/values/icon-respeto.svg";
+import colaborarIcon from "../../../assets/icons/values/icon-colaborar.svg";
+import entenderIcon from "../../../assets/icons/values/icon-entender.svg";
+import calidadIcon from "../../../assets/icons/values/icon-calidad.svg";
 import { useInView } from "../../../hooks/useInView";
 
 const ITEMS = [
@@ -39,10 +39,10 @@ export default function QuienesSomosProfesionales() {
       <div
         className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col justify-center items-center gap-[20px] max-md:max-w-[295px] md:gap-[clamp(9px,1.563vw,20px)]`}
       >
-        <h3 className="text-[24px] md:text-display2 text-center font-woodland leading-none font-bold text-verde-confianza">
+        <h3 className="title text-center font-woodland leading-none font-bold text-verde-confianza">
           En una sola palabra somos: Profesionales
         </h3>
-        <p className="text-paragraph1 text-center leading-tight text-gris-profundo">
+        <p className="paragraph text-center leading-tight text-gris-profundo">
           Para nosotros ser profesional no es un título es una forma de actuar
           todos los días
         </p>

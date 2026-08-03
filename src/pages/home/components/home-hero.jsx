@@ -27,10 +27,10 @@ export default function HomeHero() {
 
         {/* Text */}
         <div className="flex flex-col items-center gap-[20px]">
-          <h1 className="animate-hero-2 text-center text-[26px] lg:text-[42px] font-woodland font-semibold leading-none text-beige-hogar">
+          <h1 className="animate-hero-2 text-center title font-woodland font-semibold leading-none text-beige-hogar">
             Tu hogar merece lo mejor de ti
           </h1>
-          <p className="animate-hero-3 max-w-[80vw] md:max-w-[78vw] text-[18px] md:text-paragraph4 text-center font-sans leading-[120%]">
+          <p className="animate-hero-3 max-w-[80vw] md:max-w-[78vw] paragraph text-center font-sans leading-[120%]">
             En Beneva pensamos cada espacio desde adentro hacia afuera porque el
             hogar es donde tu familia echa raíces y construye su historia.
           </p>

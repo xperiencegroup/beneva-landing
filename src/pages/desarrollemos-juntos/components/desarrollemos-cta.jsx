@@ -26,10 +26,10 @@ export default function DesarrollemosCta() {
         ref={ref}
         className={`reveal-scale ${isVisible ? "is-visible" : ""} relative flex flex-col items-center max-w-[860px] gap-[20px]`}
       >
-        <h3 className="max-md:max-w-[260px] text-[24px] md:text-display2  text-center font-woodland font-bold leading-[110%] text-beige-hogar">
+        <h3 className="max-md:max-w-[260px] title text-center font-woodland font-bold leading-[110%] text-beige-hogar">
           ¿Listo para encontrar tu hogar ideal?
         </h3>
-        <p className="max-md:max-w-[260px] text-paragraph1 leading-[110%] text-center font-woodland font-bold text-beige-hogar">
+        <p className="max-md:max-w-[260px] paragraph leading-[110%] text-center text-beige-hogar">
           Platica con nosotros cuéntanos qué estás buscando y con gusto te
           acompañamos en cada paso del camino.
         </p>

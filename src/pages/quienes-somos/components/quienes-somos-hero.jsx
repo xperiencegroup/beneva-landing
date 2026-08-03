@@ -20,11 +20,11 @@ export default function QuienesSomosHero() {
         </div>
       </div>
 
-      <h2 className="animate-hero-1 relative max-w-[260px] md:max-w-[732px] text-display6 font-woodland font-bold text-center leading-[110%] text-beige-hogar">
+      <h2 className="animate-hero-1 relative max-w-[260px] md:max-w-[732px] title font-woodland font-bold text-center leading-[110%] text-beige-hogar">
         Construyamos algo grande juntos
       </h2>
 
-      <p className="animate-hero-2 relative max-w-[1088px] text-[18px] md:text-paragraph4 leading-tight text-center text-beige-hogar">
+      <p className="animate-hero-2 relative max-w-[1088px] paragraph leading-tight text-center text-beige-hogar">
         Creamos espacios pensados para vivir mejor, con calidad, detalle y una
         visión profundamente humana.
       </p>

@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import SendIcon from "../../../assets/icons/commons/sendIcon";
 import rightDecoration from "../../../assets/images/icons/decorations/icono-quienes-somos.png";
 import { useInView } from "../../../hooks/useInView";
 
@@ -60,10 +59,10 @@ export default function HomeEnterarme() {
         ref={ref}
         className={`reveal ${isVisible ? "is-visible" : ""} relative z-10 flex flex-col gap-[clamp(9px,1.563vw,20px)]`}
       >
-        <h3 className="text-[24px] md:text-display2 font-woodland text-verde-dinamico text-center">
+        <h3 className="title font-woodland text-verde-dinamico text-center">
           Más proyectos en camino
         </h3>
-        <p className="text-[18px] md:text-paragraph1 text-center leading-tight">
+        <p className="paragraph text-center leading-tight">
           Estamos trabajando en nuevos desarrollos para distintas zonas de la
           zona metropolitana. <br /> Si quieres ser de los primeros en
           enterarte, déjanos tus datos.
@@ -79,9 +78,9 @@ export default function HomeEnterarme() {
         <div className="flex flex-col gap-[clamp(4px,0.781vw,10px)]">
           <label
             htmlFor="nombre"
-            className="text-[16px] md:text-paragraph2 text-beige-hogar"
+            className="text-[16px] md:text-paragraph2 font-basic-sans font-bold tracking-wide text-beige-hogar"
           >
-            Nombre completo <span className="text-beige-hogar">*</span>
+            Nombre completo *
           </label>
           <input
             {...register("name")}
@@ -98,9 +97,9 @@ export default function HomeEnterarme() {
           <div className="flex flex-col gap-[clamp(4px,0.781vw,10px)]">
             <label
               htmlFor="correo"
-              className="text-[16px] md:text-paragraph2 text-beige-hogar"
+              className="text-[16px] md:text-paragraph2 font-basic-sans font-bold tracking-wide text-beige-hogar"
             >
-              Correo electrónico <span className="text-beige-hogar">*</span>
+              Correo electrónico *
             </label>
             <input
               {...register("email")}
@@ -115,9 +114,9 @@ export default function HomeEnterarme() {
           <div className="flex flex-col gap-[clamp(4px,0.781vw,10px)]">
             <label
               htmlFor="telefono"
-              className="text-[16px] md:text-paragraph2 text-beige-hogar"
+              className="text-[16px] md:text-paragraph2 font-basic-sans font-bold tracking-wide text-beige-hogar"
             >
-              Teléfono <span className="text-beige-hogar">*</span>
+              Teléfono *
             </label>
             <input
               {...register("phone")}
@@ -134,7 +133,7 @@ export default function HomeEnterarme() {
         <div className="flex flex-col gap-[clamp(4px,0.781vw,10px)]">
           <label
             htmlFor="mensaje"
-            className="text-[16px] md:text-paragraph2 text-beige-hogar"
+            className="text-[16px] md:text-paragraph2 font-basic-sans font-bold tracking-wide text-beige-hogar"
           >
             Mensaje
           </label>
@@ -151,10 +150,9 @@ export default function HomeEnterarme() {
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full flex items-center justify-center gap-[15px] md:gap-[clamp(6px,0.938vw,12px)] bg-[#B7D9E8] text-verde-confianza font-semibold px-[clamp(14px,2.344vw,30px)] py-[clamp(10px,1.406vw,16px)] text-[14px] md:text-button transition-opacity hover:opacity-90 hover:cursor-pointer disabled:opacity-80 disabled:cursor-not-allowed"
+          className="w-full flex items-center justify-center gap-[15px] md:gap-[clamp(6px,0.938vw,12px)] bg-[#B7D9E8] text-verde-confianza px-[clamp(14px,2.344vw,30px)] py-[clamp(10px,1.406vw,16px)] text-[14px] md:text-button transition-opacity hover:opacity-90 hover:cursor-pointer disabled:opacity-80 disabled:cursor-not-allowed"
         >
           {isLoading ? "Enviando..." : "Quiero enterarme primero"}
-          <SendIcon className="w-[20px] md:w-[clamp(11px,1.797vw,23px)] text-verde-confianza" />
         </button>
       </form>
     </div>

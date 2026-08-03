@@ -4,9 +4,9 @@ import checkIcon from "../../../assets/icons/commons/checkIcon.svg";
 import { useInView } from "../../../hooks/useInView";
 
 const PREGUNTAS = [
+  { label: "¿Tomo responsabilidad de este acto?" },
   { label: "¿Es lo mejor para la empresa?" },
   { label: "¿Es lo mejor para el cliente?" },
-  { label: "¿Tomo responsabilidad de este acto?" },
 ];
 
 export default function HomeCompromiso() {
@@ -43,10 +43,10 @@ export default function HomeCompromiso() {
             <div
               className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col gap-[20px]`}
             >
-              <h3 className="text-[20px] md:text-display5 font-woodland text-verde-confianza font-bold leading-none">
+              <h3 className="subtitle font-woodland text-verde-confianza font-bold leading-none">
                 Los 3 "SI" antes de tomar una decisión
               </h3>
-              <p className="text-paragraph1 text-center leading-[110%] lg:leading-none text-gris-profundo max-w-[500px] lg:max-w-none">
+              <p className="paragraph text-center leading-[110%] lg:leading-none text-gris-profundo max-w-[500px] lg:max-w-none">
                 Antes de cada acción, nuestro equipo se hace tres preguntas.
                 Sencillas, pero poderosas porque creemos que la calidad empieza
                 por la forma en que uno toma sus decisiones.
@@ -82,10 +82,10 @@ export default function HomeCompromiso() {
               style={{ transitionDelay: isVisible ? "0.55s" : "0s" }}
               className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col gap-[20px]`}
             >
-              <h3 className="text-[20px] md:text-display5 max-md:pt-2.5 font-woodland font-bold text-verde-confianza leading-none">
+              <h3 className="subtitle max-md:pt-2.5 font-woodland font-bold text-verde-confianza leading-none">
                 Nuestro Compromiso con la Calidad
               </h3>
-              <p className="text-paragraph1 text-center leading-[110%] lg:leading-none text-gris-profundo max-w-[500px] lg:max-w-[720px]">
+              <p className="paragraph text-center leading-[110%] lg:leading-none text-gris-profundo max-w-[500px] lg:max-w-[720px]">
                 Somos una desarrolladora que se compromete a crear proyectos
                 donde la calidad, la innovación y la confianza van de la mano.
                 Creemos que cada espacio tiene el poder de transformar la vida

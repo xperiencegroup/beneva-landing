@@ -51,17 +51,17 @@ export default function DesarrollemosFormulario() {
         ref={ref}
         className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col items-center gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]`}
       >
-        <h3 className="text-[24px] md:text-display2 text-center font-woodland text-verde-confianza font-semibold leading-none">
+        <h3 className="title text-center font-woodland text-verde-confianza font-semibold leading-none">
           ¿Tienes un proyecto en mente? Platiquemos
         </h3>
-        <p className="text-paragraph1 leading-tight text-center text-verde-confianza">
+        <p className="paragraph leading-tight text-center text-verde-confianza">
           Cuéntanos en qué estás pensando ya sea un terreno, una idea o una
           inversión. <br /> Nosotros nos ponemos en contacto contigo.
         </p>
       </div>
 
       {/* Formulario */}
-      <p className="text-paragraph1 font-basic-sans text-gris-profundo">
+      <p className="paragraph font-basic-sans text-gris-profundo">
         Datos del inversionista
       </p>
 

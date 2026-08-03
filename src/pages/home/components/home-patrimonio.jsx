@@ -26,10 +26,10 @@ export default function HomePatrimonio() {
         <div className="flex flex-col min-w-0 h-full justify-center items-center gap-[20px]">
           {/* Text */}
           <div className="flex flex-col w-full max-w-[1160px] justify-center items-center gap-[20px] text-center">
-            <h3 className="text-[24px] md:text-display2 font-woodland text-verde-confianza font-bold leading-none md:leading-tight">
+            <h3 className="title font-woodland text-verde-confianza font-bold leading-none md:leading-tight">
               Más que propiedades, construimos patrimonio
             </h3>
-            <p className="text-paragraph1 text-center leading-[110%] lg:leading-none text-gris-profundo">
+            <p className="paragraph text-center leading-[110%] lg:leading-none text-gris-profundo">
               Cada desarrollo Beneva es una apuesta por la calidad de vida
               espacios diseñados para que tu familia crezca, conviva y eche
               raíces.
@@ -53,8 +53,8 @@ export default function HomePatrimonio() {
                   alt="Logo Misión de los Ángeles"
                   className="w-[122px]"
                 />
-                <h3 className="text-[24px] text-center md:text-display2 font-woodland leading-none text-verde-dinamico">
-                  Misión de los <br /> Ángeles
+                <h3 className="text-center title font-woodland leading-none whitespace-nowrap text-verde-dinamico">
+                  Misión de los Ángeles
                 </h3>
                 <Link
                   to={"/proyectos"}

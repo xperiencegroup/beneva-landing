@@ -29,7 +29,7 @@ export default function HomeNosotros() {
     >
       {/* Texts */}
       <p
-        className={`reveal ${isVisible ? "is-visible" : ""} text-[32px] md:text-display1 font-woodland font-bold text-verde-confianza`}
+        className={`reveal ${isVisible ? "is-visible" : ""} title font-woodland font-bold text-verde-confianza`}
       >
         Nosotros
       </p>
@@ -44,10 +44,10 @@ export default function HomeNosotros() {
               }}
               className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col justify-center items-center gap-y-[clamp(9px,1.563vw,18px)]`}
             >
-              <h2 className="text-[20px] md:text-display-min text-center font-woodland font-bold leading-none text-verde-confianza">
+              <h2 className="subtitle text-center font-woodland font-bold leading-none text-verde-confianza">
                 {item.title}
               </h2>
-              <h2 className="w-[86vw] text-paragraph1 text-center font-sans font-light text-verde-confianza leading-[109%]">
+              <h2 className="w-[86vw] paragraph text-center font-sans font-light text-verde-confianza leading-[109%]">
                 {item.description}
               </h2>
             </div>

@@ -45,10 +45,10 @@ export default function QuienesSomosNosMueve() {
             <div
               className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col items-center gap-[20px] md:gap-[clamp(6px,1.563vw,20px)]`}
             >
-              <h3 className="text-[20px] md:text-display-min font-woodland text-verde-confianza font-bold">
+              <h3 className="subtitle font-woodland text-verde-confianza font-bold">
                 Lo que nos mueve
               </h3>
-              <p className="text-paragraph1 text-center leading-[110%] lg:leading-none text-gris-profundo max-w-[295px] md:max-w-[500px] lg:max-w-[760px]">
+              <p className="paragraph text-center leading-[110%] text-gris-profundo max-w-[295px] md:max-w-[500px] lg:max-w-[760px]">
                 El nombre lo dice todo: Beneva significa buen vivir. Y esa idea
                 es la brújula que guía cada decisión que tomamos desde cómo
                 diseñamos un espacio hasta cómo tratamos a cada cliente.
@@ -64,12 +64,12 @@ export default function QuienesSomosNosMueve() {
                       ? `${index * 0.1 + 0.15}s`
                       : "0s",
                   }}
-                  className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col w-full items-center px-[40px] py-[20px] md:px-[clamp(21px,3.594vw,46px)] md:py-[clamp(9px,1.563vw,20px)] rounded-tl-[30px] md:rounded-tl-[20px] sm:rounded-tl-[30px] gap-[15px] md:gap-[clamp(6px,0.938vw,12px)] bg-azul-integro`}
+                  className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col justify-center w-full min-h-[258px] min-[540px]:min-h-[160px] md:h-[204px] items-center px-[40px] py-[20px] md:px-[clamp(21px,3.594vw,46px)] md:py-[clamp(9px,1.563vw,20px)] rounded-tl-[30px] md:rounded-tl-[20px] sm:rounded-tl-[30px] gap-[10px] bg-azul-integro`}
                 >
-                  <h4 className="text-[17px] md:text-min font-woodland font-bold text-rosa-bienestar">
+                  <h4 className="subtitle font-woodland font-bold tracking-wide text-rosa-bienestar">
                     {item.titulo}
                   </h4>
-                  <p className="max-w-[659px] text-beige-hogar text-[16px] md:text-[24px] md:leading-tight text-center">
+                  <p className="max-w-[659px] text-beige-hogar paragraph leading-[110%] text-center">
                     {item.texto}
                   </p>
                 </div>

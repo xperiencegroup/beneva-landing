@@ -35,10 +35,10 @@ export default function DesarrollemosRazones() {
       <div
         className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col items-center text-center gap-[20px] md:gap-[clamp(8px,1.172vw,15px)] mb-[clamp(32px,4.688vw,60px)]`}
       >
-        <h2 className="text-[24px] md:text-display2 font-woodland text-verde-confianza font-semibold leading-none">
+        <h2 className="title font-woodland text-verde-confianza font-semibold leading-none">
           Por qué desarrollar con Beneva
         </h2>
-        <p className="text-paragraph1 leading-tight text-gris-profundo">
+        <p className="paragraph leading-tight text-gris-profundo">
           No solo construimos casas desarrollamos proyectos integrales con
           visión de largo plazo. Estas son las razones por las que nuestros
           socios eligen trabajar con nosotros.
@@ -57,12 +57,12 @@ export default function DesarrollemosRazones() {
             }}
             className={`reveal-scale ${isVisible ? "is-visible" : ""} flex flex-col items-center justify-center text-center w-full w-[295px] max-md:h-[250px] max-md:max-w-[300px] md:max-w-[clamp(245px,41.641vw,533px)] h-[clamp(164px,27.813vw,356px)] bg-rosa-bienestar rounded-t-[100px] md:rounded-t-[160px] lg:rounded-t-[180px] px-[34px] py-[40px] md:p-[clamp(24px,3.125vw,40px)] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]`}
           >
-            <h3 className="flex flex-col text-[20px] md:text-[18px] lg:text-[28px] font-woodland text-gris-profundo font-bold leading-none">
+            <h3 className="flex flex-col subtitle font-woodland text-gris-profundo font-bold leading-none">
               <span>{step.number}</span>
               <span>{step.title}</span>
             </h3>
 
-            <p className="text-[16px] lg:text-paragraph4 leading-tight text-gris-profundo font-basic-sans font-light leading-none">
+            <p className="paragraph leading-tight text-gris-profundo font-basic-sans font-light leading-none">
               {step.text}
             </p>
           </div>
