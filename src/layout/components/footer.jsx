@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import mailIcon from "../../assets/icons/commons/mailIcon.svg";
-import developedByXperience from "../../assets/images/icons/xperience/xperience.png";
+import developedByXperience from "../../assets/images/icons/xperience/xperience.svg";
 import LogoMain from "../../assets/images/icons/main/logo-main";
 
 export default function Footer() {
