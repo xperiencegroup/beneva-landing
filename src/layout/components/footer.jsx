@@ -8,7 +8,9 @@ export default function Footer() {
     <div className="flex flex-col w-full md:h-[467px] bg-verde-confianza">
       <div className="flex flex-col justify-center items-center h-full max-md:px-[30px] py-[30px] gap-[20px]">
         {/* Logo */}
-        <LogoMain className="w-[56px] text-beige-hogar" />
+        <Link to={"/"}>
+          <LogoMain className="w-[56px] text-beige-hogar" />
+        </Link>
 
         <div className="flex max-md:flex-col gap-[20px] md:gap-[clamp(9px,1.563vw,20px)] max-md:w-full">
           <Link
