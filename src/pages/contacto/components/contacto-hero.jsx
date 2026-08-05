@@ -13,6 +13,7 @@ export default function ContactoHero() {
             src={video}
             autoPlay
             loop
+            playsInline
             muted
             alt="Video de fondo"
             className="absolute inset-0 w-full h-full object-cover object-top"

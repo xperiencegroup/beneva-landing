@@ -11,6 +11,7 @@ export default function HomeHero() {
             src={video}
             autoPlay
             muted
+            playsInline
             loop
             className="absolute inset-0 w-full h-full object-cover"
           />

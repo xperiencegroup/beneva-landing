@@ -1,7 +1,7 @@
 import { useInView } from "../../../hooks/useInView";
 
 export default function HomeConstruimos() {
-  const [ref, isVisible] = useInView({ threshold: 0.4 });
+  const [ref, isVisible] = useInView({ threshold: 0.3 });
 
   const steps = [
     {

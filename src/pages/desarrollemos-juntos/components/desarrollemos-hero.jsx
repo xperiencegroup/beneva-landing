@@ -13,6 +13,7 @@ export default function DesarrollemosHero() {
             src={video}
             autoPlay
             loop
+            playsInline
             muted
             alt="Imagen de fondo"
             className="absolute inset-0 w-full h-full object-cover"
