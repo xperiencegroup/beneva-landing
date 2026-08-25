@@ -8,7 +8,7 @@ export default function HomePatrimonio() {
   const [ref, isVisible] = useInView({ threshold: 0.3 });
 
   return (
-    <div className="relative w-full px-[40px] py-[30px] gap-[20px] md:p-[clamp(28px,4.688vw,60px)]">
+    <div className="relative flex justify-center w-full px-[40px] py-[30px] gap-[20px] md:p-[clamp(28px,4.688vw,60px)]">
       {/* Background image */}
       <div className="absolute -z-10 inset-0 w-full h-full overflow-hidden">
         <img
@@ -21,15 +21,15 @@ export default function HomePatrimonio() {
       {/* Content */}
       <div
         ref={ref}
-        className={`reveal ${isVisible ? "is-visible" : ""} relative flex w-full h-full justify-center items-center`}
+        className={`reveal ${isVisible ? "is-visible" : ""} relative flex w-full max-w-[1280px] h-full justify-center items-center`}
       >
-        <div className="flex flex-col min-w-0 h-full justify-center items-center gap-[20px]">
+        <div className="flex flex-col h-full w-full max-w-[1160px] justify-center items-center gap-[20px]">
           {/* Text */}
-          <div className="flex flex-col w-full max-w-[1160px] justify-center items-center gap-[20px] text-center">
+          <div className="flex flex-col w-full max-w-[980px] justify-center items-center gap-[20px] text-center">
             <h3 className="title font-woodland text-verde-confianza font-bold leading-none md:leading-tight">
               Más que propiedades, construimos patrimonio
             </h3>
-            <p className="paragraph text-center leading-[110%] lg:leading-none text-gris-profundo">
+            <p className="w-full paragraph text-center leading-[110%] lg:leading-none text-gris-profundo">
               Cada desarrollo Beneva es una apuesta por la calidad de vida
               espacios diseñados para que tu familia crezca, conviva y eche
               raíces.

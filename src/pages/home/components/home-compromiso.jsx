@@ -40,6 +40,24 @@ export default function HomeCompromiso() {
         {/* Text  */}
         <div className="flex md:w-[66%] min-w-0 h-full justify-center items-center max-md:px-[40px] max-md:py-[30px] md:pr-2">
           <div className="flex flex-col w-full max-w-[780px] justify-center items-center gap-[20px] md:gap-[40px] text-center">
+            {/* Nuestro compromiso con la calidad */}
+            <div
+              style={{ transitionDelay: isVisible ? "0.55s" : "0s" }}
+              className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col gap-[20px]`}
+            >
+              <h3 className="subtitle max-md:pt-2.5 font-woodland font-bold text-verde-confianza leading-none">
+                Nuestro Compromiso con la Calidad
+              </h3>
+              <p className="paragraph text-center leading-[110%] lg:leading-none text-gris-profundo max-w-[500px] lg:max-w-[720px]">
+                Somos una desarrolladora que se compromete a crear proyectos
+                donde la calidad, la innovación y la confianza van de la mano.
+                <br /> <br />
+                Creemos que cada espacio tiene el poder de transformar la vida
+                de las personas y trabajamos cada día para que así sea.
+              </p>
+            </div>
+
+            {/* Los 3 "SI" */}
             <div
               className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col gap-[20px]`}
             >
@@ -48,6 +66,8 @@ export default function HomeCompromiso() {
               </h3>
               <p className="paragraph text-center leading-[110%] lg:leading-none text-gris-profundo max-w-[500px] lg:max-w-none">
                 Antes de cada acción, nuestro equipo se hace tres preguntas.
+                <br />
+                <br />
                 Sencillas, pero poderosas porque creemos que la calidad empieza
                 por la forma en que uno toma sus decisiones.
               </p>
@@ -63,7 +83,7 @@ export default function HomeCompromiso() {
                         ? `${index * 0.1 + 0.15}s`
                         : "0s",
                     }}
-                    className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col md:flex-row w-full px-[34px] py-[20px] md:pl-10 lg:pl-20 xl:pl-[clamp(64px,10.938vw,140px)] items-center rounded-tr-[20px] sm:rounded-tr-[30px] gap-[15px] md:gap-[clamp(5px,1.172vw,15px)] bg-azul-integro`}
+                    className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col md:flex-row w-full px-[34px] py-[20px] md:pl-10 lg:pl-20 xl:pl-[30px] items-center rounded-tr-[20px] sm:rounded-tr-[30px] gap-[15px] md:gap-[clamp(5px,1.172vw,15px)] bg-azul-integro`}
                   >
                     <img
                       src={checkIcon}
@@ -76,21 +96,6 @@ export default function HomeCompromiso() {
                   </div>
                 );
               })}
-            </div>
-
-            <div
-              style={{ transitionDelay: isVisible ? "0.55s" : "0s" }}
-              className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col gap-[20px]`}
-            >
-              <h3 className="subtitle max-md:pt-2.5 font-woodland font-bold text-verde-confianza leading-none">
-                Nuestro Compromiso con la Calidad
-              </h3>
-              <p className="paragraph text-center leading-[110%] lg:leading-none text-gris-profundo max-w-[500px] lg:max-w-[720px]">
-                Somos una desarrolladora que se compromete a crear proyectos
-                donde la calidad, la innovación y la confianza van de la mano.
-                Creemos que cada espacio tiene el poder de transformar la vida
-                de las personas y trabajamos cada día para que así sea.
-              </p>
             </div>
           </div>
         </div>

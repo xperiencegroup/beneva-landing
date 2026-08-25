@@ -5,7 +5,7 @@ const PARAGRAPHS = [
   {
     title: "Somos una desarrolladora enfocada en las personas:",
     description:
-      "Beneva nació con una convicción clara: los espacios donde vivimos moldean quiénes somos. Por eso cada proyecto lleva consigo calidad, detalle y una visión humana para que quien llegue a casa sienta que llegó a su lugar.",
+      "Beneva nació con una convicción clara: los espacios donde vivimos moldean quiénes somos.\nPor eso cada proyecto lleva consigo calidad, detalle y una visión humana para que quien llegue a casa sienta que llegó a su lugar.",
   },
   {
     title: "Compromiso Beneva",
@@ -42,14 +42,14 @@ export default function HomeNosotros() {
               style={{
                 transitionDelay: isVisible ? `${index * 0.2 + 0.1}s` : "0s",
               }}
-              className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col justify-center items-center gap-y-[clamp(9px,1.563vw,18px)]`}
+              className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col justify-center items-center gap-y-[20px] md:gap-y-[30px]`}
             >
               <h2 className="subtitle text-center font-woodland font-bold leading-none text-verde-confianza">
                 {item.title}
               </h2>
-              <h2 className="w-[86vw] paragraph text-center font-sans font-light text-verde-confianza leading-[109%]">
+              <p className="w-full max-w-[840px] paragraph text-center font-light whitespace-pre-line text-verde-confianza leading-[109%]">
                 {item.description}
-              </h2>
+              </p>
             </div>
           );
         })}

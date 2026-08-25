@@ -21,7 +21,7 @@ export default function QuienesSomosCta() {
       </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 w-full h-full bg-linear-to-b from-verde-gradiente/0 from-0% via-verde-gradiente/80 via-36% to-verde-gradiente" />
+      <div className="absolute inset-0 w-full h-full bg-linear-to-b from-verde-gradiente/0 from-7% via-verde-gradiente/30 via-48% to-verde-gradiente" />
 
       {/* Image */}
       <div className="absolute -z-10 w-full h-full top-0 overflow-hidden">

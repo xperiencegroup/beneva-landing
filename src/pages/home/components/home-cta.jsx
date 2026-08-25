@@ -8,10 +8,10 @@ export default function HomeCta() {
   return (
     <div className="relative flex flex-col h-[755px] items-center justify-center md:justify-end py-[40px] px-[34px] md:p-[60px] gap-[24px] bg-verde-confianza/20">
       {/* Overlay */}
-      <div className="absolute inset-0 w-full h-full bg-linear-to-b from-verde-gradiente/0 from-0% via-verde-gradiente/80 via-36% to-verde-gradiente" />
+      <div className="absolute inset-0 w-full h-full bg-linear-to-b from-verde-gradiente/0 from-7% via-verde-gradiente/30 via-48% to-verde-gradiente" />
 
       {/* Image */}
-      <div className="absolute -z-10 w-full h-full overflow-hidden">
+      <div className="absolute -z-10 inset-0 w-full h-full overflow-hidden">
         <div className="relative w-full h-full">
           <img
             src={backgroundImage}
