@@ -24,7 +24,7 @@ export default function QuienesSomosNosMueve() {
   const [ref, isVisible] = useInView({ threshold: 0.25 });
 
   return (
-    <div className="relative w-full h-fit lg:h-[880px] overflow-hidden">
+    <div className="relative w-full h-fit lg:h-[929px] overflow-hidden">
       {/* Background image */}
       <div className="absolute -z-10 inset-0 w-full h-full overflow-hidden">
         <img
@@ -41,7 +41,7 @@ export default function QuienesSomosNosMueve() {
       >
         {/* Text  */}
         <div className="flex w-[66%] w-full min-w-0 h-full justify-center items-center max-md:px-[40px] max-md:py-[30px] px-[30px] py-5">
-          <div className="flex flex-col w-full lg:max-w-[780px] justify-center items-center gap-[20px] md:gap-[clamp(6px,1.563vw,20px)] text-center">
+          <div className="flex flex-col w-full lg:max-w-[780px] justify-center items-center gap-[20px] md:gap-[40px] text-center">
             <div
               className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col items-center gap-[20px] md:gap-[clamp(6px,1.563vw,20px)]`}
             >
@@ -49,32 +49,37 @@ export default function QuienesSomosNosMueve() {
                 Lo que nos mueve
               </h3>
               <p className="paragraph text-center leading-[110%] text-gris-profundo max-w-[295px] md:max-w-[500px] lg:max-w-[760px]">
-                El nombre lo dice todo: Beneva significa buen vivir. Y esa idea
-                es la brújula que guía cada decisión que tomamos desde cómo
-                diseñamos un espacio hasta cómo tratamos a cada cliente.
+                El nombre lo dice todo: Beneva significa buen vivir.
+                <br />
+                <br />Y esa idea es la brújula que guía cada decisión que
+                tomamos desde cómo diseñamos un espacio hasta cómo tratamos a
+                cada cliente.
               </p>
             </div>
 
-            {NUESTRA_EMPRESA.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  style={{
-                    transitionDelay: isVisible
-                      ? `${index * 0.1 + 0.15}s`
-                      : "0s",
-                  }}
-                  className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col justify-center w-full min-h-[258px] min-[540px]:min-h-[160px] md:h-[204px] items-center px-[40px] py-[20px] md:px-[clamp(21px,3.594vw,46px)] md:py-[clamp(9px,1.563vw,20px)] rounded-tl-[30px] md:rounded-tl-[20px] sm:rounded-tl-[30px] gap-[10px] bg-azul-integro`}
-                >
-                  <h4 className="subtitle font-woodland font-bold tracking-wide text-rosa-bienestar">
-                    {item.titulo}
-                  </h4>
-                  <p className="max-w-[659px] text-beige-hogar paragraph leading-[110%] text-center">
-                    {item.texto}
-                  </p>
-                </div>
-              );
-            })}
+            {/* Misión, visión y propósito */}
+            <div className="flex flex-col gap-[20px]">
+              {NUESTRA_EMPRESA.map((item, index) => {
+                return (
+                  <div
+                    key={index}
+                    style={{
+                      transitionDelay: isVisible
+                        ? `${index * 0.1 + 0.15}s`
+                        : "0s",
+                    }}
+                    className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col justify-center w-full min-h-[258px] min-[540px]:min-h-[160px] md:h-[204px] items-center px-[40px] py-[20px] md:px-[clamp(21px,3.594vw,46px)] md:py-[clamp(9px,1.563vw,20px)] rounded-tl-[30px] md:rounded-tl-[20px] sm:rounded-tl-[30px] gap-[12px] bg-azul-integro`}
+                  >
+                    <h4 className="subtitle font-woodland font-bold tracking-wide text-rosa-bienestar">
+                      {item.titulo}
+                    </h4>
+                    <p className="max-w-[659px] text-beige-hogar paragraph leading-[110%] text-center">
+                      {item.texto}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
 
