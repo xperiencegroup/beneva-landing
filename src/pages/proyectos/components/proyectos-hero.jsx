@@ -1,4 +1,14 @@
-import video from "/videos/hero/proyectos/banner.mov";
+import { GalleryCarrousel } from "../../../components/carousel/embla/gallery-carousel";
+
+// Images
+import image6 from "../../../assets/images/sections/proyectos/hero-carousel/caseta-6.jpg";
+import image5 from "../../../assets/images/sections/proyectos/hero-carousel/alberca-5.jpg";
+import image4 from "../../../assets/images/sections/proyectos/hero-carousel/asador-4.jpg";
+import image3 from "../../../assets/images/sections/proyectos/hero-carousel/casaclub-3.jpg";
+import image2 from "../../../assets/images/sections/proyectos/hero-carousel/cocina-2.jpg";
+import image1 from "../../../assets/images/sections/proyectos/hero-carousel/casa-1.jpg";
+
+const images = [image1, image2, image3, image4, image5, image6];
 
 export default function ProyectosHero() {
   return (
@@ -6,18 +16,11 @@ export default function ProyectosHero() {
       {/* Overlay gradiente */}
       <div className="absolute z-0 inset-0 w-full h-full bg-linear-to-b from-gris-gradiente/0 from-21% md:via-gris-gradiente/70 via-gris-gradiente/90 via-80% to-gris-gradiente" />
 
-      {/* Video */}
+      {/* Carousel */}
       <div className="absolute -z-10 inset-0 w-full h-full">
-        <div className="relative w-full h-full">
-          <video
-            src={video}
-            autoPlay
-            loop
-            playsInline
-            muted
-            alt="Video de fondo"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+        <div className="relative w-full h-full pointer-events-none">
+          {/* Embla Carousel */}
+          <GalleryCarrousel images={images} />
         </div>
       </div>
 
