@@ -47,7 +47,7 @@ export default function HomeNosotros() {
               <h2 className="subtitle text-center font-woodland font-bold leading-none text-verde-confianza">
                 {item.title}
               </h2>
-              <p className="w-full max-w-[840px] paragraph text-center font-light whitespace-pre-line text-verde-confianza leading-[109%]">
+              <p className="w-full max-w-[1160px] paragraph text-center font-light whitespace-pre-line text-verde-confianza leading-[109%]">
                 {item.description}
               </p>
             </div>

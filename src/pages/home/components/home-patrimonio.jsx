@@ -25,7 +25,7 @@ export default function HomePatrimonio() {
       >
         <div className="flex flex-col h-full w-full max-w-[1160px] justify-center items-center gap-[20px]">
           {/* Text */}
-          <div className="flex flex-col w-full max-w-[980px] justify-center items-center gap-[20px] text-center">
+          <div className="flex flex-col w-full max-w-[1160px] justify-center items-center gap-[20px] text-center">
             <h3 className="title font-woodland text-verde-confianza font-bold leading-none md:leading-tight">
               Más que propiedades, construimos patrimonio
             </h3>

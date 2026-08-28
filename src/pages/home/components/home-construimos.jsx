@@ -38,7 +38,7 @@ export default function HomeConstruimos() {
         <h2 className="title font-woodland text-verde-confianza font-semibold leading-none">
           Así construimos cada proyecto
         </h2>
-        <p className="paragraph leading-tight text-gris-profundo">
+        <p className="max-w-[1160px] paragraph leading-tight text-gris-profundo">
           Cada desarrollo Beneva sigue un proceso pensado desde las personas
           desde la primera idea hasta el día que entregas llaves.
         </p>

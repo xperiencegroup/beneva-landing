@@ -38,7 +38,7 @@ export default function DesarrollemosRazones() {
         <h2 className="title font-woodland text-verde-confianza font-semibold leading-none">
           Por qué desarrollar con Beneva
         </h2>
-        <p className="paragraph leading-tight text-gris-profundo">
+        <p className="max-w-[1160px] paragraph leading-tight text-gris-profundo">
           No solo construimos casas desarrollamos proyectos integrales con
           visión de largo plazo. Estas son las razones por las que nuestros
           socios eligen trabajar con nosotros.

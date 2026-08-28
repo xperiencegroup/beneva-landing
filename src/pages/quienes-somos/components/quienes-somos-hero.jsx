@@ -22,7 +22,7 @@ export default function QuienesSomosHero() {
         Construyamos algo grande juntos
       </h2>
 
-      <p className="animate-hero-2 relative max-w-[1088px] paragraph leading-tight text-center text-beige-hogar">
+      <p className="animate-hero-2 relative max-w-[1160px] paragraph leading-tight text-center text-beige-hogar">
         Creamos espacios pensados para vivir mejor, con calidad, detalle y una
         visión profundamente humana.
       </p>

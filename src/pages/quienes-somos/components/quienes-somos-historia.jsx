@@ -14,7 +14,7 @@ export default function QuienesSomosHistoria() {
         <h3 className="title font-woodland font-bold text-center text-verde-confianza">
           Nuestra historia
         </h3>
-        <p className="paragraph leading-[100%] text-center text-gris-profundo">
+        <p className="max-w-[1160px] paragraph leading-[100%] text-center text-gris-profundo">
           Detrás de Beneva hay casi 20 años de experiencia acumulada entre
           construcción y negocios. Años de ver cómo se hacen las cosas, de
           aprender qué funciona y qué puede hacerse mejor y de entender que el
