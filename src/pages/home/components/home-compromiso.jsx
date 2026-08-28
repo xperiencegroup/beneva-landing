@@ -1,12 +1,11 @@
 import bgImage from "../../../assets/images/backgrounds/compromiso-bg.jpg";
 import mainImage from "../../../assets/images/sections/home/compromiso.jpg";
-import checkIcon from "../../../assets/icons/commons/checkIcon.svg";
 import { useInView } from "../../../hooks/useInView";
 
 const PREGUNTAS = [
-  { label: "¿Tomo responsabilidad de este acto?" },
-  { label: "¿Es lo mejor para la empresa?" },
-  { label: "¿Es lo mejor para el cliente?" },
+  { label: "Mejor para el cliente" },
+  { label: "Para la empresa" },
+  { label: "Tomo responsabilidad" },
 ];
 
 export default function HomeCompromiso() {
@@ -83,14 +82,10 @@ export default function HomeCompromiso() {
                         ? `${index * 0.1 + 0.15}s`
                         : "0s",
                     }}
-                    className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col md:flex-row w-full px-[34px] py-[20px] md:pl-10 lg:pl-20 xl:pl-[30px] items-center rounded-tr-[20px] sm:rounded-tr-[30px] gap-[15px] md:gap-[clamp(5px,1.172vw,15px)] bg-azul-integro`}
+                    className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col md:flex-row w-full px-[34px] py-[20px] md:pl-10 lg:pl-20 xl:pl-[30px] items-center rounded-tr-[20px] sm:rounded-tr-[30px]  bg-azul-integro`}
                   >
-                    <img
-                      src={checkIcon}
-                      alt="Ícono del contenedor"
-                      className="size-[35px] md:size-[clamp(14px,2.734vw,35px)] shrink-0"
-                    />
-                    <p className="text-[15px] text-beige-hogar font-woodland md:text-min font-bold text-center md:text-left leading-none">
+                    <p className="subtitle text-beige-hogar font-woodland md:text-min font-bold text-center md:text-left leading-none">
+                      <span className="text-rosa-bienestar">{index + 1}.</span>{" "}
                       {pregunta.label}
                     </p>
                   </div>

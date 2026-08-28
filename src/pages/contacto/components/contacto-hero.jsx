@@ -26,7 +26,7 @@ export default function ContactoHero() {
       </h2>
 
       <p className="animate-hero-2 relative z-10 max-w-[1160px] paragraph text-center leading-none text-verde-confianza">
-        Estamos aquí para ayudarte
+        Estamos para ayudarte
       </p>
     </div>
   );

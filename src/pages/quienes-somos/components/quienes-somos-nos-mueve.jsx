@@ -49,7 +49,11 @@ export default function QuienesSomosNosMueve() {
                 Lo que nos mueve
               </h3>
               <p className="paragraph text-center leading-[110%] text-gris-profundo max-w-[295px] md:max-w-[500px] lg:max-w-[760px]">
-                El nombre lo dice todo: Beneva significa buen vivir.
+                El nombre lo dice todo:
+                <br />
+                <span className="font-bold font-woodland">
+                  Beneva significa buen vivir.
+                </span>
                 <br />
                 <br />Y esa idea es la brújula que guía cada decisión que
                 tomamos desde cómo diseñamos un espacio hasta cómo tratamos a
