@@ -6,7 +6,7 @@ export default function HomeCta() {
   const [ref, isVisible] = useInView();
 
   return (
-    <div className="relative flex flex-col h-[755px] items-center justify-center md:justify-end py-[40px] px-[34px] md:p-[60px] gap-[24px] bg-verde-confianza/20">
+    <div className="relative flex flex-col h-[755px] items-center justify-center md:justify-end py-[40px] px-[34px] md:p-[60px] gap-[20px] bg-verde-confianza/20">
       {/* Overlay */}
       <div className="absolute inset-0 w-full h-full bg-linear-to-b from-verde-gradiente/0 from-7% via-verde-gradiente/30 via-48% to-verde-gradiente" />
 
@@ -24,7 +24,7 @@ export default function HomeCta() {
 
       <div
         ref={ref}
-        className={`reveal-scale ${isVisible ? "is-visible" : ""} relative flex flex-col max-w-[260px] md:max-w-[840px] gap-[20px]`}
+        className={`reveal-scale ${isVisible ? "is-visible" : ""} relative flex flex-col max-w-[290px] md:max-w-[680px] xl:max-w-[1160px] gap-[5px]`}
       >
         <h3 className="title text-center font-woodland font-semibold leading-[110%] text-beige-hogar">
           ¿Listo para encontrar <br className="md:hidden" /> tu hogar ideal?

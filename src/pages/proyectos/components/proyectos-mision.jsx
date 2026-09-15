@@ -10,22 +10,20 @@ export default function ProyectosMision() {
     <>
       <div
         ref={textRef}
-        className={`reveal ${textVisible ? "is-visible" : ""} flex flex-col h-fit md:h-[373px] justify-center items-center px-[40px] py-[30px] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]`}
+        className={`reveal ${textVisible ? "is-visible" : ""} flex flex-col h-fit md:h-[373px] justify-center items-center px-[40px] py-[30px] gap-[15px] md:gap-[20px]`}
       >
         <img
           src={logoMision}
           alt="Logo Misión de los Ángeles"
-          className="w-[122px] md:w-[clamp(71px,12.031vw,154px)]"
+          className="w-[122px] h-[40px] md:w-[210px] md:h-[69px] xl:w-[282px] xl:h-[93px]"
         />
-
-        <h2 className="title font-woodland font-bold text-verde-confianza">
-          Misión de los Ángeles
-        </h2>
 
         <p className="max-w-[1160px] paragraph text-center leading-[110%] text-gris-profundo">
           Dos prototipos de vivienda, más de 5,500 m² de amenidades y vigilancia
-          24/7 en una de las zonas de mayor crecimiento de Apodaca. El hogar que
-          tu familia merece está aquí.
+          24/7 <br /> en una de las zonas de mayor crecimiento de Apodaca.
+          <br />
+          <br />
+          El hogar que tu familia merece está aquí.
         </p>
 
         <button className="relative group text-[18px] md:text-button px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] text-verde-confianza bg-celeste-bienestar hover:bg-transparent hover:cursor-pointer active:text-beige-hogar active:font-bold active:bg-verde-confianza transition-all">

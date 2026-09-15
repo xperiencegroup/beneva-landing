@@ -1,8 +1,8 @@
-import video from "/videos/hero/quienes-somos/banner.mp4";
+import video from "/videos/hero/quienes-somos/banner2.mp4"; //optimizar, pesa casi 8 MB
 
 export default function QuienesSomosHero() {
   return (
-    <div className="relative flex flex-col justify-end items-center h-lvh max-h-[900px] gap-[20px] pb-[60px] px-[40px] md:p-[60px] rounded-br-[100px] md:rounded-br-[150px] lg:rounded-br-[200px] overflow-hidden">
+    <div className="relative flex flex-col justify-end items-center h-lvh max-h-[900px] gap-[5px] pb-[60px] px-[40px] md:p-[60px] rounded-br-[100px] md:rounded-br-[150px] lg:rounded-br-[200px] overflow-hidden">
       {/* Video */}
       <div className="absolute -z-10 inset-0 w-full h-full">
         <div className="relative w-full h-full">

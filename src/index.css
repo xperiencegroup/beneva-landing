@@ -48,29 +48,36 @@ body {
     "Helvetica Neue",
     Arial,
     sans-serif;
+  text-wrap: pretty;
 }
 
 /* Medidas de textos */
 .title-xl {
-  @apply text-[35px] md:text-[45px] lg:text-[60px] leading-[110%];
+  @apply text-[35px] md:text-[45px] xl:text-[60px] leading-[110%];
 }
 .title {
-  @apply text-[25px] md:text-[35px] lg:text-[40px] leading-[110%];
+  @apply text-[25px] md:text-[35px] xl:text-[40px] leading-[110%];
 }
 .subtitle {
-  @apply text-[20px] md:text-[25px] lg:text-[30px] leading-[95%] tracking-tight;
+  @apply text-[20px] md:text-[25px] xl:text-[30px] leading-[95%] tracking-tight;
 }
 .paragraph {
-  @apply text-[20px] md:text-[22px] lg:text-[24px] leading-[130%];
+  @apply text-[20px] md:text-[22px] xl:text-[24px] leading-[110%];
 }
 .boton {
-  @apply text-[13px] md:text-[12px] lg:text-[17px];
+  @apply text-[13px] md:text-[12px] xl:text-[17px];
 }
 .boton-label {
-  @apply text-[13px] md:text-[14px] lg:text-[16px];
+  @apply text-[13px] md:text-[14px] xl:text-[16px];
 }
 .input {
   @apply text-[13px] md:text-[18px];
+}
+.preguntas {
+  @apply text-[14px] md:text-[18px] xl:text-[20px];
+}
+.parrafos-bloques {
+  @apply text-[16px] md:text-[18px] xl:text-[21px] leading-none;
 }
 
 /* ---------- Animaciones -------- */

@@ -9,7 +9,7 @@ export default function QuienesSomosHistoria() {
     <div className="flex flex-col self-center w-full max-w-[1280px] h-lvh max-h-[900px]">
       <div
         ref={textRef}
-        className={`reveal ${textVisible ? "is-visible" : ""} flex flex-col justify-center items-center px-[48px] py-[30px] md:p-[clamp(28px,4.688vw,60px)] gap-[20px] md:gap-[30px]`}
+        className={`reveal ${textVisible ? "is-visible" : ""} flex flex-col justify-center items-center px-[48px] py-[30px] md:p-[clamp(28px,4.688vw,60px)]`}
       >
         <h3 className="title font-woodland font-bold text-center text-verde-confianza">
           Nuestra historia
@@ -31,12 +31,16 @@ export default function QuienesSomosHistoria() {
       {/* Imagen */}
       <div
         ref={imageRef}
-        className={`reveal-fade ${imageVisible ? "is-visible" : ""} relative flex grow w-full rounded-tl-[100px] overflow-hidden`}
+        className={`relative reveal-fade ${imageVisible ? "is-visible" : ""} relative flex grow w-full`}
       >
+        <p className="absolute -top-7 left-1/2 -translate-x-[50%] z-10 text-[12px] font-at-surt text-gris-profundo">
+          Imágenes con fines ilustrativos*
+        </p>
+
         <img
           src={image}
           alt="Imagen del Parque de Beneva Serafines"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover rounded-tl-[100px]"
         />
       </div>
     </div>

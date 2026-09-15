@@ -25,7 +25,7 @@ export default function HomePatrimonio() {
       >
         <div className="flex flex-col h-full w-full max-w-[1160px] justify-center items-center gap-[20px]">
           {/* Text */}
-          <div className="flex flex-col w-full max-w-[1160px] justify-center items-center gap-[20px] text-center">
+          <div className="flex flex-col w-full max-w-[1160px] justify-center items-center text-center">
             <h3 className="title font-woodland text-verde-confianza font-bold leading-none md:leading-tight">
               Más que propiedades, construimos patrimonio
             </h3>
@@ -47,14 +47,14 @@ export default function HomePatrimonio() {
             </div>
 
             <div className="flex flex-col justify-center items-center w-full bg-verde-confianza px-[clamp(11px,1.875vw,24px)] py-[clamp(14px,2.344vw,30px)]">
-              <div className="flex flex-col justify-center items-center gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]">
+              <div className="flex flex-col lg:flex-row justify-between items-center w-full max-w-[1006px] gap-[15px] md:gap-[20px] lg:gap-0 p-[20px] lg:px-[40px]">
                 <img
                   src={logoMision}
                   alt="Logo Misión de los Ángeles"
                   className="w-[122px]"
                 />
-                <h3 className="text-center title font-woodland leading-none whitespace-nowrap text-verde-dinamico">
-                  Misión de los Ángeles
+                <h3 className="text-center title font-woodland leading-none text-verde-dinamico">
+                  Misión de los Ángeles: Serafines
                 </h3>
                 <Link
                   to={"/proyectos"}

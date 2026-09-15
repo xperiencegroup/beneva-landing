@@ -12,7 +12,7 @@ const images = [image1, image2, image3, image4, image5, image6];
 
 export default function ProyectosHero() {
   return (
-    <div className="relative flex flex-col justify-end items-center h-lvh max-h-[900px] gap-[20px] px-[44px] pb-[60px] md:p-[60px] rounded-bl-[100px] md:rounded-bl-[150px] lg:rounded-bl-[200px] overflow-hidden">
+    <div className="relative flex flex-col justify-end items-center h-lvh max-h-[900px] gap-[5px] px-[44px] pb-[60px] md:p-[60px] rounded-bl-[100px] md:rounded-bl-[150px] lg:rounded-bl-[200px] overflow-hidden">
       {/* Overlay gradiente */}
       <div className="absolute z-0 inset-0 w-full h-full bg-linear-to-b from-gris-gradiente/0 from-21% md:via-gris-gradiente/70 via-gris-gradiente/90 via-80% to-gris-gradiente" />
 
