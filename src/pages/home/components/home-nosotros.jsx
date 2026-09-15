@@ -90,7 +90,7 @@ export default function HomeNosotros() {
         <img
           src={banner}
           alt="Imágen de casas"
-          className="absolute inset-0 w-full h-full object-cover object-[0%_50%]"
+          className="absolute inset-0 w-full h-full object-cover object-[0%_42%]"
         />
       </div>
     </>

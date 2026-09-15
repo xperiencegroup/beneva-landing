@@ -5,7 +5,6 @@ import correoIcon from "../../assets/icons/form/green/correo.svg";
 
 import instagramIcon from "../../assets/icons/social/instagram.svg";
 import facebookIcon from "../../assets/icons/social/facebook.svg";
-import whatsappIcon from "../../assets/icons/social/whatsapp.svg";
 
 const socials = [
   {
@@ -18,17 +17,12 @@ const socials = [
     icon: facebookIcon,
     href: "#",
   },
-  {
-    id: "whatsapp",
-    icon: whatsappIcon,
-    href: "#",
-  },
 ];
 
 export default function Footer() {
   return (
     <div className="flex flex-col w-full md:h-[467px] bg-verde-confianza">
-      <div className="flex flex-col justify-center h-full max-md:px-[30px] py-[60px] px-[44px] lg:px-[60px] gap-[20px] md:gap-[30px]">
+      <div className="self-center flex flex-col w-full max-w-[1280px] justify-center h-full max-md:px-[30px] py-[60px] px-[44px] lg:px-[60px] xl:px-5 gap-[20px] md:gap-[30px]">
         {/* Logo y frase*/}
         <div className="flex flex-col md:flex-row w-full max-w-[1280px] items-center py-[20px] gap-[10px] md:gap-[20px]">
           <Link to={"/"}>
@@ -101,7 +95,7 @@ export default function Footer() {
           </a>
 
           {/* redes sociales */}
-          <div className="flex max-md:w-full max-md:max-w-[210px] max-md:justify-between gap-[15px]">
+          <div className="flex max-md:w-full max-md:max-w-[210px] max-md:justify-center gap-[40px]">
             {socials.map((social) => {
               return (
                 <a
