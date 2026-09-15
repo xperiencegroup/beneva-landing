@@ -2,6 +2,14 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useInView } from "../../../hooks/useInView";
 
+import nombreIcon from "../../../assets/icons/form/nombre.svg";
+import ubicacionIcon from "../../../assets/icons/form/ubicacion.svg";
+import correoIcon from "../../../assets/icons/form/correo.svg";
+import telIcon from "../../../assets/icons/form/tel.svg";
+import desarrolloIcon from "../../../assets/icons/form/desarrollo.svg";
+import inversionesIcon from "../../../assets/icons/form/inversiones.svg";
+import comentariosIcon from "../../../assets/icons/form/comentarios.svg";
+
 export default function DesarrollemosFormulario() {
   const { handleSubmit, register, reset } = useForm({
     defaultValues: {
@@ -46,10 +54,10 @@ export default function DesarrollemosFormulario() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center px-[40px] py-[60px] md:p-[clamp(28px,4.688vw,60px)] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]">
+    <div className="flex flex-col justify-center items-center px-[40px] py-[60px] md:p-[clamp(28px,4.688vw,60px)] gap-[20px] md:gap-[5px]">
       <div
         ref={ref}
-        className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col items-center gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]`}
+        className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col items-center gap-[5px]`}
       >
         <h3 className="title text-center font-woodland text-verde-confianza font-semibold leading-none">
           ¿Tienes un proyecto en mente? Platiquemos
@@ -61,117 +69,172 @@ export default function DesarrollemosFormulario() {
       </div>
 
       {/* Formulario */}
-      <p className="paragraph font-basic-sans text-gris-profundo">
+      <p className="paragraph text-gris-profundo pb-[10px]">
         Datos del inversionista
       </p>
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="w-full max-w-[1132px] flex flex-col gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]"
+        className="w-full max-w-[1132px] flex flex-col gap-[10px]"
       >
         {/* Nombre y ciudad */}
         <div className="flex max-md:flex-col w-full gap-[25px] md:gap-[clamp(12px,1.953vw,25px)]">
           {/* Input */}
-          <div className="flex-1 flex flex-col h-[84px] gap-[8px] md:gap-[clamp(4px,0.625vw,8px)]">
-            <label className="text-[14px] md:text-button font-at-surt font-bold text-gris-profundo">
+          <div className="flex-1 flex flex-col h-fit gap-[8px]">
+            <label className="formulario text-gris-profundo">
               Nombre completo
             </label>
-            <input
-              {...register("name")}
-              type="text"
-              placeholder="Ej: Juan Pérez"
-              className="w-full h-[60px] md:h-full px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-beige-hogar"
-            />
+
+            <div className="flex h-[60px] items-center px-[16px] py-[8px] gap-[12px] rounded-[10px] bg-verde-confianza">
+              <img
+                src={nombreIcon}
+                alt="Ícono de usuario"
+                className="w-fit h-[20px]"
+              />
+              <input
+                {...register("name")}
+                type="text"
+                placeholder="Ej: Juan Pérez"
+                className="w-full h-[60px] md:h-full formulario text-beige-hogar bg-verde-confianza placeholder:text-beige-hogar outline-none"
+              />
+            </div>
           </div>
 
           {/* Input */}
-          <div className="flex-1 flex flex-col h-[84px] gap-[8px] md:gap-[clamp(4px,0.625vw,8px)]">
-            <label className="text-[14px] md:text-button font-at-surt font-bold text-gris-profundo">
+          <div className="flex-1 flex flex-col h-fit gap-[8px] md:gap-[clamp(4px,0.625vw,8px)]">
+            <label className="formulario text-gris-profundo">
               Ciudad / Estado
             </label>
-            <input
-              {...register("city")}
-              type="text"
-              placeholder="Puebla"
-              className="w-full h-[60px] md:h-full px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-beige-hogar"
-            />
+
+            <div className="flex h-[60px] items-center px-[16px] py-[8px] gap-[12px] rounded-[10px] bg-verde-confianza">
+              <img
+                src={ubicacionIcon}
+                alt="Ícono de ubicación"
+                className="w-fit h-[20px]"
+              />
+              <input
+                {...register("city")}
+                type="text"
+                placeholder="Puebla"
+                className="w-full h-[60px] md:h-full formulario text-beige-hogar bg-verde-confianza placeholder:text-beige-hogar outline-none"
+              />
+            </div>
           </div>
         </div>
 
         {/* Correo y telefono */}
         <div className="flex max-md:flex-col w-full gap-[25px] md:gap-[clamp(12px,1.953vw,25px)]">
           {/* Input */}
-          <div className="flex-1 flex flex-col h-[84px] gap-[8px] md:gap-[clamp(4px,0.625vw,8px)]">
-            <label className="text-[14px] md:text-button font-at-surt font-bold text-gris-profundo">
+          <div className="flex-1 flex flex-col h-fit gap-[8px] md:gap-[clamp(4px,0.625vw,8px)]">
+            <label className="formulario text-gris-profundo">
               Correo electrónico
             </label>
-            <input
-              {...register("email")}
-              type="text"
-              placeholder="ejemplo.email@gmail.com"
-              className="w-full h-[60px] md:h-full px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-beige-hogar"
-            />
+
+            <div className="flex h-[60px] items-center px-[16px] py-[8px] gap-[12px] rounded-[10px] bg-verde-confianza">
+              <img
+                src={correoIcon}
+                alt="Ícono de correo"
+                className="w-fit h-[20px]"
+              />
+              <input
+                {...register("email")}
+                type="text"
+                placeholder="ejemplo.email@gmail.com"
+                className="w-full h-[60px] md:h-full formulario text-beige-hogar bg-verde-confianza placeholder:text-beige-hogar outline-none"
+              />
+            </div>
           </div>
 
           {/* Input */}
-          <div className="flex-1 flex flex-col h-[84px] gap-[8px] md:gap-[clamp(4px,0.625vw,8px)]">
-            <label className="text-[14px] md:text-button font-at-surt font-bold text-gris-profundo">
+          <div className="flex-1 flex flex-col h-fit gap-[8px] md:gap-[clamp(4px,0.625vw,8px)]">
+            <label className="formulario text-gris-profundo">
               Teléfono / WhatsApp
             </label>
-            <input
-              {...register("phone")}
-              type="text"
-              placeholder="(555) 876-0084"
-              className="w-full h-[60px] md:h-full px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-beige-hogar"
-            />
+
+            <div className="flex h-[60px] items-center px-[16px] py-[8px] gap-[12px] rounded-[10px] bg-verde-confianza">
+              <img
+                src={telIcon}
+                alt="Ícono de teléfono"
+                className="w-fit h-[20px]"
+              />
+              <input
+                {...register("phone")}
+                type="text"
+                placeholder="(555) 876-0084"
+                className="w-full h-[60px] md:h-full formulario text-beige-hogar bg-verde-confianza placeholder:text-beige-hogar outline-none"
+              />
+            </div>
           </div>
         </div>
 
         {/* Tipo de desarrollo de interés */}
-        <div className="flex-1 flex flex-col h-[84px] gap-[clamp(4px,0.625vw,8px)]">
-          <label className="text-[14px] md:text-button font-at-surt font-bold text-gris-profundo">
+        <div className="flex-1 flex flex-col h-fit gap-[clamp(4px,0.625vw,8px)]">
+          <label className="formulario text-gris-profundo">
             Tipo de desarrollo de interés
           </label>
-          <input
-            {...register("interest")}
-            type="text"
-            placeholder="Horizontal o Vertical"
-            className="w-full h-[60px] px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-beige-hogar"
-          />
+
+          <div className="flex h-[60px] items-center px-[16px] py-[8px] gap-[12px] rounded-[10px] bg-verde-confianza">
+            <img
+              src={desarrolloIcon}
+              alt="Ícono de desarrollo"
+              className="w-fit h-[20px]"
+            />
+            <input
+              {...register("interest")}
+              type="text"
+              placeholder="Horizontal o Vertical"
+              className="w-full h-[60px] formulario text-beige-hogar bg-verde-confianza placeholder:text-beige-hogar outline-none"
+            />
+          </div>
         </div>
 
         {/* Experiencia previa en inversiones */}
         <div className="flex flex-col w-full">
-          <div className="flex-1 flex flex-col h-[84px] gap-[clamp(4px,0.625vw,8px)]">
-            <label className="text-[14px] md:text-button font-at-surt font-bold text-gris-profundo">
+          <div className="flex-1 flex flex-col h-fit gap-[clamp(4px,0.625vw,8px)]">
+            <label className="formulario text-gris-profundo">
               Experiencia previa en inversiones
             </label>
-            <input
-              {...register("experience")}
-              type="text"
-              placeholder="Ya he invertido"
-              className="w-full h-[60px] px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-beige-hogar"
-            />
+            <div className="flex h-[60px] items-center px-[16px] py-[8px] gap-[12px] rounded-[10px] bg-verde-confianza">
+              <img
+                src={inversionesIcon}
+                alt="Ícono de inversiones"
+                className="w-fit h-[20px]"
+              />
+              <input
+                {...register("experience")}
+                type="text"
+                placeholder="Ya he invertido"
+                className="w-full h-[60px] formulario text-beige-hogar bg-verde-confianza placeholder:text-beige-hogar outline-none"
+              />
+            </div>
           </div>
         </div>
 
         {/* Comentarios o preguntas (opcional) */}
         <div className="flex flex-col w-full">
           <div className="flex-1 flex flex-col gap-[clamp(4px,0.625vw,8px)]">
-            <label className="text-[14px] md:text-button font-at-surt font-bold text-gris-profundo">
+            <label className="formulario text-gris-profundo">
               Comentarios o preguntas (opcional)
             </label>
-            <textarea
-              {...register("comments")}
-              type="text"
-              placeholder="Compartános sobre sus objetivos"
-              className="w-full h-[150px] py-[12px] md:py-[clamp(6px,0.938vw,12px)] px-[16px] md:px-[clamp(7px,1.25vw,16px)] bg-verde-confianza placeholder:text-beige-hogar"
-            />
+
+            <div className="flex h-[150px] items-start px-[16px] py-[8px] gap-[12px] rounded-[10px] bg-verde-confianza">
+              <img
+                src={comentariosIcon}
+                alt="Ícono de mensaje"
+                className="w-fit h-[25px] pt-[5px]"
+              />
+              <textarea
+                {...register("comments")}
+                type="text"
+                placeholder="Compartános sobre sus objetivos"
+                className="w-full h-full formulario text-beige-hogar bg-verde-confianza placeholder:text-beige-hogar outline-none resize-none"
+              />
+            </div>
           </div>
         </div>
 
         {/* Botónes (Reset y Submit) */}
-        <div className="flex flex-col md:flex-row w-full gap-[clamp(12px,1.953vw,25px)]">
+        <div className="flex flex-col md:flex-row w-full gap-[clamp(12px,1.953vw,25px)] pt-[15px]">
           {/* Input */}
           <button
             type="button"

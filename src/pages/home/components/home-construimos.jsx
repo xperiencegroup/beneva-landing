@@ -34,7 +34,7 @@ export default function HomeConstruimos() {
     >
       {/* Heading */}
       <div
-        className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col items-center text-center gap-[10px] md:gap-[20px] mb-[clamp(32px,4.688vw,60px)]`}
+        className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col items-center text-center gap-[10px] md:gap-[10px] mb-[clamp(32px,4.688vw,60px)]`}
       >
         <h3 className="title font-woodland text-verde-confianza font-semibold leading-none">
           Nuestro Proceso
@@ -43,8 +43,9 @@ export default function HomeConstruimos() {
           Así construimos cada proyecto
         </h3>
         <p className="max-w-[1160px] paragraph leading-tight text-gris-profundo">
-          Cada desarrollo Beneva sigue un proceso pensado desde las personas
-          desde la primera idea hasta el día que entregas llaves.
+          Cada desarrollo Beneva sigue un proceso pensado en las personas,
+          <br />
+          desde la primera idea hasta el día en que entregas llaves
         </p>
       </div>
 

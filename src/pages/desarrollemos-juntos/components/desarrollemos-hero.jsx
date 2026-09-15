@@ -2,7 +2,7 @@ import video from "/videos/hero/desarrollemos-juntos/banner.mp4";
 
 export default function DesarrollemosHero() {
   return (
-    <div className="relative flex flex-col justify-end items-center h-lvh max-h-[900px] gap-[20px] px-[44px] pb-[60px] md:p-[60px] rounded-br-[140px] md:rounded-br-[160px] lg:rounded-br-[200px] overflow-hidden">
+    <div className="relative flex flex-col justify-end items-center h-lvh max-h-[900px] gap-[5px] px-[44px] pb-[60px] md:p-[60px] rounded-br-[140px] md:rounded-br-[160px] lg:rounded-br-[200px] overflow-hidden">
       {/* Overlay gradiente */}
 
       {/* Video */}

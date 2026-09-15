@@ -13,7 +13,7 @@ export default function HomeNosotros() {
     <>
       <div
         ref={ref}
-        className="relative w-full flex flex-col justify-center items-center max-md:py-[30px] p-[40px] md:p-[60px] gap-[20px] md:gap-[30px]"
+        className="relative w-full flex flex-col justify-center items-center max-md:py-[30px] p-[40px] md:p-[60px] gap-[20px] md:gap-[20px]"
       >
         {/* Texts */}
         <p
@@ -28,13 +28,16 @@ export default function HomeNosotros() {
           </h2>
           <p className="w-full max-w-[1160px] paragraph text-center font-light whitespace-pre-line text-verde-confianza leading-[109%]">
             Beneva nació con una convicción clara: los espacios donde vivimos
-            moldean quiénes somos. <br />
+            moldean quiénes somos.
+            <br />
             Por eso cada proyecto lleva consigo calidad, detalle y una visión
-            humana para que quien llegue a casa sienta que llegó a su lugar.
+            humana
+            <br />
+            para que quien llegue a casa sienta que llegó a su lugar.
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center items-center md:items-start w-full gap-[30px] xl:gap-[60px]">
+        <div className="flex flex-col md:flex-row justify-center items-center md:items-center w-full gap-[30px] xl:gap-[60px]">
           {/* compromiso beneva */}
           <div className="flex flex-1 flex-col xl:flex-row w-full max-w-[380px] xl:max-w-[580px] justify-center items-center gap-[20px]">
             <div className="flex shrink-0 justify-center items-center size-[95px] rounded-bl-[50px] bg-verde-dinamico">
@@ -47,7 +50,7 @@ export default function HomeNosotros() {
               <p className="w-full max-w-[1160px] paragraph text-center xl:text-left font-light whitespace-pre-line text-verde-confianza leading-[109%]">
                 Construimos con responsabilidad hacia nuestros clientes, nuestro
                 equipo y la ciudad.
-                <br /> <br className="hidden xl:block" />
+                <br />
                 Cada decisión la tomamos pensando en los tres.
               </p>
             </div>

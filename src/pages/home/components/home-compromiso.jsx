@@ -41,15 +41,12 @@ export default function HomeCompromiso() {
           <div className="flex flex-col w-full max-w-[615px] gap-[20px] md:gap-[20px] text-center">
             {/* Nuestro compromiso con la calidad */}
             <div
-              style={{ transitionDelay: isVisible ? "0.55s" : "0s" }}
               className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col gap-[5px]`}
             >
               <h3 className="subtitle text-left max-md:pt-2.5 font-woodland font-bold text-verde-confianza leading-none">
-                Nuestro Compromiso
-                <br />
-                con la Calidad
+                Nuestro Compromiso con la Calidad
               </h3>
-              <p className="paragraph text-left leading-[110%] lg:leading-none text-gris-profundo max-w-[500px] lg:max-w-[720px]">
+              <p className="paragraph text-left leading-[110%] lg:leading-none text-gris-profundo max-w-[500px] lg:max-w-[580px]">
                 Somos una desarrolladora que se compromete a crear proyectos
                 donde la calidad, la innovación y la confianza van de la mano.
                 <br /> <br />
@@ -60,6 +57,7 @@ export default function HomeCompromiso() {
 
             {/* Los 3 "SI" */}
             <div
+              style={{ transitionDelay: isVisible ? "0.55s" : "0s" }}
               className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col gap-[5px] pt-[30px]`}
             >
               <h3 className="subtitle text-left font-woodland text-verde-confianza font-bold leading-none">
@@ -81,7 +79,7 @@ export default function HomeCompromiso() {
                     key={index}
                     style={{
                       transitionDelay: isVisible
-                        ? `${index * 0.1 + 0.15}s`
+                        ? `${index * 0.1 + 0.55}s`
                         : "0s",
                     }}
                     className={`reveal ${isVisible ? "is-visible" : ""} flex flex-row w-full px-[34px] py-[15px] xl:pl-[30px] items-center rounded-tr-[20px] sm:rounded-tr-[30px]  bg-azul-integro`}

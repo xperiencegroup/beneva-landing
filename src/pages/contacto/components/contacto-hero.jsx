@@ -2,7 +2,7 @@ import video from "/videos/hero/contacto/banner.mov";
 
 export default function ContactoHero() {
   return (
-    <div className="relative flex flex-col justify-end items-center h-lvh max-h-[900px] gap-[20px] px-[40px] pb-[60px] md:p-[60px] rounded-br-[100px] md:rounded-br-[200px] overflow-hidden">
+    <div className="relative flex flex-col justify-end items-center h-lvh max-h-[900px] gap-[5px] px-[40px] pb-[60px] md:p-[60px] rounded-br-[100px] md:rounded-br-[200px] overflow-hidden">
       {/* Overlay gradiente */}
       <div className="absolute z-5 inset-0 w-full h-full bg-linear-to-b from-beige-hogar/0 from-21% md:via-beige-hogar/70 via-beige-hogar/90 via-80% to-beige-hogar" />
 

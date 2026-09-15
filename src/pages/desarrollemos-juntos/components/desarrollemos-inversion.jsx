@@ -23,14 +23,14 @@ export default function DesarrollemosInversion() {
       >
         {/* Text  */}
         <div className="flex lg:w-[53%] min-w-0 h-full justify-center items-center px-[40px] py-[30px] md:pl-4">
-          <div className="flex flex-col w-full lg:max-w-[588px] justify-center items-center gap-[20px] md:gap-[clamp(6px,1.563vw,20px)] text-center">
+          <div className="flex flex-col w-full lg:max-w-[588px] justify-center items-center gap-[20px] text-center">
             <div
-              className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col items-center gap-[20px] md:gap-[clamp(6px,1.563vw,20px)]`}
+              className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col items-center gap-[5px] pb-[5px]`}
             >
               <h3 className="subtitle font-woodland text-verde-confianza font-bold leading-none">
                 Tu inversión en buenas manos
               </h3>
-              <p className="paragraph text-center leading-tight lg:leading-none text-gris-profundo max-w-[500px] lg:max-w-[760px]">
+              <p className="paragraph text-center leading-tight lg:leading-none text-gris-profundo max-w-[500px] lg:max-w-[540px]">
                 Cuando un socio trabaja con Beneva, sabe que el cliente final va
                 a recibir exactamente lo que se le prometió y eso protege la
                 reputación y el valor de cada proyecto.
@@ -40,31 +40,35 @@ export default function DesarrollemosInversion() {
             {/* Servicio y atención al cliente */}
             <div
               style={{ transitionDelay: isVisible ? "0.15s" : "0s" }}
-              className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col w-full h-[286px] sm:h-[278px] items-center justify-center px-[24px] py-[40px] md:px-[clamp(21px,3.594vw,46px)] md:py-[clamp(9px,1.563vw,20px)] rounded-tl-[80px] sm:rounded-tl-[30px] gap-[15px] md:gap-[clamp(6px,0.938vw,12px)] bg-azul-integro`}
+              className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col w-full max-[490px]:min-h-[300px] min-[490px]:h-[170px] md:h-[190px] lg:h-[220px] xl:h-[240px] items-center justify-center px-[24px] py-[40px] md:px-[clamp(21px,3.594vw,46px)] md:py-[clamp(9px,1.563vw,20px)] rounded-tl-[80px] sm:rounded-tl-[30px] gap-[5px] bg-azul-integro`}
             >
               <h4 className="subtitle font-woodland font-bold leading-none text-rosa-bienestar">
                 Servicio y atención al cliente
               </h4>
-              <p className="max-w-[659px] text-beige-hogar text-[16px] paragraph leading-tight text-center">
-                Nuestros clientes y socios son la columna vertebral de lo que
-                hacemos. Cada interacción desde la primera llamada hasta la
-                entrega de llaves la tratamos con el mismo cuidado que ponemos
-                en cada detalle constructivo.
+              <p className="max-w-[659px] text-beige-hogar text-[16px] parrafos-bloques leading-tight text-center">
+                Nuestros clientes y socios son la columna vertebral{" "}
+                <br className="hidden lg:block" /> de lo que hacemos.
+                <br /> <br />
+                Cada interacción desde la primera llamada hasta la entrega de
+                llaves la tratamos con el mismo cuidado que ponemos en cada
+                detalle constructivo.
               </p>
             </div>
 
             {/* Calidad */}
             <div
               style={{ transitionDelay: isVisible ? "0.25s" : "0s" }}
-              className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col w-full h-[286px] sm:h-[275px] items-center justify-center px-[24px] py-[40px] md:px-[clamp(21px,3.594vw,46px)] md:py-[clamp(9px,1.563vw,20px)] rounded-tl-[80px] sm:rounded-tl-[30px] gap-[15px] md:gap-[clamp(6px,0.938vw,12px)] bg-azul-integro`}
+              className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col w-full max-[490px]:min-h-[300px] min-[490px]:h-[170px] md:h-[190px] lg:h-[220px] xl:h-[240px] items-center justify-center px-[24px] py-[40px] md:px-[clamp(21px,3.594vw,46px)] md:py-[clamp(9px,1.563vw,20px)] rounded-tl-[80px] sm:rounded-tl-[30px] gap-[5px] bg-azul-integro`}
             >
               <h4 className="subtitle font-woodland font-bold leading-none text-rosa-bienestar">
                 Calidad
               </h4>
-              <p className="max-w-[659px] text-beige-hogar paragraph leading-tight text-center">
+              <p className="max-w-[659px] text-beige-hogar parrafos-bloques leading-tight text-center">
                 Si queremos vivir en una buena ciudad, hay que construir una
-                buena ciudad. Tenemos el más alto estándar de calidad en
-                nuestros trabajos sin excepciones.
+                buena ciudad.
+                <br /> <br />
+                Tenemos el más alto estándar de calidad en nuestros trabajos sin
+                excepciones.
               </p>
             </div>
           </div>
