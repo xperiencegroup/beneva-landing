@@ -85,7 +85,7 @@ export default function QuienesSomosNosMueve() {
 
         {/* Image */}
         <div
-          className={`reveal-right ${isVisible ? "is-visible" : ""} w-full lg:w-[34%] h-[545px] lg:h-full relative rounded-tl-[100px] md:rounded-tl-[40px] sm:rounded-tl-[60px] lg:rounded-tl-[100px] overflow-hidden shrink-0`}
+          className={`reveal-right ${isVisible ? "is-visible" : ""} w-full lg:w-[34%] xl:w-[50%] h-[545px] lg:h-full relative rounded-tl-[100px] md:rounded-tl-[40px] sm:rounded-tl-[60px] lg:rounded-tl-[100px] overflow-hidden shrink-0`}
         >
           <img
             src={mainImage}

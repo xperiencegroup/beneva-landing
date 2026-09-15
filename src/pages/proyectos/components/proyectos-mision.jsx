@@ -26,10 +26,15 @@ export default function ProyectosMision() {
           El hogar que tu familia merece está aquí.
         </p>
 
-        <button className="relative group text-[18px] md:text-button px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] text-verde-confianza bg-celeste-bienestar hover:bg-transparent hover:cursor-pointer active:text-beige-hogar active:font-bold active:bg-verde-confianza transition-all">
+        <a
+          href="https://mision-de-los-angeles.vercel.app/"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="relative group text-[18px] md:text-button px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] text-verde-confianza bg-celeste-bienestar hover:bg-transparent hover:cursor-pointer active:text-beige-hogar active:font-bold active:bg-verde-confianza transition-all"
+        >
           Ver sitio del proyecto
           <div className="absolute bottom-0 left-0 w-full h-0.5 bg-celeste-bienestar opacity-0 group-hover:opacity-100 active:opacity-0 group-active:opacity-0 transition-opacity ease-in" />
-        </button>
+        </a>
       </div>
 
       <div
