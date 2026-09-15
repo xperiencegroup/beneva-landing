@@ -30,7 +30,7 @@ export default function QuienesSomosValores() {
   return (
     <div
       ref={ref}
-      className="flex flex-col justify-center items-center w-full bg-beige-hogar px-[40px] py-[30px] md:p-[clamp(20px,4.688vw,60px)] gap-[20px]"
+      className="flex flex-col justify-center items-center w-full bg-beige-hogar px-[40px] pt-[30px] md:px-[clamp(20px,4.688vw,60px)] gap-[30px]"
     >
       {/* Heading */}
       <div
@@ -69,7 +69,9 @@ export default function QuienesSomosValores() {
       </div>
 
       {/* Logo beneva */}
-      <LogoMain className="size-[55px] text-verde-confianza" />
+      <div className="pt-[5px]">
+        <LogoMain className="size-[55px] text-verde-confianza" />
+      </div>
     </div>
   );
 }

@@ -6,7 +6,7 @@ import colaborarIcon from "../../../assets/icons/values/icon-colaborar.svg";
 import entenderIcon from "../../../assets/icons/values/icon-entender.svg";
 import calidadIcon from "../../../assets/icons/values/icon-calidad.svg";
 
-import banner from "../../../assets/images/sections/home/nosotros-banner.jpg";
+import banner from "../../../assets/images/sections/home/nosotros-banner.png";
 
 const ITEMS = [
   {
@@ -80,11 +80,11 @@ export default function QuienesSomosProfesionales() {
       </div>
 
       {/* Banner */}
-      <div className="hidden xl:block relative w-full h-[45svh] bg-cyan-500 rounded-tl-[120px] overflow-hidden">
+      <div className="hidden xl:block relative w-full h-[50svh] bg-cyan-500 rounded-tl-[120px] overflow-hidden">
         <img
           src={banner}
           alt="Imágen de casas"
-          className="absolute inset-0 w-full h-full object-cover object-[0%_40%]"
+          className="absolute inset-0 w-full h-full object-cover object-[0%_60%]"
         />
       </div>
     </>

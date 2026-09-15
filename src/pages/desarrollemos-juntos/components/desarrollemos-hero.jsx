@@ -26,7 +26,7 @@ export default function DesarrollemosHero() {
 
       <p className="animate-hero-2 relative max-w-[1160px] paragraph leading-tight text-center text-beige-hogar">
         En Beneva sumamos experiencia, visión y capacidad de ejecución para
-        crear proyectos sólidos, rentables y con valor a largo plazo.
+        crear proyectos sólidos, <br /> rentables y con valor a largo plazo.
       </p>
     </div>
   );

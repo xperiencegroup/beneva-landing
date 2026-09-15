@@ -37,13 +37,13 @@ export default function HomeNosotros() {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center items-center md:items-center w-full gap-[30px] xl:gap-[60px]">
+        <div className="flex flex-col md:flex-row justify-center items-center md:items-start w-full gap-[30px] xl:gap-[60px]">
           {/* compromiso beneva */}
-          <div className="flex flex-1 flex-col xl:flex-row w-full max-w-[380px] xl:max-w-[580px] justify-center items-center gap-[20px]">
+          <div className="flex flex-1 flex-col xl:flex-row w-full max-w-[380px] xl:max-w-[580px] xl:h-[140px] justify-center items-center gap-[20px]">
             <div className="flex shrink-0 justify-center items-center size-[95px] rounded-bl-[50px] bg-verde-dinamico">
               <img src={compromisoIcon} alt="Ícono de compromiso" />
             </div>
-            <div className="flex flex-col gap-[20px] xl:gap-[5px]">
+            <div className="self-start flex flex-col gap-[20px] xl:gap-[5px]">
               <h2 className="subtitle text-center xl:text-left font-woodland font-bold leading-none text-verde-confianza">
                 Compromiso Beneva
               </h2>
@@ -57,7 +57,7 @@ export default function HomeNosotros() {
           </div>
 
           {/* visión beneva */}
-          <div className="flex flex-1 flex-col-reverse md:flex-col xl:flex-row max-w-[380px] xl:max-w-[580px] justify-center items-center gap-[20px]">
+          <div className="flex flex-1 flex-col-reverse md:flex-col xl:flex-row max-w-[380px] xl:max-w-[580px] xl:h-[140px] justify-center items-center gap-[20px]">
             <div className="flex shrink-0 justify-center items-center size-[95px] rounded-bl-[50px] bg-verde-dinamico">
               <img src={visionIcon} alt="Ícono de compromiso" />
             </div>
@@ -86,11 +86,11 @@ export default function HomeNosotros() {
       </div>
 
       {/* Banner */}
-      <div className="hidden xl:block relative w-full h-[34svh] bg-cyan-500 rounded-tl-[120px] overflow-hidden">
+      <div className="hidden xl:block relative w-full h-[50svh] bg-cyan-500 rounded-tl-[120px] overflow-hidden">
         <img
           src={banner}
           alt="Imágen de casas"
-          className="absolute inset-0 w-full h-full object-cover object-[0%_26%]"
+          className="absolute inset-0 w-full h-full object-cover object-[0%_50%]"
         />
       </div>
     </>

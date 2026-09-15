@@ -26,7 +26,7 @@ export default function HomeCompromiso() {
       <div className="relative flex flex-col md:flex-row w-full h-full items-center md:gap-[60px]">
         {/* Image */}
         <div
-          className={`reveal-left ${isVisible ? "is-visible" : ""} w-full md:w-[34%] h-[552px] md:h-[92vh] relative rounded-tr-[100px] overflow-hidden shrink-0`}
+          className={`reveal-left ${isVisible ? "is-visible" : ""} w-full md:w-[50%] h-[552px] md:h-[92vh] relative rounded-tr-[100px] overflow-hidden shrink-0`}
         >
           <img
             src={mainImage}
