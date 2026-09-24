@@ -7,6 +7,8 @@ import userIcon from "../../../assets/icons/home/user.svg";
 import phoneIcon from "../../../assets/icons/home/phone.svg";
 import mailIcon from "../../../assets/icons/home/mail.svg";
 import chatIcon from "../../../assets/icons/home/chat.svg";
+import { track } from "../../../analytics/track";
+import { TRACK } from "../../../analytics/track.constants";
 
 export default function HomeEnterarme() {
   const { handleSubmit, register, reset } = useForm();
@@ -37,10 +39,16 @@ export default function HomeEnterarme() {
         throw new Error("Error en la respuesta del servidor");
       }
 
+      track(TRACK.home.enterarme.formSubmit);
+
       setIsLoading(false);
       reset();
     } catch (error) {
       console.log("Error: ", error);
+      track(TRACK.home.enterarme.formSubmitError, {
+        error_type: error.message.startsWith("HTTP") ? "server" : "network",
+        error_message: error.message,
+      });
     } finally {
       setIsLoading(false);
     }

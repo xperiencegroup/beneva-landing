@@ -1,6 +1,9 @@
+import { useInView } from "../../../hooks/useInView";
+import { track } from "../../../analytics/track";
+import { TRACK } from "../../../analytics/track.constants";
+
 import logoMision from "../../../assets/images/icons/main/logo-mision-angeles-verde.svg";
 import misionImage from "../../../assets/images/sections/proyectos/mision-main-image.png";
-import { useInView } from "../../../hooks/useInView";
 
 export default function ProyectosMision() {
   const [textRef, textVisible] = useInView({ threshold: 0.25 });
@@ -31,6 +34,11 @@ export default function ProyectosMision() {
           href="https://mision-de-los-angeles.vercel.app/"
           target="_blank"
           rel="noreferrer noopener"
+          onClick={() =>
+            track(TRACK.projects.mision.siteClick, {
+              item_id: "mision-de-los-angeles",
+            })
+          }
           className="relative group text-[18px] md:text-button px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] text-verde-confianza bg-celeste-bienestar hover:bg-transparent hover:cursor-pointer active:text-beige-hogar active:font-bold active:bg-verde-confianza transition-all"
         >
           Ver sitio del proyecto

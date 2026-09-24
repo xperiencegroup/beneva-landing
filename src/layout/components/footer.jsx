@@ -1,4 +1,7 @@
 import { Link } from "react-router";
+import { track } from "../../analytics/track";
+import { TRACK } from "../../analytics/track.constants";
+
 import developedByXperience from "../../assets/images/icons/xperience/xperience.svg";
 import benevaLogoWhite from "../../assets/images/icons/main/beneva-footer.svg";
 import correoIcon from "../../assets/icons/form/green/correo.svg";
@@ -19,13 +22,24 @@ const socials = [
   },
 ];
 
+const NAV = [
+  { id: "quienes-somos", slug: "/quienes-somos", title: "Quiénes Somos" },
+  { id: "proyectos", slug: "/proyectos", title: "Proyectos" },
+  {
+    id: "desarrollemos-juntos",
+    slug: "/desarrollemos-juntos",
+    title: "Desarrollemos Juntos",
+  },
+  { id: "contactanos", slug: "/contactanos", title: "Contacto" },
+];
+
 export default function Footer() {
   return (
     <div className="flex flex-col w-full md:h-[467px] bg-verde-confianza">
       <div className="self-center flex flex-col w-full max-w-[1280px] justify-center h-full max-md:px-[30px] py-[60px] px-[44px] lg:px-[60px] xl:px-5 gap-[20px] md:gap-[30px]">
         {/* Logo y frase*/}
         <div className="flex flex-col md:flex-row w-full max-w-[1280px] items-center py-[20px] gap-[10px] md:gap-[20px]">
-          <Link to={"/"}>
+          <Link to={"/"} onClick={() => track(TRACK.layout.footer.logo)}>
             <img
               src={benevaLogoWhite}
               alt="Logo de Beneva"
@@ -45,34 +59,19 @@ export default function Footer() {
         <div className="hidden md:block w-full h-[1px] bg-beige-hogar" />
 
         <div className="flex max-md:flex-col md:gap-[20px] max-md:w-full justify-center lg:justify-start">
-          <Link
-            to={"quienes-somos"}
-            className="relative group px-[24px] py-[15px] button text-center text-beige-hogar hover:cursor-pointer active:text-verde-confianza active:font-bold active:bg-celeste-bienestar transition-all"
-          >
-            Quiénes Somos
-            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-celeste-bienestar opacity-0 group-hover:opacity-100 group-active:opacity-0 transition-opacity ease-in" />
-          </Link>
-          <Link
-            to={"proyectos"}
-            className="relative group px-[24px] py-[15px] button text-center text-beige-hogar hover:cursor-pointer active:text-verde-confianza active:font-bold active:bg-celeste-bienestar transition-all"
-          >
-            Proyectos
-            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-celeste-bienestar opacity-0 group-hover:opacity-100 group-active:opacity-0 transition-opacity ease-in" />
-          </Link>
-          <Link
-            to={"desarrollemos-juntos"}
-            className="relative group px-[24px] py-[15px] button text-center text-beige-hogar hover:cursor-pointer active:text-verde-confianza active:font-bold active:bg-celeste-bienestar transition-all"
-          >
-            Desarrollemos Juntos
-            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-celeste-bienestar opacity-0 group-hover:opacity-100 group-active:opacity-0 transition-opacity ease-in" />
-          </Link>
-          <Link
-            to={"contactanos"}
-            className="relative group px-[24px] py-[15px] button text-center text-beige-hogar hover:cursor-pointer active:text-verde-confianza active:font-bold active:bg-celeste-bienestar transition-all"
-          >
-            Contacto
-            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-celeste-bienestar opacity-0 group-hover:opacity-100 group-active:opacity-0 transition-opacity ease-in" />
-          </Link>
+          {NAV.map((item) => (
+            <Link
+              key={item.id}
+              to={item.slug}
+              onClick={() =>
+                track(TRACK.layout.footer.nav, { item_id: item.id })
+              }
+              className="relative group px-[24px] py-[15px] button text-center text-beige-hogar hover:cursor-pointer active:text-verde-confianza active:font-bold active:bg-celeste-bienestar transition-all"
+            >
+              {item.title}
+              <div className="absolute bottom-0 left-0 w-full h-0.5 bg-celeste-bienestar opacity-0 group-hover:opacity-100 group-active:opacity-0 transition-opacity ease-in" />
+            </Link>
+          ))}
         </div>
 
         <div className="max-md:self-center flex flex-col md:flex-row justify-between items-center w-full max-md:max-w-[315px] md:w-full md:h-[97px] px-[25px] py-[15px] max-md:gap-[20px] rounded-[12px] border-[1px] border-beige-hogar">
@@ -82,6 +81,9 @@ export default function Footer() {
 
           <a
             href="mailto:contacto@beneva.mx"
+            onClick={() =>
+              track(TRACK.layout.footer.contact, { item_id: "email" })
+            }
             className="flex flex-wrap max-md:w-full max-md:w-full max-md:max-w-[210px] max-md:justify-between justify-center items-center  gap-[4px] md:gap-[8px] lg:gap-[15px] paragraph text-beige-hogar"
           >
             <span className="flex shrink-0 justify-center items-center size-[42px] md:size-[60px] bg-beige-hogar">
@@ -100,6 +102,13 @@ export default function Footer() {
               return (
                 <a
                   key={social.id}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.id}
+                  onClick={() =>
+                    track(TRACK.layout.footer.social, { item_id: social.id })
+                  }
                   className="flex size-[42px] md:size-[60px] justify-center items-center bg-beige-hogar"
                 >
                   <img

@@ -1,5 +1,7 @@
 import { Link } from "react-router";
 import { useInView } from "../../../hooks/useInView";
+import { track } from "../../../analytics/track";
+import { TRACK } from "../../../analytics/track.constants";
 
 import compromisoIcon from "../../../assets/icons/home/compromiso.svg";
 import visionIcon from "../../../assets/icons/home/vision.svg";
@@ -77,6 +79,9 @@ export default function HomeNosotros() {
         {/* Button */}
         <Link
           to={"/quienes-somos"}
+          onClick={() =>
+            track(TRACK.home.nosotros.cta, { item_id: "quienes-somos" })
+          }
           style={{ transitionDelay: isVisible ? ".8s" : "0s" }}
           className={`reveal ${isVisible ? "is-visible" : ""} relative group text-[14px] md:text-button px-[24px] py-[15px] md:px-[clamp(20px,3.438vw,44px)] md:py-[clamp(7px,1.172vw,15px)] transition-all text-gris-profundo bg-celeste-bienestar hover:bg-transparent hover:font-bold hover:cursor-pointer`}
         >

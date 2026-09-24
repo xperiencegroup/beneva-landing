@@ -1,8 +1,11 @@
+import { Link } from "react-router";
+import { useInView } from "../../../hooks/useInView";
+import { track } from "../../../analytics/track";
+import { TRACK } from "../../../analytics/track.constants";
+
 import bgImage from "../../../assets/images/backgrounds/compromiso-bg.jpg";
 import patrimonioImage from "../../../assets/images/sections/home/patrimonio.jpg";
 import logoMision from "../../../assets/images/icons/main/logo-mision-angeles.svg";
-import { Link } from "react-router";
-import { useInView } from "../../../hooks/useInView";
 
 export default function HomePatrimonio() {
   const [ref, isVisible] = useInView({ threshold: 0.3 });
@@ -53,6 +56,9 @@ export default function HomePatrimonio() {
                 </h3>
                 <Link
                   to={"/proyectos"}
+                  onClick={() =>
+                    track(TRACK.home.patrimonio.cta, { item_id: "proyectos" })
+                  }
                   className="relative group text-[14px] md:text-button px-[24px] py-[15px] md:px-[clamp(11px,1.875vw,24px)] md:py-[clamp(7px,1.172vw,15px)] bg-celeste-bienestar hover:bg-transparent text-verde-confianza hover:text-celeste-bienestar active:text-beige-hogar active:font-bold active:bg-transparent hover:cursor-pointer"
                 >
                   Ver proyectos

@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useInView } from "../../../hooks/useInView";
+import { track } from "../../../analytics/track";
+import { TRACK } from "../../../analytics/track.constants";
 
 import nombreIcon from "../../../assets/icons/form/green/nombre.svg";
 import correoIcon from "../../../assets/icons/form/green/correo.svg";
@@ -43,9 +45,15 @@ export default function ContactoForm() {
         throw new Error("Error en la respuesta del servidor");
       }
 
+      track(TRACK.contact.formSubmit);
+
       reset();
     } catch (error) {
       console.error(error);
+      track(TRACK.contact.formSubmitError, {
+        error_type: error.message.startsWith("HTTP") ? "server" : "network",
+        error_message: error.message,
+      });
     } finally {
       setIsLoading(false);
     }
