@@ -80,7 +80,7 @@ export default function DesarrollemosInversion() {
             src={mainImage}
             alt="Imagen principal"
             draggable={false}
-            className="absolute inset-0 w-full h-full object-cover object-[0%_50%]"
+            className="absolute inset-0 w-full h-full object-cover object-[0%_50%] scale-125"
           />
         </div>
       </div>
