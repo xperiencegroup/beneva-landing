@@ -5,7 +5,7 @@ const steps = [
   {
     number: "01",
     title: "Experiencia real",
-    text: "Casi 20 años entre construcción y negocios.\n\n Sabemos lo que cuesta levantar un desarrollo y cómo hacerlo bien.",
+    text: "10 proyectos concluidos exitosamente.\n Una trayectoria que nos permite entender cada reto y llevar cada desarrollo de la planeación a la realidad.",
   },
   {
     number: "02",
@@ -14,7 +14,7 @@ const steps = [
   },
   {
     number: "03",
-    title: "Cantidad que genera plusvalía",
+    title: "Proyectos que \n generan plusvalía",
     text: "Desarrollamos con los más altos estándares porque un proyecto bien hecho genera valor para todos: socios, compradores y la ciudad.",
   },
   {
@@ -40,7 +40,7 @@ export default function DesarrollemosRazones() {
           Por qué desarrollar con Beneva
         </h2>
         <p className="max-w-[1160px] paragraph leading-tight text-gris-profundo">
-          No solo construimos casas desarrollamos proyectos integrales con
+          No solo construimos casas, desarrollamos proyectos integrales con
           visión de largo plazo.
           <br />
           Estas son las razones por las que nuestros socios eligen trabajar con
@@ -60,7 +60,7 @@ export default function DesarrollemosRazones() {
             }}
             className={`reveal-scale ${isVisible ? "is-visible" : ""} flex flex-col items-center justify-center text-center w-full w-[295px] max-md:h-[280px] max-md:max-w-[300px] md:max-w-[clamp(245px,41.641vw,500px)] h-[clamp(164px,27.813vw,239px)] bg-rosa-bienestar rounded-t-[120px] lg:rounded-t-[160px] px-[34px] py-[40px] md:p-[clamp(24px,3.125vw,40px)] gap-[20px] md:gap-[clamp(9px,1.563vw,20px)]`}
           >
-            <h3 className="subtitle font-woodland text-gris-profundo font-bold leading-none">
+            <h3 className="subtitle font-woodland text-gris-profundo font-bold leading-none whitespace-pre-line">
               <span>{step.title}</span>
             </h3>
 

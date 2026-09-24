@@ -19,8 +19,9 @@ export default function ProyectosMision() {
         />
 
         <p className="max-w-[1160px] paragraph text-center leading-[110%] text-gris-profundo">
-          Dos prototipos de vivienda, más de 5,500 m² de amenidades y vigilancia
-          24/7 <br /> en una de las zonas de mayor crecimiento de Apodaca.
+          Cuatro prototipos de vivienda, más de 5,500 m² de amenidades y
+          vigilancia 24/7 <br /> en una de las zonas de mayor crecimiento de
+          Apodaca.
           <br />
           <br />
           El hogar que tu familia merece está aquí.

@@ -16,17 +16,16 @@ export default function QuienesSomosHistoria() {
             Nuestra historia
           </h3>
           <p className="max-w-[1160px] paragraph leading-[100%] text-center text-gris-profundo">
-            Detrás de Beneva hay casi 20 años de experiencia acumulada entre
-            construcción y negocios. Años de ver cómo se hacen las cosas, de
-            aprender qué funciona y qué puede hacerse mejor y de entender que el
-            comprador de vivienda merece más que una transacción.
+            Detrás de Beneva hay casi 20 años de experiencia y aprendizaje. A lo
+            largo de este tiempo hemos conocido de cerca las necesidades de
+            quienes buscan un hogar, entendiendo que una vivienda representa
+            mucho más que una compra.
             <br />
             <br />
-            Esa convicción fue la semilla de Beneva.
-            <br />
-            Un proyecto que nació con la intención de construir desarrollos con
-            carácter pensados en las familias que los van a habitar, en la
-            comunidad que los rodea y en la ciudad que todos compartimos.
+            De esa experiencia nació Beneva: con la intención de crear
+            desarrollos pensados para las familias que los habitan, cuidando
+            cada detalle y procurando que cada proyecto aporte valor a su
+            entorno y a la ciudad.
           </p>
         </div>
       </div>

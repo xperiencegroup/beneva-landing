@@ -182,7 +182,7 @@ export default function DesarrollemosFormulario() {
             <input
               {...register("interest")}
               type="text"
-              placeholder="Horizontal o Vertical"
+              placeholder="Habitacional e Industrial"
               className="w-full h-[60px] formulario text-beige-hogar bg-verde-confianza placeholder:text-beige-hogar outline-none"
             />
           </div>

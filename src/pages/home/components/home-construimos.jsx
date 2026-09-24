@@ -8,7 +8,7 @@ export default function HomeConstruimos() {
     {
       number: "01",
       title: "Conceptualización",
-      text: "Todos somos colaboradores y colaboramos juntos para hacer que las cosas sucedan.",
+      text: "Adaptamos cada proyecto para priorizar el estilo y calidad de vida de nuestros residentes",
     },
     {
       number: "02",
@@ -18,7 +18,7 @@ export default function HomeConstruimos() {
     {
       number: "03",
       title: "Acompañamiento al cliente",
-      text: "Desde el primer contacto hasta la entrega, tenemos a alguien de nuestro equipo disponible para resolver dudas, guiar el proceso y hacer que la experiencia sea clara y tranquila.",
+      text: "Desde el primer contacto hasta la entrega, tenemos a alguien de nuestro equipo disponible para resolver dudas, guiar el proceso y hacer que la experiencia sea placentera.",
     },
     {
       number: "04",

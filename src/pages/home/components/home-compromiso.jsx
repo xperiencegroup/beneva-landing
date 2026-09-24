@@ -25,9 +25,7 @@ export default function HomeCompromiso() {
       {/* Content */}
       <div className="relative flex flex-col md:flex-row w-full h-full items-center md:gap-[60px]">
         {/* Image */}
-        <div
-          className={`reveal-left ${isVisible ? "is-visible" : ""} w-full md:w-[50%] h-[552px] md:h-[92vh] relative rounded-tr-[100px] overflow-hidden shrink-0`}
-        >
+        <div className="w-full md:w-[50%] self-stretch relative rounded-tr-[100px] overflow-hidden ">
           <img
             src={mainImage}
             alt="Imagen principal"
@@ -37,7 +35,7 @@ export default function HomeCompromiso() {
         </div>
 
         {/* Text  */}
-        <div className="flex md:w-[66%] min-w-0 h-full justify-start items-center max-md:px-[40px] max-md:py-[30px] md:pr-2">
+        <div className="flex md:w-[66%] min-w-0 h-full justify-start items-center max-md:px-[40px] max-md:py-[30px] md:pr-2 py-[30px]">
           <div className="flex flex-col w-full max-w-[615px] gap-[20px] md:gap-[20px] text-center">
             {/* Nuestro compromiso con la calidad */}
             <div

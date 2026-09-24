@@ -30,10 +30,9 @@ export default function DesarrollemosInversion() {
               <h3 className="subtitle font-woodland text-verde-confianza font-bold leading-none">
                 Tu inversión en buenas manos
               </h3>
-              <p className="paragraph text-center leading-tight lg:leading-none text-gris-profundo max-w-[500px] lg:max-w-[540px]">
-                Cuando un socio trabaja con Beneva, sabe que el cliente final va
-                a recibir exactamente lo que se le prometió y eso protege la
-                reputación y el valor de cada proyecto.
+              <p className="paragraph text-center leading-tight lg:leading-none text-gris-profundo max-w-[500px]">
+                Respetamos el patrimonio de nuestros socios y maximizamos su
+                valor a través de nuestro proceso de desarrollo.
               </p>
             </div>
 
@@ -49,9 +48,9 @@ export default function DesarrollemosInversion() {
                 Nuestros clientes y socios son la columna vertebral{" "}
                 <br className="hidden lg:block" /> de lo que hacemos.
                 <br /> <br />
-                Cada interacción desde la primera llamada hasta la entrega de
-                llaves la tratamos con el mismo cuidado que ponemos en cada
-                detalle constructivo.
+                Cada interacción desde la primera llamada hasta el finiquito de
+                cada proyecto la tratamos con el mismo cuidado que ponemos en
+                cada detalle constructivo.
               </p>
             </div>
 
@@ -61,14 +60,13 @@ export default function DesarrollemosInversion() {
               className={`reveal ${isVisible ? "is-visible" : ""} flex flex-col w-full max-[490px]:min-h-[300px] min-[490px]:h-[170px] md:h-[190px] lg:h-[220px] xl:h-[240px] items-center justify-center px-[24px] py-[40px] md:px-[clamp(21px,3.594vw,46px)] md:py-[clamp(9px,1.563vw,20px)] rounded-tl-[80px] sm:rounded-tl-[30px] gap-[5px] bg-azul-integro`}
             >
               <h4 className="subtitle font-woodland font-bold leading-none text-rosa-bienestar">
-                Calidad
+                Transparencia
               </h4>
               <p className="max-w-[659px] text-beige-hogar parrafos-bloques leading-tight text-center">
-                Si queremos vivir en una buena ciudad, hay que construir una
-                buena ciudad.
-                <br /> <br />
-                Tenemos el más alto estándar de calidad en nuestros trabajos sin
-                excepciones.
+                Toda la información de los proyectos es totalmente{" "}
+                <br className="max-sm:hidden" /> transparente con nuestros
+                socios y asumimos <br className="max-sm:hidden" />{" "}
+                responsabilidad en todas las partes del desarrollo
               </p>
             </div>
           </div>
@@ -76,13 +74,13 @@ export default function DesarrollemosInversion() {
 
         {/* Image */}
         <div
-          className={`reveal-right ${isVisible ? "is-visible" : ""} w-full lg:w-[46%] h-[417px] lg:h-[100vh] relative rounded-tl-[40px] sm:rounded-tl-[60px] lg:rounded-tl-[100px] overflow-hidden shrink-0`}
+          className={`reveal-right ${isVisible ? "is-visible" : ""} w-full lg:w-[46%] self-stretch relative rounded-tl-[40px] sm:rounded-tl-[60px] lg:rounded-tl-[100px] overflow-hidden shrink-0`}
         >
           <img
             src={mainImage}
             alt="Imagen principal"
             draggable={false}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-[0%_50%]"
           />
         </div>
       </div>
