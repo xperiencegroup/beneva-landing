@@ -35,7 +35,7 @@ export default function HomeCompromiso() {
         </div>
 
         {/* Text  */}
-        <div className="flex md:w-[66%] min-w-0 h-full justify-start items-center max-md:px-[40px] max-md:py-[30px] md:pr-2 py-[30px]">
+        <div className="flex md:w-[66%] min-w-0 h-full justify-start xl:justify-center items-center max-md:px-[40px] max-md:py-[30px] md:pr-2 py-[30px]">
           <div className="flex flex-col w-full max-w-[615px] gap-[20px] md:gap-[20px] text-center">
             {/* Nuestro compromiso con la calidad */}
             <div
