@@ -124,7 +124,7 @@ export default function DesarrollemosFormulario() {
               <input
                 {...register("city")}
                 type="text"
-                placeholder="Puebla"
+                placeholder="Nuevo León"
                 className="w-full h-[60px] md:h-full formulario text-beige-hogar bg-verde-confianza placeholder:text-beige-hogar outline-none"
               />
             </div>
