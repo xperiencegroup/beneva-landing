@@ -1,16 +1,19 @@
 {
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/misiondelosangeles",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/misiondelosangeles",
-      "destination": "https://mision-de-los-angeles.vercel.app/misiondelosangeles"
+      "destination": "/misiondelosangeles/index.html"
     },
     {
-      "source": "/misiondelosangeles/:path*",
-      "destination": "https://mision-de-los-angeles.vercel.app/misiondelosangeles/:path*"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/"
+      "source": "/misiondelosangeles/(.*)",
+      "destination": "/misiondelosangeles/index.html"
     }
   ]
 }
