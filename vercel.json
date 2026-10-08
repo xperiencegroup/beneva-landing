@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/misiondelosangeles",
+      "destination": "https://mision-de-los-angeles.vercel.app/misiondelosangeles"
+    },
+    {
+      "source": "/misiondelosangeles/:path*",
+      "destination": "https://mision-de-los-angeles.vercel.app/misiondelosangeles/:path*"
+    },
+    {
       "source": "/(.*)",
       "destination": "/"
     }
