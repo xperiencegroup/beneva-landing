@@ -8,6 +8,8 @@ import nombreIcon from "../../../assets/icons/form/green/nombre.svg";
 import correoIcon from "../../../assets/icons/form/green/correo.svg";
 import telIcon from "../../../assets/icons/form/green/tel.svg";
 import mensajeIcon from "../../../assets/icons/form/green/mensaje.svg";
+import { supabase } from "../../../lib/supabase";
+import { PROJECT_ID } from "../../../const/supabase";
 
 export default function ContactoForm() {
   const { handleSubmit, register, reset } = useForm({
@@ -24,25 +26,22 @@ export default function ContactoForm() {
   const onSubmit = async (data) => {
     setIsLoading(true);
     try {
-      const response = await fetch(
-        "https://beneva-backend.vercel.app/api/form",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            source: "Beneva Landing",
-            page: "Contacto",
-            data: {
-              ...data,
-            },
-          }),
-        },
-      );
+      const payload = {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        message: data.message || null,
+        city: null,
+        interest: null,
+        experience: null,
+        comments: null,
+        source: "Beneva Landing",
+        page: "contacto",
+      };
 
-      if (!response.ok) {
-        throw new Error("Error en la respuesta del servidor");
+      const { error } = await supabase.from(PROJECT_ID).insert(payload);
+      if (error) {
+        throw error;
       }
 
       track(TRACK.contact.formSubmit);

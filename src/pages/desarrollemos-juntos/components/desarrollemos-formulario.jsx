@@ -11,6 +11,8 @@ import telIcon from "../../../assets/icons/form/tel.svg";
 import desarrolloIcon from "../../../assets/icons/form/desarrollo.svg";
 import inversionesIcon from "../../../assets/icons/form/inversiones.svg";
 import comentariosIcon from "../../../assets/icons/form/comentarios.svg";
+import { supabase } from "../../../lib/supabase";
+import { PROJECT_ID } from "../../../const/supabase";
 
 export default function DesarrollemosFormulario() {
   const { handleSubmit, register, reset } = useForm({
@@ -29,32 +31,28 @@ export default function DesarrollemosFormulario() {
   const onSubmit = async (data) => {
     setIsLoading(true);
     try {
-      const response = await fetch(
-        "https://beneva-backend.vercel.app/api/form",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            source: "Beneva Landing",
-            page: "Desarrollemos Juntos",
-            data: {
-              ...data,
-            },
-          }),
-        },
-      );
+      const payload = {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        message: null,
+        city: data.city || null,
+        interest: data.interest || null,
+        experience: data.experience || null,
+        comments: data.comments || null,
+        source: "Beneva Landing",
+        page: "desarrollemos-juntos",
+      };
 
-      if (!response.ok) {
-        throw new Error("Error en la respuesta del servidor");
-      }
+      const { error } = await supabase.from(PROJECT_ID).insert(payload);
+      if (error) throw error;
 
       track(TRACK.develop.formSubmit);
-
       reset();
     } catch (error) {
       console.error(error);
       track(TRACK.develop.formSubmitError, {
-        error_type: error.message.startsWith("HTTP") ? "server" : "network",
+        error_type: "server",
         error_message: error.message,
       });
     } finally {

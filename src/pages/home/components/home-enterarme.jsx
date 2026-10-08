@@ -9,6 +9,8 @@ import mailIcon from "../../../assets/icons/home/mail.svg";
 import chatIcon from "../../../assets/icons/home/chat.svg";
 import { track } from "../../../analytics/track";
 import { TRACK } from "../../../analytics/track.constants";
+import { supabase } from "../../../lib/supabase";
+import { PROJECT_ID } from "../../../const/supabase";
 
 export default function HomeEnterarme() {
   const { handleSubmit, register, reset } = useForm();
@@ -18,35 +20,28 @@ export default function HomeEnterarme() {
   const onSubmit = async (values) => {
     setIsLoading(true);
     try {
-      const response = await fetch(
-        "https://beneva-backend.vercel.app/api/form",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            source: "Beneva Landing",
-            page: "Inicio",
-            data: {
-              ...values,
-            },
-          }),
-        },
-      );
+      const payload = {
+        name: values.name,
+        email: values.email,
+        phone: values.phone,
+        message: values.message || null,
+        city: null,
+        interest: null,
+        experience: null,
+        comments: null,
+        source: "Beneva Landing",
+        page: "inicio",
+      };
 
-      if (!response.ok) {
-        throw new Error("Error en la respuesta del servidor");
-      }
+      const { error } = await supabase.from(PROJECT_ID).insert(payload);
+      if (error) throw error;
 
       track(TRACK.home.enterarme.formSubmit);
-
-      setIsLoading(false);
       reset();
     } catch (error) {
       console.log("Error: ", error);
       track(TRACK.home.enterarme.formSubmitError, {
-        error_type: error.message.startsWith("HTTP") ? "server" : "network",
+        error_type: "server",
         error_message: error.message,
       });
     } finally {
