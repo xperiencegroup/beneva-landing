@@ -30,8 +30,8 @@ export default function ProyectosMision() {
           El hogar que tu familia merece está aquí.
         </p>
 
-        <a
-          href="https://mision-de-los-angeles.vercel.app/"
+        <a          
+          href="/misiondelosangeles"
           target="_blank"
           rel="noreferrer noopener"
           onClick={() =>
