@@ -91,7 +91,7 @@ export default function HomeNosotros() {
       </div>
 
       {/* Banner */}
-      <div className="hidden xl:block relative w-full h-[50svh] bg-cyan-500 rounded-tl-[120px] overflow-hidden">
+      <div className="hidden xl:block relative w-full h-[50svh] rounded-tl-[120px] overflow-hidden">
         <img
           src={banner}
           alt="Imágen de casas"
