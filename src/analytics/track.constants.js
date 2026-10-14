@@ -20,10 +20,10 @@ export const TRACK = {
 
   home: {
     nosotros: {
-      cta: `${PROJECT}:home:nosotros:cta:click`,
+      cta: `${PROJECT}:home:cta:ir-a-nosotros:click`,
     },
     patrimonio: {
-      cta: `${PROJECT}:home:patrimonio:cta:click`,
+      cta: `${PROJECT}:home:patrimonio:cta:ir-a-proyectos:click`,
     },
     enterarme: {
       formSubmit: `${PROJECT}:home:enterarme:form:submit`,
@@ -36,18 +36,18 @@ export const TRACK = {
 
   about: {
     cta: {
-      click: `${PROJECT}:about:cta:click`,
+      click: `${PROJECT}:about:closingBanner:cta:click`,
     },
   },
 
   projects: {
     mision: {
-      siteClick: `${PROJECT}:projects:mision:site:click`,
+      siteClick: `${PROJECT}:projects:mision:visit-site:click`,
     },
   },
 
   develop: {
-    cta: `${PROJECT}:develop:cta:click`,
+    cta: `${PROJECT}:develop:cta:closingBanner:click`,
     formSubmit: `${PROJECT}:develop:form:submit`,
     formSubmitError: `${PROJECT}:develop:form:submit-error`,
     formReset: `${PROJECT}:develop:form:reset`,
