@@ -52,8 +52,7 @@ export default function DesarrollemosFormulario() {
     } catch (error) {
       console.error(error);
       track(TRACK.develop.formSubmitError, {
-        error_type: "server",
-        error_message: error.message,
+        error_type: error.message.startsWith("HTTP") ? "server" : "network",
       });
     } finally {
       setIsLoading(false);

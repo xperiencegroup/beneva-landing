@@ -41,8 +41,7 @@ export default function HomeEnterarme() {
     } catch (error) {
       console.log("Error: ", error);
       track(TRACK.home.enterarme.formSubmitError, {
-        error_type: "server",
-        error_message: error.message,
+        error_type: error.message.startsWith("HTTP") ? "server" : "network",
       });
     } finally {
       setIsLoading(false);

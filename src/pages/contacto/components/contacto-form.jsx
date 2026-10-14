@@ -51,7 +51,6 @@ export default function ContactoForm() {
       console.error(error);
       track(TRACK.contact.formSubmitError, {
         error_type: error.message.startsWith("HTTP") ? "server" : "network",
-        error_message: error.message,
       });
     } finally {
       setIsLoading(false);
